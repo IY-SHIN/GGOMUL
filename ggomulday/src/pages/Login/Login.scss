@@ -1,0 +1,69 @@
+@mixin horizontal($display, $justify) {
+    display: $display;
+    justify-content: $justify;
+}
+
+@mixin box-size {
+    width: 100%;
+    height: 50px;
+}
+
+@mixin botton-hover {
+    &:hover {
+        background-color: white;
+        color: black;
+        border-width: 1px;
+        border-style: solid;
+        cursor: pointer;
+    }
+}
+
+.container {
+    height: 100vh;
+    @include horizontal(flex, center);
+    align-items: center;
+}
+
+.login-head {
+    @include horizontal(flex, center);
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.login-input {
+    box-sizing : border-box;
+    @include box-size;
+    margin-bottom: 20px;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.login-forgot {
+    @include horizontal(flex, flex-end);
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+        color: red;
+    }
+}
+
+.login-button {
+    border: none;
+    background-color: darkseagreen;
+    @include box-size;
+    margin-top: 50px;
+    font-size: 16px;
+    color: white;
+    @include botton-hover;
+}
+
+.login-register {
+    border: none;
+    background-color: darkslategray;
+    @include box-size;
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+    @include botton-hover;
+}
