@@ -3,9 +3,10 @@
     justify-content: $justify;
 }
 
-@mixin box-size {
-    width: 100%;
-    height: 50px;
+@mixin button-style ($color, $backcolor) {
+    border: none;
+    color: $color;
+    background-color: $backcolor;
 }
 
 @mixin botton-hover {
@@ -18,52 +19,80 @@
     }
 }
 
-.container {
+.login-container {
+    width: 100vw;
     height: 100vh;
     @include horizontal(flex, center);
     align-items: center;
-}
+    flex-wrap: wrap;
 
-.login-head {
-    @include horizontal(flex, center);
-    font-size: 30px;
-    margin-bottom: 50px;
-}
+    .login-box {
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
 
-.login-input {
-    box-sizing : border-box;
-    @include box-size;
-    margin-bottom: 20px;
-    font-size: 14px;
-    padding: 10px;
-}
+        .login-head {
+            @include horizontal(flex, center);
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
 
-.login-forgot {
-    @include horizontal(flex, flex-end);
-    font-size: 14px;
-    cursor: pointer;
+        input {
+            box-sizing: border-box;
+            height: 50px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
 
-    &:hover {
-        color: red;
+        .login-forgot {
+            @include horizontal(flex, flex-end);
+            font-size: 12px;
+            cursor: pointer;
+
+            &:hover {
+                color: red;
+            }
+        }
+
+        .login-button {
+            @include button-style(black, darkseagreen);
+            height: 50px;
+            margin-top: 50px;
+            @include botton-hover;
+        }
+
+        .login-register {
+            @include button-style(black, #fcea4e);
+            height: 50px;
+            margin-top: 20px;
+            @include botton-hover;
+        }
     }
-}
 
-.login-button {
-    border: none;
-    background-color: darkseagreen;
-    @include box-size;
-    margin-top: 50px;
-    font-size: 16px;
-    color: white;
-    @include botton-hover;
-}
+    .social-box {
+        // @include horizontal(flex, center);
+        display: flex;
+        flex-direction: column;
+        margin-left: 200px;
+        width: 30vw;
 
-.login-register {
-    border: none;
-    @include box-size;
-    background-color: #fcea4e;
-    margin-top: 20px;
-    font-size: 16px;
-    color: black;
-    @include botton-hover;
+        .social-naver {
+            margin-top: 90px;
+            height: 50px;
+            @include button-style(white, limegreen);
+        }
+
+        .social-google {
+            margin-top: 30px;
+            height: 50px;
+            background-color: white;
+            color: black;
+        }
+
+        .social-kakao {
+            margin-top: 30px;
+            height: 50px;
+            @include button-style(black, #fcea4e);
+        }
+    }
 }
