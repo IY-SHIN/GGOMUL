@@ -19,23 +19,21 @@
     }
 }
 
-.login-container {
-    width: 100vw;
-    height: 100vh;
+.login-head {
     @include horizontal(flex, center);
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.login-container {
+    @include horizontal(flex, space-evenly);
     align-items: center;
     flex-wrap: wrap;
 
     .login-box {
         display: flex;
         flex-direction: column;
-        width: 30vw;
-
-        .login-head {
-            @include horizontal(flex, center);
-            font-size: 30px;
-            margin-bottom: 50px;
-        }
+        width: 300px;
 
         input {
             box-sizing: border-box;
@@ -73,24 +71,23 @@
         // @include horizontal(flex, center);
         display: flex;
         flex-direction: column;
-        margin-left: 200px;
-        width: 30vw;
+        justify-content: space-between;
+        width: 300px;
 
         .social-naver {
-            margin-top: 90px;
+            margin-bottom: 30px;
             height: 50px;
             @include button-style(white, limegreen);
         }
 
         .social-google {
-            margin-top: 30px;
+            margin-bottom: 30px;
             height: 50px;
             background-color: white;
             color: black;
         }
 
         .social-kakao {
-            margin-top: 30px;
             height: 50px;
             @include button-style(black, #fcea4e);
         }
