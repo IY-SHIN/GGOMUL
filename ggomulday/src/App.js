@@ -6,9 +6,9 @@ import Register from './pages/Register/Register';
 function App() {
   return (
     <Routes>
-      <Route path="/Login" element={<Login />} />
-      <Route path="/Register" element={<Select />} />
-      <Route path="/Register/:type" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Select />} />
+      <Route path="/register/:type" element={<Register />} />
     </Routes>
   );
 }
