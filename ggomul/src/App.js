@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import "./asset/style.scss";
+import Home from "./component/Home";
+import Test from "./test";
+// import modalTest from "./components/modalTest"
+
 
 function App() {
+  //  // useState를 사용하여 open상태를 변경한다. (open일때 true로 만들어 열리는 방식)
+  //  const [modalOpen, setModalOpen] = useState(false);
+
+  //  const openModal = () => {
+  //    setModalOpen(true);
+  //  };
+  //  const closeModal = () => {
+  //    setModalOpen(false);
+  //  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/test" element={<Test />} />
+    </Routes>
+  )
 }
 
 export default App;
+
