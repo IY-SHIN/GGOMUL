@@ -1,0 +1,21 @@
+.join-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .join-box {
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+
+        input {
+            box-sizing: border-box;
+            height: 50px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+    }
+}

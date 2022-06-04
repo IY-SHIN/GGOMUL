@@ -1,0 +1,95 @@
+@mixin horizontal($display, $justify) {
+    display: $display;
+    justify-content: $justify;
+}
+
+@mixin button-style ($color, $backcolor) {
+    border: none;
+    color: $color;
+    background-color: $backcolor;
+}
+
+@mixin botton-hover {
+    &:hover {
+        background-color: white;
+        color: black;
+        border-width: 1px;
+        border-style: solid;
+        cursor: pointer;
+    }
+}
+
+.login-head {
+    @include horizontal(flex, center);
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.login-container {
+    @include horizontal(flex, space-evenly);
+    align-items: center;
+    flex-wrap: wrap;
+
+    .login-box {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+
+        input {
+            box-sizing: border-box;
+            height: 50px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .login-forgot {
+            @include horizontal(flex, flex-end);
+            font-size: 12px;
+            cursor: pointer;
+
+            &:hover {
+                color: red;
+            }
+        }
+
+        .login-button {
+            @include button-style(black, darkseagreen);
+            height: 50px;
+            margin-top: 50px;
+            @include botton-hover;
+        }
+
+        .login-register {
+            @include button-style(black, #fcea4e);
+            height: 50px;
+            margin-top: 20px;
+            @include botton-hover;
+        }
+    }
+
+    .social-box {
+        // @include horizontal(flex, center);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 300px;
+
+        .social-naver {
+            margin-bottom: 30px;
+            height: 50px;
+            @include button-style(white, limegreen);
+        }
+
+        .social-google {
+            margin-bottom: 30px;
+            height: 50px;
+            background-color: white;
+            color: black;
+        }
+
+        .social-kakao {
+            height: 50px;
+            @include button-style(black, #fcea4e);
+        }
+    }
+}
