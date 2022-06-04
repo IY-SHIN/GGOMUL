@@ -4,6 +4,7 @@ import "./Mypage.scss";
 
 function Mypage() {
     const [nickname, setNickName] = useState("신우혁");
+    console.log(setNickName);
 
     return (
         <>
