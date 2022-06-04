@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="com.ggomul.persistence.JoinUserTest" time="0.004" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\bin"/>
+    <property name="java.vm.version" value="25.202-b08"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\0_DCOM_20220127\04_SPRING\workspace\ggomul_project"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="KR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\0_DCOM_20220127\04_SPRING\workspace\ggomul_project"/>
+    <property name="java.runtime.version" value="1.8.0_202-b08"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\qmffo\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="E:\0_DCOM_20220127\04_SPRING\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7694894704176648941.tmp"/>
+    <property name="jansi.force" value="true"/>
+    <property name="sun.jnu.encoding" value="MS949"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_202\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Program Files/Java/jdk1.8.0_202/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_202/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_202/bin/../jre/lib/amd64;C:\app\qmffo\product\18.0.0\dbhomeXE\bin;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\apache-maven-3.8.5\bin;C:\Program Files\nodejs\;C:\Users\qmffo\AppData\Local\Microsoft\WindowsApps;C:\Users\qmffo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\qmffo\AppData\Roaming\npm;E:\0_DCOM_20220127\04_SPRING\app\spring-tool-suite-3.9.14\sts-bundle\sts-3.9.14.RELEASE;;."/>
+    <property name="jansi.passthrough" value="true"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\qmffo"/>
+    <property name="user.timezone" value="Asia/Seoul"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="qmffo"/>
+    <property name="java.class.path" value="E:\0_DCOM_20220127\04_SPRING\app\spring-tool-suite-3.9.14\sts-bundle\sts-3.9.14.RELEASE\plugins\org.eclipse.m2e.maven.runtime_1.15.0.20200310-1832\jars\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_202\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -gs C:\apache-maven-3.8.5\conf\settings.xml install -Dstyle.color=always"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="ko"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_202"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="E:\0_DCOM_20220127\04_SPRING\workspace\ggomul_project\EMBEDDED"/>
+    <property name="style.color" value="always"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.ggomul.persistence.JoinUserTest" name="insert" time="0.004">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;entityManagerFactory&apos; defined in com.ggomul.config.RootContext: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/validation/ValidatorFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:127)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:275)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:243)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 32 more
+Caused by: java.lang.NoClassDefFoundError: javax/validation/ValidatorFactory
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetMethodRecursive(Class.java:3048)
+	at java.lang.Class.getMethod0(Class.java:3018)
+	at java.lang.Class.getMethod(Class.java:1784)
+	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:113)
+	at org.hibernate.internal.SessionFactoryImpl.&lt;init&gt;(SessionFactoryImpl.java:300)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 47 more
+Caused by: java.lang.ClassNotFoundException: javax.validation.ValidatorFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 63 more
+</error>
+    <system-out>[2022-06-03 00:06:16.896] DEBUG
+			SpringJUnit4ClassRunner.&lt;init&gt;(SpringJUnit4ClassRunner.java:139) - SpringJUnit4ClassRunner constructor called with [class com.ggomul.persistence.JoinUserTest]
+[2022-06-03 00:06:16.903] DEBUG
+			BootstrapUtils.createCacheAwareContextLoaderDelegate(BootstrapUtils.java:96) - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+[2022-06-03 00:06:16.910] DEBUG
+			BootstrapUtils.createBootstrapContext(BootstrapUtils.java:79) - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+[2022-06-03 00:06:16.938] DEBUG
+			BootstrapUtils.resolveTestContextBootstrapper(BootstrapUtils.java:132) - Instantiating TestContextBootstrapper for test class [com.ggomul.persistence.JoinUserTest] from class [org.springframework.test.context.support.DefaultTestContextBootstrapper]
+[2022-06-03 00:06:16.968] DEBUG
+			AbstractDelegatingSmartContextLoader.delegateProcessing(AbstractDelegatingSmartContextLoader.java:263) - Delegating to AnnotationConfigContextLoader to process context configuration [ContextConfigurationAttributes@f79e declaringClass = &apos;com.ggomul.persistence.JoinUserTest&apos;, classes = &apos;{class com.ggomul.config.RootContext}&apos;, locations = &apos;{}&apos;, inheritLocations = true, initializers = &apos;{}&apos;, inheritInitializers = true, name = [null], contextLoaderClass = &apos;org.springframework.test.context.ContextLoader&apos;].
+[2022-06-03 00:06:16.987] DEBUG
+			ActiveProfilesUtils.resolveActiveProfiles(ActiveProfilesUtils.java:79) - Could not find an &apos;annotation declaring class&apos; for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.ggomul.persistence.JoinUserTest]
+[2022-06-03 00:06:16.988] DEBUG
+			AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:125) - @TestExecutionListeners is not present for class [com.ggomul.persistence.JoinUserTest]: using defaults.
+[2022-06-03 00:06:16.989] INFO 
+			AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:248) - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2022-06-03 00:06:17.003] INFO 
+			AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:177) - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3246fb96, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2e222612, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@61386958, org.springframework.test.context.support.DirtiesContextTestExecutionListener@73ee04c8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7671cb68, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@49dc7102, org.springframework.test.context.event.EventPublishingTestExecutionListener@6b8ca3c8]
+[2022-06-03 00:06:17.005] DEBUG
+			ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:70) - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ggomul.persistence.JoinUserTest]
+[2022-06-03 00:06:17.006] DEBUG
+			ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:83) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ggomul.persistence.JoinUserTest]
+[2022-06-03 00:06:17.007] DEBUG
+			ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:70) - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ggomul.persistence.JoinUserTest]
+[2022-06-03 00:06:17.007] DEBUG
+			ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:83) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ggomul.persistence.JoinUserTest]
+[2022-06-03 00:06:17.008] DEBUG
+			ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:70) - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ggomul.persistence.JoinUserTest]
+[2022-06-03 00:06:17.008] DEBUG
+			ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:83) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ggomul.persistence.JoinUserTest]
+[2022-06-03 00:06:17.008] DEBUG
+			ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:70) - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ggomul.persistence.JoinUserTest]
+[2022-06-03 00:06:17.009] DEBUG
+			ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:83) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ggomul.persistence.JoinUserTest]
+[2022-06-03 00:06:17.012] DEBUG
+			AbstractDirtiesContextTestExecutionListener.beforeOrAfterTestClass(AbstractDirtiesContextTestExecutionListener.java:142) - Before test class: context [DefaultTestContext@2f8dad04 testClass = JoinUserTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@29e495ff testClass = JoinUserTest, locations = &apos;{}&apos;, classes = &apos;{class com.ggomul.config.RootContext}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, propertySourceLocations = &apos;{}&apos;, propertySourceProperties = &apos;{}&apos;, contextCustomizers = set[[empty]], contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+[2022-06-03 00:06:17.014] DEBUG
+			ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:70) - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ggomul.persistence.JoinUserTest]
+[2022-06-03 00:06:17.014] DEBUG
+			ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:83) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ggomul.persistence.JoinUserTest]
+[2022-06-03 00:06:17.015] DEBUG
+			DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:81) - Performing dependency injection for test context [[DefaultTestContext@2f8dad04 testClass = JoinUserTest, testInstance = com.ggomul.persistence.JoinUserTest@1613674b, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@29e495ff testClass = JoinUserTest, locations = &apos;{}&apos;, classes = &apos;{class com.ggomul.config.RootContext}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, propertySourceLocations = &apos;{}&apos;, propertySourceProperties = &apos;{}&apos;, contextCustomizers = set[[empty]], contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]], attributes = map[[empty]]]].
+[2022-06-03 00:06:17.016] DEBUG
+			AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:273) - Delegating to AnnotationConfigContextLoader to load context from [MergedContextConfiguration@29e495ff testClass = JoinUserTest, locations = &apos;{}&apos;, classes = &apos;{class com.ggomul.config.RootContext}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, propertySourceLocations = &apos;{}&apos;, propertySourceProperties = &apos;{}&apos;, contextCustomizers = set[[empty]], contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]].
+[2022-06-03 00:06:17.017] DEBUG
+			AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:107) - Loading ApplicationContext for merged context configuration [[MergedContextConfiguration@29e495ff testClass = JoinUserTest, locations = &apos;{}&apos;, classes = &apos;{class com.ggomul.config.RootContext}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, propertySourceLocations = &apos;{}&apos;, propertySourceProperties = &apos;{}&apos;, contextCustomizers = set[[empty]], contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+[2022-06-03 00:06:17.053] DEBUG
+			AbstractEnvironment.setActiveProfiles(AbstractEnvironment.java:252) - Activating profiles []
+[2022-06-03 00:06:17.053] DEBUG
+			AnnotationConfigContextLoader.loadBeanDefinitions(AnnotationConfigContextLoader.java:184) - Registering component classes: {class com.ggomul.config.RootContext}
+[2022-06-03 00:06:17.095] DEBUG
+			AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:596) - Refreshing org.springframework.context.support.GenericApplicationContext@759d26fb
+[2022-06-03 00:06:17.111] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;org.springframework.context.annotation.internalConfigurationAnnotationProcessor&apos;
+[2022-06-03 00:06:17.246] DEBUG
+			ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:435) - Identified candidate component class: file [E:\0_DCOM_20220127\04_SPRING\workspace\ggomul_project\target\classes\com\ggomul\join\JoinTeacherRepository.class]
+[2022-06-03 00:06:17.395] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;emBeanDefinitionRegistrarPostProcessor&apos;
+[2022-06-03 00:06:17.399] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;org.springframework.context.event.internalEventListenerProcessor&apos;
+[2022-06-03 00:06:17.401] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;org.springframework.context.event.internalEventListenerFactory&apos;
+[2022-06-03 00:06:17.402] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;org.springframework.transaction.config.internalTransactionalEventListenerFactory&apos;
+[2022-06-03 00:06:17.405] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;org.springframework.context.annotation.internalAutowiredAnnotationProcessor&apos;
+[2022-06-03 00:06:17.406] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;org.springframework.context.annotation.internalCommonAnnotationProcessor&apos;
+[2022-06-03 00:06:17.410] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;org.springframework.context.annotation.internalPersistenceAnnotationProcessor&apos;
+[2022-06-03 00:06:17.411] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;org.springframework.aop.config.internalAutoProxyCreator&apos;
+[2022-06-03 00:06:17.450] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;entityManagerFactory&apos;
+[2022-06-03 00:06:17.451] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;rootContext&apos;
+[2022-06-03 00:06:17.452] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;org.springframework.transaction.config.internalTransactionAdvisor&apos;
+[2022-06-03 00:06:17.452] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration&apos;
+[2022-06-03 00:06:17.473] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;transactionAttributeSource&apos;
+[2022-06-03 00:06:17.474] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;transactionInterceptor&apos;
+[2022-06-03 00:06:17.476] DEBUG
+			ConstructorResolver.createArgumentArray(ConstructorResolver.java:806) - Autowiring by type from bean name &apos;transactionInterceptor&apos; via factory method to bean named &apos;transactionAttributeSource&apos;
+[2022-06-03 00:06:17.481] DEBUG
+			ConstructorResolver.createArgumentArray(ConstructorResolver.java:806) - Autowiring by type from bean name &apos;org.springframework.transaction.config.internalTransactionAdvisor&apos; via factory method to bean named &apos;transactionAttributeSource&apos;
+[2022-06-03 00:06:17.482] DEBUG
+			ConstructorResolver.createArgumentArray(ConstructorResolver.java:806) - Autowiring by type from bean name &apos;org.springframework.transaction.config.internalTransactionAdvisor&apos; via factory method to bean named &apos;transactionInterceptor&apos;
+[2022-06-03 00:06:17.526] DEBUG
+			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean &apos;dataSource&apos;
+[2022-06-03 00:06:17.621] DEBUG
+			LoggerProviders.logProvider(LoggerProviders.java:152) - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[2022-06-03 00:06:17.635] DEBUG
+			LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:361) - Building JPA container EntityManagerFactory for persistence unit &apos;jpa-sql&apos;
+[2022-06-03 00:06:17.658] DEBUG
+			LogHelper.logPersistenceUnitInformation(LogHelper.java:102) - PersistenceUnitInfo [
+	name: jpa-sql
+	persistence provider classname: null
+	classloader: sun.misc.Launcher$AppClassLoader@42a57993
+	excludeUnlistedClasses: false
+	JTA datasource: null
+	Non JTA datasource: org.apache.commons.dbcp2.BasicDataSource@665df3c6
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/E:/0_DCOM_20220127/04_SPRING/workspace/ggomul_project/target/classes
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names []
+	Mapping files names []
+	Properties [
+		hibernate.dialect: org.hibernate.dialect.Oracle10gDialect
+		hibernate.id.new_generator_mappings: true
+		hibernate.show_sql: true
+		hibernate.format_sql: true
+		hibernate.use_sql_comments: true]
+[2022-06-03 00:06:17.672] DEBUG
+			IntegratorServiceImpl.addIntegrator(IntegratorServiceImpl.java:46) - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[2022-06-03 00:06:17.673] DEBUG
+			IntegratorServiceImpl.addIntegrator(IntegratorServiceImpl.java:46) - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[2022-06-03 00:06:17.677] DEBUG
+			IntegratorServiceImpl.addIntegrator(IntegratorServiceImpl.java:46) - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[2022-06-03 00:06:17.715] INFO 
+			Version.logVersion(Version.java:44) - HHH000412: Hibernate ORM core version 5.6.8.Final
+[2022-06-03 00:06:17.716] DEBUG
+			Environment.&lt;clinit&gt;(Environment.java:199) - HHH000206: hibernate.properties not found
+[2022-06-03 00:06:17.856] DEBUG
+			ServiceBinding.setService(ServiceBinding.java:68) - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[2022-06-03 00:06:17.870] DEBUG
+			RegionFactoryInitiator.resolveRegionFactory(RegionFactoryInitiator.java:118) - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[2022-06-03 00:06:17.871] DEBUG
+			RegionFactoryInitiator.initiateService(RegionFactoryInitiator.java:49) - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[2022-06-03 00:06:17.890] INFO 
+			JavaReflectionManager.&lt;clinit&gt;(JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-06-03 00:06:18.088] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration boolean -&gt; org.hibernate.type.BooleanType@2c383e33
+[2022-06-03 00:06:18.089] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration boolean -&gt; org.hibernate.type.BooleanType@2c383e33
+[2022-06-03 00:06:18.089] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.lang.Boolean -&gt; org.hibernate.type.BooleanType@2c383e33
+[2022-06-03 00:06:18.089] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration numeric_boolean -&gt; org.hibernate.type.NumericBooleanType@2fa3be26
+[2022-06-03 00:06:18.090] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration true_false -&gt; org.hibernate.type.TrueFalseType@4e6d7365
+[2022-06-03 00:06:18.091] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration yes_no -&gt; org.hibernate.type.YesNoType@21ae6e73
+[2022-06-03 00:06:18.092] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration byte -&gt; org.hibernate.type.ByteType@e044b4a
+[2022-06-03 00:06:18.092] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration byte -&gt; org.hibernate.type.ByteType@e044b4a
+[2022-06-03 00:06:18.093] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.lang.Byte -&gt; org.hibernate.type.ByteType@e044b4a
+[2022-06-03 00:06:18.094] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration character -&gt; org.hibernate.type.CharacterType@4604b900
+[2022-06-03 00:06:18.094] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration char -&gt; org.hibernate.type.CharacterType@4604b900
+[2022-06-03 00:06:18.094] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.lang.Character -&gt; org.hibernate.type.CharacterType@4604b900
+[2022-06-03 00:06:18.095] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration short -&gt; org.hibernate.type.ShortType@367795c7
+[2022-06-03 00:06:18.096] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration short -&gt; org.hibernate.type.ShortType@367795c7
+[2022-06-03 00:06:18.096] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.lang.Short -&gt; org.hibernate.type.ShortType@367795c7
+[2022-06-03 00:06:18.097] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration integer -&gt; org.hibernate.type.IntegerType@edf4f36
+[2022-06-03 00:06:18.097] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration int -&gt; org.hibernate.type.IntegerType@edf4f36
+[2022-06-03 00:06:18.097] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.lang.Integer -&gt; org.hibernate.type.IntegerType@edf4f36
+[2022-06-03 00:06:18.098] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration long -&gt; org.hibernate.type.LongType@cd7f1ae
+[2022-06-03 00:06:18.098] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration long -&gt; org.hibernate.type.LongType@cd7f1ae
+[2022-06-03 00:06:18.099] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.lang.Long -&gt; org.hibernate.type.LongType@cd7f1ae
+[2022-06-03 00:06:18.099] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration float -&gt; org.hibernate.type.FloatType@1f651cd8
+[2022-06-03 00:06:18.100] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration float -&gt; org.hibernate.type.FloatType@1f651cd8
+[2022-06-03 00:06:18.100] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.lang.Float -&gt; org.hibernate.type.FloatType@1f651cd8
+[2022-06-03 00:06:18.101] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration double -&gt; org.hibernate.type.DoubleType@538cd0f2
+[2022-06-03 00:06:18.101] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration double -&gt; org.hibernate.type.DoubleType@538cd0f2
+[2022-06-03 00:06:18.101] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.lang.Double -&gt; org.hibernate.type.DoubleType@538cd0f2
+[2022-06-03 00:06:18.102] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration big_decimal -&gt; org.hibernate.type.BigDecimalType@654c1a54
+[2022-06-03 00:06:18.102] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.math.BigDecimal -&gt; org.hibernate.type.BigDecimalType@654c1a54
+[2022-06-03 00:06:18.103] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration big_integer -&gt; org.hibernate.type.BigIntegerType@1532c619
+[2022-06-03 00:06:18.103] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.math.BigInteger -&gt; org.hibernate.type.BigIntegerType@1532c619
+[2022-06-03 00:06:18.104] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration string -&gt; org.hibernate.type.StringType@7de4a01f
+[2022-06-03 00:06:18.104] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.lang.String -&gt; org.hibernate.type.StringType@7de4a01f
+[2022-06-03 00:06:18.105] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration nstring -&gt; org.hibernate.type.StringNVarcharType@208e9ef6
+[2022-06-03 00:06:18.105] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration ncharacter -&gt; org.hibernate.type.CharacterNCharType@34448e6c
+[2022-06-03 00:06:18.106] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration url -&gt; org.hibernate.type.UrlType@7dc51783
+[2022-06-03 00:06:18.106] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.net.URL -&gt; org.hibernate.type.UrlType@7dc51783
+[2022-06-03 00:06:18.108] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration Duration -&gt; org.hibernate.type.DurationType@75699e35
+[2022-06-03 00:06:18.108] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.time.Duration -&gt; org.hibernate.type.DurationType@75699e35
+[2022-06-03 00:06:18.116] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration Instant -&gt; org.hibernate.type.InstantType@39ce27f2
+[2022-06-03 00:06:18.117] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.time.Instant -&gt; org.hibernate.type.InstantType@39ce27f2
+[2022-06-03 00:06:18.118] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration LocalDateTime -&gt; org.hibernate.type.LocalDateTimeType@68105edc
+[2022-06-03 00:06:18.118] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.time.LocalDateTime -&gt; org.hibernate.type.LocalDateTimeType@68105edc
+[2022-06-03 00:06:18.120] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration LocalDate -&gt; org.hibernate.type.LocalDateType@288a4658
+[2022-06-03 00:06:18.120] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.time.LocalDate -&gt; org.hibernate.type.LocalDateType@288a4658
+[2022-06-03 00:06:18.121] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration LocalTime -&gt; org.hibernate.type.LocalTimeType@470a9030
+[2022-06-03 00:06:18.121] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.time.LocalTime -&gt; org.hibernate.type.LocalTimeType@470a9030
+[2022-06-03 00:06:18.122] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration OffsetDateTime -&gt; org.hibernate.type.OffsetDateTimeType@53b98ff6
+[2022-06-03 00:06:18.123] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.time.OffsetDateTime -&gt; org.hibernate.type.OffsetDateTimeType@53b98ff6
+[2022-06-03 00:06:18.124] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration OffsetTime -&gt; org.hibernate.type.OffsetTimeType@36074e47
+[2022-06-03 00:06:18.124] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.time.OffsetTime -&gt; org.hibernate.type.OffsetTimeType@36074e47
+[2022-06-03 00:06:18.127] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration ZonedDateTime -&gt; org.hibernate.type.ZonedDateTimeType@3088660d
+[2022-06-03 00:06:18.127] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.time.ZonedDateTime -&gt; org.hibernate.type.ZonedDateTimeType@3088660d
+[2022-06-03 00:06:18.129] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration date -&gt; org.hibernate.type.DateType@111610e6
+[2022-06-03 00:06:18.129] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.sql.Date -&gt; org.hibernate.type.DateType@111610e6
+[2022-06-03 00:06:18.130] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration time -&gt; org.hibernate.type.TimeType@4beddc56
+[2022-06-03 00:06:18.131] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.sql.Time -&gt; org.hibernate.type.TimeType@4beddc56
+[2022-06-03 00:06:18.132] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration timestamp -&gt; org.hibernate.type.TimestampType@32639b12
+[2022-06-03 00:06:18.132] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.sql.Timestamp -&gt; org.hibernate.type.TimestampType@32639b12
+[2022-06-03 00:06:18.132] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.util.Date -&gt; org.hibernate.type.TimestampType@32639b12
+[2022-06-03 00:06:18.133] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration dbtimestamp -&gt; org.hibernate.type.DbTimestampType@5649ec46
+[2022-06-03 00:06:18.134] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration calendar -&gt; org.hibernate.type.CalendarType@55120f99
+[2022-06-03 00:06:18.134] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.util.Calendar -&gt; org.hibernate.type.CalendarType@55120f99
+[2022-06-03 00:06:18.135] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.util.GregorianCalendar -&gt; org.hibernate.type.CalendarType@55120f99
+[2022-06-03 00:06:18.135] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration calendar_date -&gt; org.hibernate.type.CalendarDateType@779dfe55
+[2022-06-03 00:06:18.136] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration calendar_time -&gt; org.hibernate.type.CalendarTimeType@265c5d69
+[2022-06-03 00:06:18.137] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration locale -&gt; org.hibernate.type.LocaleType@5767b2af
+[2022-06-03 00:06:18.137] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.util.Locale -&gt; org.hibernate.type.LocaleType@5767b2af
+[2022-06-03 00:06:18.138] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration currency -&gt; org.hibernate.type.CurrencyType@241a0c3a
+[2022-06-03 00:06:18.138] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.util.Currency -&gt; org.hibernate.type.CurrencyType@241a0c3a
+[2022-06-03 00:06:18.139] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration timezone -&gt; org.hibernate.type.TimeZoneType@3f4f9acd
+[2022-06-03 00:06:18.140] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.util.TimeZone -&gt; org.hibernate.type.TimeZoneType@3f4f9acd
+[2022-06-03 00:06:18.140] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration class -&gt; org.hibernate.type.ClassType@1d2644e3
+[2022-06-03 00:06:18.141] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.lang.Class -&gt; org.hibernate.type.ClassType@1d2644e3
+[2022-06-03 00:06:18.141] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration uuid-binary -&gt; org.hibernate.type.UUIDBinaryType@3c443976
+[2022-06-03 00:06:18.142] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.util.UUID -&gt; org.hibernate.type.UUIDBinaryType@3c443976
+[2022-06-03 00:06:18.142] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration uuid-char -&gt; org.hibernate.type.UUIDCharType@63998bf4
+[2022-06-03 00:06:18.144] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration binary -&gt; org.hibernate.type.BinaryType@62a8fd44
+[2022-06-03 00:06:18.144] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration byte[] -&gt; org.hibernate.type.BinaryType@62a8fd44
+[2022-06-03 00:06:18.144] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration [B -&gt; org.hibernate.type.BinaryType@62a8fd44
+[2022-06-03 00:06:18.145] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration wrapper-binary -&gt; org.hibernate.type.WrapperBinaryType@18388a3c
+[2022-06-03 00:06:18.146] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration Byte[] -&gt; org.hibernate.type.WrapperBinaryType@18388a3c
+[2022-06-03 00:06:18.146] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration [Ljava.lang.Byte; -&gt; org.hibernate.type.WrapperBinaryType@18388a3c
+[2022-06-03 00:06:18.147] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration row_version -&gt; org.hibernate.type.RowVersionType@5f212d84
+[2022-06-03 00:06:18.147] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration image -&gt; org.hibernate.type.ImageType@6622a690
+[2022-06-03 00:06:18.148] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration characters -&gt; org.hibernate.type.CharArrayType@4dd94a58
+[2022-06-03 00:06:18.148] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration char[] -&gt; org.hibernate.type.CharArrayType@4dd94a58
+[2022-06-03 00:06:18.149] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration [C -&gt; org.hibernate.type.CharArrayType@4dd94a58
+[2022-06-03 00:06:18.149] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration wrapper-characters -&gt; org.hibernate.type.CharacterArrayType@155d1021
+[2022-06-03 00:06:18.150] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration [Ljava.lang.Character; -&gt; org.hibernate.type.CharacterArrayType@155d1021
+[2022-06-03 00:06:18.150] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration Character[] -&gt; org.hibernate.type.CharacterArrayType@155d1021
+[2022-06-03 00:06:18.150] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration text -&gt; org.hibernate.type.TextType@2c42b421
+[2022-06-03 00:06:18.151] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration ntext -&gt; org.hibernate.type.NTextType@701a32
+[2022-06-03 00:06:18.153] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration blob -&gt; org.hibernate.type.BlobType@383f3558
+[2022-06-03 00:06:18.153] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.sql.Blob -&gt; org.hibernate.type.BlobType@383f3558
+[2022-06-03 00:06:18.154] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration materialized_blob -&gt; org.hibernate.type.MaterializedBlobType@65f00478
+[2022-06-03 00:06:18.155] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration clob -&gt; org.hibernate.type.ClobType@56febdc
+[2022-06-03 00:06:18.155] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.sql.Clob -&gt; org.hibernate.type.ClobType@56febdc
+[2022-06-03 00:06:18.157] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration nclob -&gt; org.hibernate.type.NClobType@f2c488
+[2022-06-03 00:06:18.157] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.sql.NClob -&gt; org.hibernate.type.NClobType@f2c488
+[2022-06-03 00:06:18.157] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration materialized_clob -&gt; org.hibernate.type.MaterializedClobType@5488b5c5
+[2022-06-03 00:06:18.158] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration materialized_nclob -&gt; org.hibernate.type.MaterializedNClobType@4564e94b
+[2022-06-03 00:06:18.159] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration serializable -&gt; org.hibernate.type.SerializableType@667e34b1
+[2022-06-03 00:06:18.162] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration object -&gt; org.hibernate.type.ObjectType@3c5a54b7
+[2022-06-03 00:06:18.162] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration java.lang.Object -&gt; org.hibernate.type.ObjectType@3c5a54b7
+[2022-06-03 00:06:18.163] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration imm_date -&gt; org.hibernate.type.AdaptedImmutableType@417ad4f3
+[2022-06-03 00:06:18.163] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration imm_time -&gt; org.hibernate.type.AdaptedImmutableType@2f6bcf87
+[2022-06-03 00:06:18.163] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration imm_timestamp -&gt; org.hibernate.type.AdaptedImmutableType@58f174d9
+[2022-06-03 00:06:18.163] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration imm_dbtimestamp -&gt; org.hibernate.type.AdaptedImmutableType@78c7f9b3
+[2022-06-03 00:06:18.163] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration imm_calendar -&gt; org.hibernate.type.AdaptedImmutableType@6f8d7714
+[2022-06-03 00:06:18.164] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration imm_calendar_date -&gt; org.hibernate.type.AdaptedImmutableType@1e6b9a95
+[2022-06-03 00:06:18.164] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration imm_binary -&gt; org.hibernate.type.AdaptedImmutableType@4d6f623d
+[2022-06-03 00:06:18.164] DEBUG
+			BasicTypeRegistry.register(BasicTypeRegistry.java:157) - Adding type registration imm_serializable -&gt; org.hibernate.type.AdaptedImmutableType@aa21042
+[2022-06-03 00:06:18.173] DEBUG
+			BootstrapContextImpl.injectJpaTempClassLoader(BootstrapContextImpl.java:259) - Injecting JPA temp ClassLoader [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1d01dfa5] into BootstrapContext; was [null]
+[2022-06-03 00:06:18.173] DEBUG
+			ClassLoaderAccessImpl.injectTempClassLoader(ClassLoaderAccessImpl.java:45) - ClassLoaderAccessImpl#injectTempClassLoader(org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1d01dfa5) [was null]
+[2022-06-03 00:06:18.173] DEBUG
+			BootstrapContextImpl.injectScanEnvironment(BootstrapContextImpl.java:269) - Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@22101c80] into BootstrapContext; was [null]
+[2022-06-03 00:06:18.174] DEBUG
+			BootstrapContextImpl.injectScanOptions(BootstrapContextImpl.java:264) - Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@31ff1390] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@759d81f3]
+[2022-06-03 00:06:18.226] DEBUG
+			BootstrapContextImpl.injectJpaTempClassLoader(BootstrapContextImpl.java:259) - Injecting JPA temp ClassLoader [null] into BootstrapContext; was [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1d01dfa5]
+[2022-06-03 00:06:18.226] DEBUG
+			ClassLoaderAccessImpl.injectTempClassLoader(ClassLoaderAccessImpl.java:45) - ClassLoaderAccessImpl#injectTempClassLoader(null) [was org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1d01dfa5]
+[2022-06-03 00:06:18.236] DEBUG
+			DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:98) - Registering IdentifierGenerator strategy [uuid2] -&gt; [org.hibernate.id.UUIDGenerator]
+[2022-06-03 00:06:18.236] DEBUG
+			DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:98) - Registering IdentifierGenerator strategy [guid] -&gt; [org.hibernate.id.GUIDGenerator]
+[2022-06-03 00:06:18.237] DEBUG
+			DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:98) - Registering IdentifierGenerator strategy [uuid] -&gt; [org.hibernate.id.UUIDHexGenerator]
+[2022-06-03 00:06:18.237] DEBUG
+			DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:98) - Registering IdentifierGenerator strategy [uuid.hex] -&gt; [org.hibernate.id.UUIDHexGenerator]
+[2022-06-03 00:06:18.237] DEBUG
+			DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:98) - Registering IdentifierGenerator strategy [assigned] -&gt; [org.hibernate.id.Assigned]
+[2022-06-03 00:06:18.238] DEBUG
+			DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:98) - Registering IdentifierGenerator strategy [identity] -&gt; [org.hibernate.id.IdentityGenerator]
+[2022-06-03 00:06:18.239] DEBUG
+			DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:98) - Registering IdentifierGenerator strategy [select] -&gt; [org.hibernate.id.SelectGenerator]
+[2022-06-03 00:06:18.240] DEBUG
+			DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:98) - Registering IdentifierGenerator strategy [sequence] -&gt; [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[2022-06-03 00:06:18.240] DEBUG
+			DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:98) - Registering IdentifierGenerator strategy [seqhilo] -&gt; [org.hibernate.id.SequenceHiLoGenerator]
+[2022-06-03 00:06:18.241] DEBUG
+			DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:98) - Registering IdentifierGenerator strategy [increment] -&gt; [org.hibernate.id.IncrementGenerator]
+[2022-06-03 00:06:18.241] DEBUG
+			DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:98) - Registering IdentifierGenerator strategy [foreign] -&gt; [org.hibernate.id.ForeignGenerator]
+[2022-06-03 00:06:18.242] DEBUG
+			DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:98) - Registering IdentifierGenerator strategy [sequence-identity] -&gt; [org.hibernate.id.SequenceIdentityGenerator]
+[2022-06-03 00:06:18.242] DEBUG
+			DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:98) - Registering IdentifierGenerator strategy [enhanced-sequence] -&gt; [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[2022-06-03 00:06:18.243] DEBUG
+			DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:98) - Registering IdentifierGenerator strategy [enhanced-table] -&gt; [org.hibernate.id.enhanced.TableGenerator]
+[2022-06-03 00:06:18.938] DEBUG
+			JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:72) - Database -&gt;
+       name : Oracle
+    version : Oracle Database 18c Express Edition Release 18.0.0.0.0 - Production
+Version 18.4.0.0.0
+      major : 18
+      minor : 0
+[2022-06-03 00:06:18.938] DEBUG
+			JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:83) - Driver -&gt;
+       name : Oracle JDBC driver
+    version : 21.5.0.0.0
+      major : 21
+      minor : 5
+[2022-06-03 00:06:18.938] DEBUG
+			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:389) - JDBC version : 4.2
+[2022-06-03 00:06:18.952] INFO 
+			Dialect.&lt;init&gt;(Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[2022-06-03 00:06:19.172] DEBUG
+			TypeConfiguration.scope(TypeConfiguration.java:149) - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@716e431d] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@7e744f43]
+[2022-06-03 00:06:19.203] DEBUG
+			Namespace.&lt;init&gt;(Namespace.java:51) - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[2022-06-03 00:06:19.215] DEBUG
+			AnnotationBinder.bindClass(AnnotationBinder.java:547) - Binding entity from annotated class: com.ggomul.user.User
+[2022-06-03 00:06:19.233] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3DiscriminatorColumn{logicalColumnName&apos;DTYPE&apos;, discriminatorTypeName=&apos;string&apos;}
+[2022-06-03 00:06:19.238] DEBUG
+			EntityBinder.bindEntity(EntityBinder.java:431) - Import with entity name User
+[2022-06-03 00:06:19.240] DEBUG
+			EntityBinder.bindTable(EntityBinder.java:874) - Bind entity com.ggomul.user.User on table USER_TB
+[2022-06-03 00:06:19.263] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=no, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.265] DEBUG
+			ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:60) - Not known whether passed class name [com.ggomul.user.User] is safe
+[2022-06-03 00:06:19.266] DEBUG
+			ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:62) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.ggomul.user.User
+[2022-06-03 00:06:19.266] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property no with lazy=false
+[2022-06-03 00:06:19.268] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:no]
+[2022-06-03 00:06:19.269] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for no
+[2022-06-03 00:06:19.270] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property no
+[2022-06-03 00:06:19.272] DEBUG
+			BinderHelper.makeIdGenerator(BinderHelper.java:514) - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(no)]), no, identity, , ...)
+[2022-06-03 00:06:19.273] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=activateKey, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.273] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property activateKey with lazy=false
+[2022-06-03 00:06:19.273] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:activateKey]
+[2022-06-03 00:06:19.273] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for activateKey
+[2022-06-03 00:06:19.274] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property activateKey
+[2022-06-03 00:06:19.274] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=address, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.274] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property address with lazy=false
+[2022-06-03 00:06:19.274] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:address]
+[2022-06-03 00:06:19.274] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for address
+[2022-06-03 00:06:19.275] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property address
+[2022-06-03 00:06:19.275] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=customer, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.275] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property customer with lazy=false
+[2022-06-03 00:06:19.275] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:customer]
+[2022-06-03 00:06:19.276] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for customer
+[2022-06-03 00:06:19.276] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property customer
+[2022-06-03 00:06:19.276] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=dateBirth, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.276] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property dateBirth with lazy=false
+[2022-06-03 00:06:19.276] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:dateBirth]
+[2022-06-03 00:06:19.277] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for dateBirth
+[2022-06-03 00:06:19.277] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property dateBirth
+[2022-06-03 00:06:19.278] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=detailAddress, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.278] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property detailAddress with lazy=false
+[2022-06-03 00:06:19.278] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:detailAddress]
+[2022-06-03 00:06:19.278] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for detailAddress
+[2022-06-03 00:06:19.278] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property detailAddress
+[2022-06-03 00:06:19.279] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=email, insertable=true, updatable=true, unique=true}
+[2022-06-03 00:06:19.279] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property email with lazy=false
+[2022-06-03 00:06:19.279] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:email]
+[2022-06-03 00:06:19.279] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for email
+[2022-06-03 00:06:19.279] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property email
+[2022-06-03 00:06:19.280] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=emailConfirm, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.280] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property emailConfirm with lazy=false
+[2022-06-03 00:06:19.280] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:emailConfirm]
+[2022-06-03 00:06:19.280] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for emailConfirm
+[2022-06-03 00:06:19.280] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property emailConfirm
+[2022-06-03 00:06:19.281] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=gender, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.281] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property gender with lazy=false
+[2022-06-03 00:06:19.281] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:gender]
+[2022-06-03 00:06:19.281] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for gender
+[2022-06-03 00:06:19.282] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property gender
+[2022-06-03 00:06:19.282] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=memberType, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.282] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property memberType with lazy=false
+[2022-06-03 00:06:19.282] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:memberType]
+[2022-06-03 00:06:19.282] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for memberType
+[2022-06-03 00:06:19.283] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property memberType
+[2022-06-03 00:06:19.283] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=name, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.283] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property name with lazy=false
+[2022-06-03 00:06:19.283] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:name]
+[2022-06-03 00:06:19.284] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for name
+[2022-06-03 00:06:19.284] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property name
+[2022-06-03 00:06:19.284] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=password, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.284] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property password with lazy=false
+[2022-06-03 00:06:19.284] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:password]
+[2022-06-03 00:06:19.285] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for password
+[2022-06-03 00:06:19.285] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property password
+[2022-06-03 00:06:19.285] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=resign, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.285] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property resign with lazy=false
+[2022-06-03 00:06:19.285] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:resign]
+[2022-06-03 00:06:19.285] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for resign
+[2022-06-03 00:06:19.286] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property resign
+[2022-06-03 00:06:19.286] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=signDt, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.286] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property signDt with lazy=false
+[2022-06-03 00:06:19.286] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:signDt]
+[2022-06-03 00:06:19.286] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for signDt
+[2022-06-03 00:06:19.287] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property signDt
+[2022-06-03 00:06:19.287] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=teacher, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.287] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property teacher with lazy=false
+[2022-06-03 00:06:19.287] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:teacher]
+[2022-06-03 00:06:19.287] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for teacher
+[2022-06-03 00:06:19.288] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property teacher
+[2022-06-03 00:06:19.288] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=tel, insertable=true, updatable=true, unique=true}
+[2022-06-03 00:06:19.288] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property tel with lazy=false
+[2022-06-03 00:06:19.288] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:tel]
+[2022-06-03 00:06:19.288] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for tel
+[2022-06-03 00:06:19.288] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property tel
+[2022-06-03 00:06:19.289] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=typeNo, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.289] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property typeNo with lazy=false
+[2022-06-03 00:06:19.289] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.User:typeNo]
+[2022-06-03 00:06:19.289] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for typeNo
+[2022-06-03 00:06:19.289] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property typeNo
+[2022-06-03 00:06:19.296] DEBUG
+			AnnotationBinder.bindClass(AnnotationBinder.java:547) - Binding entity from annotated class: com.ggomul.user.Customer
+[2022-06-03 00:06:19.296] DEBUG
+			EntityBinder.bindEntity(EntityBinder.java:431) - Import with entity name Customer
+[2022-06-03 00:06:19.297] WARN 
+			AnnotationBinder.bindClass(AnnotationBinder.java:653) - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.ggomul.user.Customer
+[2022-06-03 00:06:19.298] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=nickname, insertable=true, updatable=true, unique=true}
+[2022-06-03 00:06:19.298] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property nickname with lazy=false
+[2022-06-03 00:06:19.298] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.Customer:nickname]
+[2022-06-03 00:06:19.298] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for nickname
+[2022-06-03 00:06:19.299] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property nickname
+[2022-06-03 00:06:19.299] DEBUG
+			AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1660) - Skipping attribute [int : no] as it was already processed as part of super hierarchy
+[2022-06-03 00:06:19.299] DEBUG
+			AnnotationBinder.bindClass(AnnotationBinder.java:547) - Binding entity from annotated class: com.ggomul.user.Teacher
+[2022-06-03 00:06:19.300] DEBUG
+			EntityBinder.bindEntity(EntityBinder.java:431) - Import with entity name Teacher
+[2022-06-03 00:06:19.300] WARN 
+			AnnotationBinder.bindClass(AnnotationBinder.java:653) - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.ggomul.user.Teacher
+[2022-06-03 00:06:19.300] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=accountNumber, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.300] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property accountNumber with lazy=false
+[2022-06-03 00:06:19.301] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.Teacher:accountNumber]
+[2022-06-03 00:06:19.301] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for accountNumber
+[2022-06-03 00:06:19.301] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property accountNumber
+[2022-06-03 00:06:19.301] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=branchNo, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.301] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property branchNo with lazy=false
+[2022-06-03 00:06:19.302] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.Teacher:branchNo]
+[2022-06-03 00:06:19.302] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for branchNo
+[2022-06-03 00:06:19.302] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property branchNo
+[2022-06-03 00:06:19.302] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=nameBank, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.302] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property nameBank with lazy=false
+[2022-06-03 00:06:19.303] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.Teacher:nameBank]
+[2022-06-03 00:06:19.303] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for nameBank
+[2022-06-03 00:06:19.303] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property nameBank
+[2022-06-03 00:06:19.303] DEBUG
+			Ejb3Column.bind(Ejb3Column.java:227) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USER_TB), mappingColumn=profilePhoto, insertable=true, updatable=true, unique=false}
+[2022-06-03 00:06:19.303] DEBUG
+			PropertyBinder.makePropertyAndValue(PropertyBinder.java:175) - MetadataSourceProcessor property profilePhoto with lazy=false
+[2022-06-03 00:06:19.303] DEBUG
+			AbstractPropertyHolder.resolveAttributeConverterDescriptor(AbstractPropertyHolder.java:94) - Attempting to locate auto-apply AttributeConverter for property [com.ggomul.user.Teacher:profilePhoto]
+[2022-06-03 00:06:19.304] DEBUG
+			SimpleValueBinder.make(SimpleValueBinder.java:410) - building SimpleValue for profilePhoto
+[2022-06-03 00:06:19.304] DEBUG
+			PropertyBinder.makeProperty(PropertyBinder.java:266) - Building property profilePhoto
+[2022-06-03 00:06:19.305] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for no
+[2022-06-03 00:06:19.305] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for activateKey
+[2022-06-03 00:06:19.306] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for address
+[2022-06-03 00:06:19.306] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for customer
+[2022-06-03 00:06:19.306] DEBUG
+			ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:60) - Not known whether passed class name [com.ggomul.user.Customer] is safe
+[2022-06-03 00:06:19.306] DEBUG
+			ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:62) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.ggomul.user.Customer
+[2022-06-03 00:06:19.307] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for dateBirth
+[2022-06-03 00:06:19.307] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for detailAddress
+[2022-06-03 00:06:19.307] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for email
+[2022-06-03 00:06:19.307] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for emailConfirm
+[2022-06-03 00:06:19.308] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for gender
+[2022-06-03 00:06:19.308] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for memberType
+[2022-06-03 00:06:19.308] DEBUG
+			ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:60) - Not known whether passed class name [com.ggomul.user.UserType] is safe
+[2022-06-03 00:06:19.309] DEBUG
+			ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:62) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.ggomul.user.UserType
+[2022-06-03 00:06:19.309] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for name
+[2022-06-03 00:06:19.309] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for password
+[2022-06-03 00:06:19.310] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for resign
+[2022-06-03 00:06:19.310] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for signDt
+[2022-06-03 00:06:19.310] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for teacher
+[2022-06-03 00:06:19.310] DEBUG
+			ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:60) - Not known whether passed class name [com.ggomul.user.Teacher] is safe
+[2022-06-03 00:06:19.310] DEBUG
+			ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:62) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.ggomul.user.Teacher
+[2022-06-03 00:06:19.311] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for tel
+[2022-06-03 00:06:19.311] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for typeNo
+[2022-06-03 00:06:19.311] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for nickname
+[2022-06-03 00:06:19.311] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for accountNumber
+[2022-06-03 00:06:19.312] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for branchNo
+[2022-06-03 00:06:19.312] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for nameBank
+[2022-06-03 00:06:19.312] DEBUG
+			SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:455) - Starting fillSimpleValue for profilePhoto
+[2022-06-03 00:06:19.314] DEBUG
+			PrimaryKey.addColumn(PrimaryKey.java:36) - Forcing column [no] to be non-null as it is part of the primary key for table [user_tb]
+[2022-06-03 00:06:19.343] DEBUG
+			SessionFactoryImpl.&lt;init&gt;(SessionFactoryImpl.java:208) - Building session factory
+[2022-06-03 00:06:19.345] DEBUG
+			Settings.&lt;init&gt;(Settings.java:68) - SessionFactory name : null
+[2022-06-03 00:06:19.345] DEBUG
+			Settings.&lt;init&gt;(Settings.java:69) - Automatic flush during beforeCompletion(): enabled
+[2022-06-03 00:06:19.345] DEBUG
+			Settings.&lt;init&gt;(Settings.java:70) - Automatic session close at end of transaction: disabled
+[2022-06-03 00:06:19.345] DEBUG
+			Settings.&lt;init&gt;(Settings.java:72) - Statistics: disabled
+[2022-06-03 00:06:19.345] DEBUG
+			Settings.&lt;init&gt;(Settings.java:74) - Deleted entity synthetic identifier rollback: disabled
+[2022-06-03 00:06:19.346] DEBUG
+			Settings.&lt;init&gt;(Settings.java:75) - Default entity-mode: pojo
+[2022-06-03 00:06:19.346] DEBUG
+			Settings.&lt;init&gt;(Settings.java:76) - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[2022-06-03 00:06:19.346] DEBUG
+			Settings.&lt;init&gt;(Settings.java:77) - Allow initialization of lazy state outside session : disabled
+[2022-06-03 00:06:19.346] DEBUG
+			Settings.&lt;init&gt;(Settings.java:79) - Using BatchFetchStyle : LEGACY
+[2022-06-03 00:06:19.346] DEBUG
+			Settings.&lt;init&gt;(Settings.java:80) - Default batch fetch size: -1
+[2022-06-03 00:06:19.346] DEBUG
+			Settings.&lt;init&gt;(Settings.java:81) - Maximum outer join fetch depth: null
+[2022-06-03 00:06:19.347] DEBUG
+			Settings.&lt;init&gt;(Settings.java:82) - Default null ordering: NONE
+[2022-06-03 00:06:19.347] DEBUG
+			Settings.&lt;init&gt;(Settings.java:83) - Order SQL updates by primary key: disabled
+[2022-06-03 00:06:19.347] DEBUG
+			Settings.&lt;init&gt;(Settings.java:84) - Order SQL inserts for batching: disabled
+[2022-06-03 00:06:19.347] DEBUG
+			Settings.&lt;init&gt;(Settings.java:86) - multi-tenancy strategy : NONE
+[2022-06-03 00:06:19.347] DEBUG
+			Settings.&lt;init&gt;(Settings.java:88) - JTA Track by Thread: enabled
+[2022-06-03 00:06:19.348] DEBUG
+			Settings.&lt;init&gt;(Settings.java:90) - Query language substitutions: {}
+[2022-06-03 00:06:19.348] DEBUG
+			Settings.&lt;init&gt;(Settings.java:91) - Named query checking : enabled
+[2022-06-03 00:06:19.348] DEBUG
+			Settings.&lt;init&gt;(Settings.java:93) - Second-level cache: disabled
+[2022-06-03 00:06:19.348] DEBUG
+			Settings.&lt;init&gt;(Settings.java:94) - Second-level query cache: disabled
+[2022-06-03 00:06:19.348] DEBUG
+			Settings.&lt;init&gt;(Settings.java:95) - Second-level query cache factory: null
+[2022-06-03 00:06:19.348] DEBUG
+			Settings.&lt;init&gt;(Settings.java:96) - Second-level cache region prefix: null
+[2022-06-03 00:06:19.349] DEBUG
+			Settings.&lt;init&gt;(Settings.java:97) - Optimize second-level cache for minimal puts: disabled
+[2022-06-03 00:06:19.349] DEBUG
+			Settings.&lt;init&gt;(Settings.java:98) - Structured second-level cache entries: disabled
+[2022-06-03 00:06:19.349] DEBUG
+			Settings.&lt;init&gt;(Settings.java:99) - Second-level cache direct-reference entries: disabled
+[2022-06-03 00:06:19.349] DEBUG
+			Settings.&lt;init&gt;(Settings.java:100) - Automatic eviction of collection cache: disabled
+[2022-06-03 00:06:19.349] DEBUG
+			Settings.&lt;init&gt;(Settings.java:102) - JDBC batch size: 15
+[2022-06-03 00:06:19.349] DEBUG
+			Settings.&lt;init&gt;(Settings.java:103) - JDBC batch updates for versioned data: disabled
+[2022-06-03 00:06:19.350] DEBUG
+			Settings.&lt;init&gt;(Settings.java:104) - Scrollable result sets: enabled
+[2022-06-03 00:06:19.350] DEBUG
+			Settings.&lt;init&gt;(Settings.java:105) - Wrap result sets: disabled
+[2022-06-03 00:06:19.350] DEBUG
+			Settings.&lt;init&gt;(Settings.java:106) - JDBC3 getGeneratedKeys(): disabled
+[2022-06-03 00:06:19.350] DEBUG
+			Settings.&lt;init&gt;(Settings.java:107) - JDBC result set fetch size: null
+[2022-06-03 00:06:19.350] DEBUG
+			Settings.&lt;init&gt;(Settings.java:108) - Connection release mode: ON_CLOSE
+[2022-06-03 00:06:19.350] DEBUG
+			Settings.&lt;init&gt;(Settings.java:109) - Generate SQL with comments: enabled
+[2022-06-03 00:06:19.351] DEBUG
+			Settings.&lt;init&gt;(Settings.java:111) - JPA compliance - query : disabled
+[2022-06-03 00:06:19.351] DEBUG
+			Settings.&lt;init&gt;(Settings.java:112) - JPA compliance - closed-handling : disabled
+[2022-06-03 00:06:19.351] DEBUG
+			Settings.&lt;init&gt;(Settings.java:113) - JPA compliance - lists : disabled
+[2022-06-03 00:06:19.351] DEBUG
+			Settings.&lt;init&gt;(Settings.java:114) - JPA compliance - transactions : disabled
+[2022-06-03 00:06:19.360] DEBUG
+			ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:60) - Not known whether passed class name [com.ggomul.user.Customer] is safe
+[2022-06-03 00:06:19.360] DEBUG
+			ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:62) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.ggomul.user.Customer
+[2022-06-03 00:06:19.360] DEBUG
+			ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:60) - Not known whether passed class name [com.ggomul.user.Teacher] is safe
+[2022-06-03 00:06:19.360] DEBUG
+			ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:62) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.ggomul.user.Teacher
+[2022-06-03 00:06:19.399] DEBUG
+			SessionFactoryServiceRegistryImpl.getService(SessionFactoryServiceRegistryImpl.java:92) - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[2022-06-03 00:06:19.401] DEBUG
+			SessionFactoryServiceRegistryImpl.getService(SessionFactoryServiceRegistryImpl.java:92) - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[2022-06-03 00:06:19.413] DEBUG
+			SessionFactoryImpl.&lt;init&gt;(SessionFactoryImpl.java:276) - Session factory constructed with filter configurations : {}
+[2022-06-03 00:06:19.413] DEBUG
+			SessionFactoryImpl.&lt;init&gt;(SessionFactoryImpl.java:277) - Instantiating session factory with properties: {sun.desktop=windows, awt.toolkit=sun.awt.windows.WToolkit, hibernate.format_sql=true, hibernate.id.new_generator_mappings=true, java.specification.version=1.8, file.encoding.pkg=sun.io, sun.cpu.isalist=amd64, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.jnu.encoding=MS949, hibernate.dialect=org.hibernate.dialect.Oracle10gDialect, java.class.path=E:\0_DCOM_20220127\04_SPRING\workspace\ggomul_project\target\test-classes;E:\0_DCOM_20220127\04_SPRING\workspace\ggomul_project\target\classes;C:\Users\qmffo\.m2\repository\org\springframework\data\spring-data-jpa\2.2.5.RELEASE\spring-data-jpa-2.2.5.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\data\spring-data-commons\2.2.5.RELEASE\spring-data-commons-2.2.5.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-orm\5.2.4.RELEASE\spring-orm-5.2.4.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-aop\5.2.4.RELEASE\spring-aop-5.2.4.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-tx\5.2.4.RELEASE\spring-tx-5.2.4.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-beans\5.2.4.RELEASE\spring-beans-5.2.4.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\aspectj\aspectjrt\1.9.5\aspectjrt-1.9.5.jar;C:\Users\qmffo\.m2\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;C:\Users\qmffo\.m2\repository\org\hibernate\hibernate-entitymanager\5.6.8.Final\hibernate-entitymanager-5.6.8.Final.jar;C:\Users\qmffo\.m2\repository\org\jboss\logging\jboss-logging\3.4.3.Final\jboss-logging-3.4.3.Final.jar;C:\Users\qmffo\.m2\repository\org\hibernate\hibernate-core\5.6.8.Final\hibernate-core-5.6.8.Final.jar;C:\Users\qmffo\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\qmffo\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar;C:\Users\qmffo\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\qmffo\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\qmffo\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\qmffo\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\qmffo\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\qmffo\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\qmffo\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Users\qmffo\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\qmffo\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\qmffo\.m2\repository\net\bytebuddy\byte-buddy\1.12.9\byte-buddy-1.12.9.jar;C:\Users\qmffo\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\qmffo\.m2\repository\org\hibernate\validator\hibernate-validator\7.0.1.Final\hibernate-validator-7.0.1.Final.jar;C:\Users\qmffo\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.0\jakarta.validation-api-3.0.0.jar;C:\Users\qmffo\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\qmffo\.m2\repository\com\h2database\h2\2.1.212\h2-2.1.212.jar;C:\Users\qmffo\.m2\repository\org\assertj\assertj-core\3.22.0\assertj-core-3.22.0.jar;C:\Users\qmffo\.m2\repository\javax\mail\mail\1.4.7\mail-1.4.7.jar;C:\Users\qmffo\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\qmffo\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.2\jackson-databind-2.10.2.jar;C:\Users\qmffo\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.2\jackson-annotations-2.10.2.jar;C:\Users\qmffo\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.2\jackson-core-2.10.2.jar;C:\Users\qmffo\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\qmffo\.m2\repository\org\mybatis\mybatis\3.5.7\mybatis-3.5.7.jar;C:\Users\qmffo\.m2\repository\org\mybatis\mybatis-spring\2.0.6\mybatis-spring-2.0.6.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-context\5.2.22.RELEASE\spring-context-5.2.22.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-expression\5.2.22.RELEASE\spring-expression-5.2.22.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-core\5.2.22.RELEASE\spring-core-5.2.22.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-jcl\5.2.22.RELEASE\spring-jcl-5.2.22.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\apache\commons\commons-dbcp2\2.8.0\commons-dbcp2-2.8.0.jar;C:\Users\qmffo\.m2\repository\org\apache\commons\commons-pool2\2.8.1\commons-pool2-2.8.1.jar;C:\Users\qmffo\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-jdbc\5.3.7\spring-jdbc-5.3.7.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-web\5.2.22.RELEASE\spring-web-5.2.22.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-webmvc\5.2.22.RELEASE\spring-webmvc-5.2.22.RELEASE.jar;C:\Users\qmffo\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar;C:\Users\qmffo\.m2\repository\com\oracle\ojdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar;C:\Users\qmffo\.m2\repository\com\oracle\ojdbc\ucp\19.3.0.0\ucp-19.3.0.0.jar;C:\Users\qmffo\.m2\repository\com\oracle\ojdbc\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar;C:\Users\qmffo\.m2\repository\com\oracle\ojdbc\osdt_cert\19.3.0.0\osdt_cert-19.3.0.0.jar;C:\Users\qmffo\.m2\repository\com\oracle\ojdbc\osdt_core\19.3.0.0\osdt_core-19.3.0.0.jar;C:\Users\qmffo\.m2\repository\com\oracle\ojdbc\simplefan\19.3.0.0\simplefan-19.3.0.0.jar;C:\Users\qmffo\.m2\repository\com\oracle\ojdbc\ons\19.3.0.0\ons-19.3.0.0.jar;C:\Users\qmffo\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.2\log4j-core-2.17.2.jar;C:\Users\qmffo\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar;C:\Users\qmffo\.m2\repository\org\projectlombok\lombok\1.18.24\lombok-1.18.24.jar;C:\Users\qmffo\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\qmffo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-test\5.2.22.RELEASE\spring-test-5.2.22.RELEASE.jar;C:\Users\qmffo\.m2\repository\javax\servlet\jsp\jstl\javax.servlet.jsp.jstl-api\1.2.1\javax.servlet.jsp.jstl-api-1.2.1.jar;C:\Users\qmffo\.m2\repository\javax\servlet\jstl\1.2\jstl-1.2.jar;C:\Users\qmffo\.m2\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, user.variant=, java.vendor.url=http://java.oracle.com/, user.timezone=Asia/Seoul, jakarta.persistence.sharedCache.mode=UNSPECIFIED, os.name=Windows 10, java.vm.specification.version=1.8, javax.persistence.validation.mode=AUTO, jakarta.persistence.nonJtaDataSource=org.apache.commons.dbcp2.BasicDataSource@665df3c6, user.country=KR, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_202\jre\bin, sun.java.command=E:\0_DCOM_20220127\04_SPRING\workspace\ggomul_project\target\surefire\surefirebooter3547523644739720173.jar E:\0_DCOM_20220127\04_SPRING\workspace\ggomul_project\target\surefire\surefire6829044934419518115tmp E:\0_DCOM_20220127\04_SPRING\workspace\ggomul_project\target\surefire\surefire_06703369329925957777tmp, hibernate.use_sql_comments=true, javax.persistence.nonJtaDataSource=org.apache.commons.dbcp2.BasicDataSource@665df3c6, javax.persistence.sharedCache.mode=UNSPECIFIED, surefire.test.class.path=E:\0_DCOM_20220127\04_SPRING\workspace\ggomul_project\target\test-classes;E:\0_DCOM_20220127\04_SPRING\workspace\ggomul_project\target\classes;C:\Users\qmffo\.m2\repository\org\springframework\data\spring-data-jpa\2.2.5.RELEASE\spring-data-jpa-2.2.5.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\data\spring-data-commons\2.2.5.RELEASE\spring-data-commons-2.2.5.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-orm\5.2.4.RELEASE\spring-orm-5.2.4.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-aop\5.2.4.RELEASE\spring-aop-5.2.4.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-tx\5.2.4.RELEASE\spring-tx-5.2.4.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-beans\5.2.4.RELEASE\spring-beans-5.2.4.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\aspectj\aspectjrt\1.9.5\aspectjrt-1.9.5.jar;C:\Users\qmffo\.m2\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;C:\Users\qmffo\.m2\repository\org\hibernate\hibernate-entitymanager\5.6.8.Final\hibernate-entitymanager-5.6.8.Final.jar;C:\Users\qmffo\.m2\repository\org\jboss\logging\jboss-logging\3.4.3.Final\jboss-logging-3.4.3.Final.jar;C:\Users\qmffo\.m2\repository\org\hibernate\hibernate-core\5.6.8.Final\hibernate-core-5.6.8.Final.jar;C:\Users\qmffo\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\qmffo\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar;C:\Users\qmffo\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\qmffo\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\qmffo\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\qmffo\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\qmffo\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\qmffo\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\qmffo\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Users\qmffo\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\qmffo\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\qmffo\.m2\repository\net\bytebuddy\byte-buddy\1.12.9\byte-buddy-1.12.9.jar;C:\Users\qmffo\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\qmffo\.m2\repository\org\hibernate\validator\hibernate-validator\7.0.1.Final\hibernate-validator-7.0.1.Final.jar;C:\Users\qmffo\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.0\jakarta.validation-api-3.0.0.jar;C:\Users\qmffo\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\qmffo\.m2\repository\com\h2database\h2\2.1.212\h2-2.1.212.jar;C:\Users\qmffo\.m2\repository\org\assertj\assertj-core\3.22.0\assertj-core-3.22.0.jar;C:\Users\qmffo\.m2\repository\javax\mail\mail\1.4.7\mail-1.4.7.jar;C:\Users\qmffo\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\qmffo\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.2\jackson-databind-2.10.2.jar;C:\Users\qmffo\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.2\jackson-annotations-2.10.2.jar;C:\Users\qmffo\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.2\jackson-core-2.10.2.jar;C:\Users\qmffo\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\qmffo\.m2\repository\org\mybatis\mybatis\3.5.7\mybatis-3.5.7.jar;C:\Users\qmffo\.m2\repository\org\mybatis\mybatis-spring\2.0.6\mybatis-spring-2.0.6.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-context\5.2.22.RELEASE\spring-context-5.2.22.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-expression\5.2.22.RELEASE\spring-expression-5.2.22.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-core\5.2.22.RELEASE\spring-core-5.2.22.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-jcl\5.2.22.RELEASE\spring-jcl-5.2.22.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\apache\commons\commons-dbcp2\2.8.0\commons-dbcp2-2.8.0.jar;C:\Users\qmffo\.m2\repository\org\apache\commons\commons-pool2\2.8.1\commons-pool2-2.8.1.jar;C:\Users\qmffo\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-jdbc\5.3.7\spring-jdbc-5.3.7.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-web\5.2.22.RELEASE\spring-web-5.2.22.RELEASE.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-webmvc\5.2.22.RELEASE\spring-webmvc-5.2.22.RELEASE.jar;C:\Users\qmffo\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar;C:\Users\qmffo\.m2\repository\com\oracle\ojdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar;C:\Users\qmffo\.m2\repository\com\oracle\ojdbc\ucp\19.3.0.0\ucp-19.3.0.0.jar;C:\Users\qmffo\.m2\repository\com\oracle\ojdbc\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar;C:\Users\qmffo\.m2\repository\com\oracle\ojdbc\osdt_cert\19.3.0.0\osdt_cert-19.3.0.0.jar;C:\Users\qmffo\.m2\repository\com\oracle\ojdbc\osdt_core\19.3.0.0\osdt_core-19.3.0.0.jar;C:\Users\qmffo\.m2\repository\com\oracle\ojdbc\simplefan\19.3.0.0\simplefan-19.3.0.0.jar;C:\Users\qmffo\.m2\repository\com\oracle\ojdbc\ons\19.3.0.0\ons-19.3.0.0.jar;C:\Users\qmffo\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.2\log4j-core-2.17.2.jar;C:\Users\qmffo\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar;C:\Users\qmffo\.m2\repository\org\projectlombok\lombok\1.18.24\lombok-1.18.24.jar;C:\Users\qmffo\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\qmffo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\qmffo\.m2\repository\org\springframework\spring-test\5.2.22.RELEASE\spring-test-5.2.22.RELEASE.jar;C:\Users\qmffo\.m2\repository\javax\servlet\jsp\jstl\javax.servlet.jsp.jstl-api\1.2.1\javax.servlet.jsp.jstl-api-1.2.1.jar;C:\Users\qmffo\.m2\repository\javax\servlet\jstl\1.2\jstl-1.2.jar;C:\Users\qmffo\.m2\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;, sun.cpu.endian=little, user.home=C:\Users\qmffo, user.language=ko, java.specification.vendor=Oracle Corporation, java.home=C:\Program Files\Java\jdk1.8.0_202\jre, basedir=E:\0_DCOM_20220127\04_SPRING\workspace\ggomul_project, file.separator=\, style.color=always, line.separator=
+, hibernate.persistenceUnitName=jpa-sql, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, surefire.real.class.path=E:\0_DCOM_20220127\04_SPRING\workspace\ggomul_project\target\surefire\surefirebooter3547523644739720173.jar, jakarta.persistence.validation.mode=AUTO, sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\classes, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=1.8.0_202-b08, user.name=qmffo, path.separator=;, os.version=10.0, java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_202\jre\lib\endorsed, java.runtime.name=Java(TM) SE Runtime Environment, file.encoding=MS949, hibernate.ejb.persistenceUnitName=jpa-sql, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=true, localRepository=C:\Users\qmffo\.m2\repository, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, java.io.tmpdir=C:\Users\qmffo\AppData\Local\Temp\, java.version=1.8.0_202, user.dir=E:\0_DCOM_20220127\04_SPRING\workspace\ggomul_project, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.awt.windows.WPrinterJob, sun.os.patch.level=, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.registry.StandardServiceRegistryBuilder$1@4397a639, java.library.path=C:\Program Files\Java\jdk1.8.0_202\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Program Files/Java/jdk1.8.0_202/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_202/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_202/bin/../jre/lib/amd64;C:\app\qmffo\product\18.0.0\dbhomeXE\bin;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\apache-maven-3.8.5\bin;C:\Program Files\nodejs\;C:\Users\qmffo\AppData\Local\Microsoft\WindowsApps;C:\Users\qmffo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\qmffo\AppData\Roaming\npm;E:\0_DCOM_20220127\04_SPRING\app\spring-tool-suite-3.9.14\sts-bundle\sts-3.9.14.RELEASE;;., java.vendor=Oracle Corporation, java.vm.info=mixed mode, java.vm.version=25.202-b08, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeLittle, java.ext.dirs=C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext;C:\windows\Sun\Java\lib\ext, hibernate.connection.datasource=org.apache.commons.dbcp2.BasicDataSource@665df3c6, java.class.version=52.0}
+[2022-06-03 00:06:19.430] DEBUG
+			ServiceBinding.setService(ServiceBinding.java:68) - Overriding existing service binding [org.hibernate.engine.jdbc.connections.spi.ConnectionProvider]
+[2022-06-03 00:06:19.431] WARN 
+			AbstractApplicationContext.refresh(AbstractApplicationContext.java:559) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;entityManagerFactory&apos; defined in com.ggomul.config.RootContext: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/validation/ValidatorFactory
+[2022-06-03 00:06:19.435] ERROR
+			TestContextManager.prepareTestInstance(TestContextManager.java:252) - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@61386958] to prepare test instance [com.ggomul.persistence.JoinUserTest@1613674b]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) ~[?:?]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) ~[?:?]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) ~[?:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) ~[surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) ~[surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) ~[surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) ~[surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) ~[surefire-booter-2.12.4.jar:2.12.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;entityManagerFactory&apos; defined in com.ggomul.config.RootContext: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/validation/ValidatorFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:127) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:275) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:243) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 32 more
+Caused by: java.lang.NoClassDefFoundError: javax/validation/ValidatorFactory
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[?:1.8.0_202]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701) ~[?:1.8.0_202]
+	at java.lang.Class.privateGetMethodRecursive(Class.java:3048) ~[?:1.8.0_202]
+	at java.lang.Class.getMethod0(Class.java:3018) ~[?:1.8.0_202]
+	at java.lang.Class.getMethod(Class.java:1784) ~[?:1.8.0_202]
+	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:113) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.internal.SessionFactoryImpl.&lt;init&gt;(SessionFactoryImpl.java:300) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:127) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:275) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:243) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 32 more
+Caused by: java.lang.ClassNotFoundException: javax.validation.ValidatorFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[?:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_202]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349) ~[?:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_202]
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[?:1.8.0_202]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701) ~[?:1.8.0_202]
+	at java.lang.Class.privateGetMethodRecursive(Class.java:3048) ~[?:1.8.0_202]
+	at java.lang.Class.getMethod0(Class.java:3018) ~[?:1.8.0_202]
+	at java.lang.Class.getMethod(Class.java:1784) ~[?:1.8.0_202]
+	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:113) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.internal.SessionFactoryImpl.&lt;init&gt;(SessionFactoryImpl.java:300) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:127) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:275) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:243) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 32 more
+</system-out>
+    <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+</system-err>
+  </testcase>
+</testsuite>

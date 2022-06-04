@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ggomul.mappers.JoinMapper">
+	<resultMap type="User" id="UserMap">
+		<result column="user_no" property="no" />
+		<result column="dateBirth" property="dateBirth" />
+	</resultMap>
+
+	<insert id="insert" parameterType="User" useGeneratedKeys="true"
+		keyColumn="user_no" keyProperty="no">
+		INSERT INTO USER_TB(
+		type_no,
+		name,
+		email,
+		password,
+		tel,
+		date_birth,
+		gender,
+		address,
+		detail_address)
+		VALUES
+		(#{type_no}, #{name}, #{email}, #{password}, #{tel}, #{date_birth},
+		#{gender}, #{address}, #{detail_address})
+	</insert>
+
+	<insert id="teacherInsert" parameterType="Map">
+		<selectKey resultType="int" keyProperty="no" order="BEFORE">
+			SELECT	MAX(no)+1 FROM USER_TB
+		</selectKey>
+		INSERT INTO TEACHER_TB(
+		branch_no,
+		profile_photo,
+		name_bank,
+		account_number)
+		VALUES (#{branch_no}, #{profile_photo}, #{name_bank}, #{account_number})
+	</insert>
+
+	<insert id="customerInsert">
+		<selectKey resultType="int" keyProperty="no" order="BEFORE">
+			SELECT	MAX(no)+1 FROM USER_TB
+		</selectKey>
+		INSERT INTO CUSTOMER_TB(nickname)
+		VALUES (#{nickname})
+	</insert>
+
+	<!-- EMAIL 중복 -->
+	<select id="checkOverEmail" parameterType="String"
+		resultType="int">
+		SELECT count(*) FROM USER_TB WHERE email=#{email}
+	</select>
+
+	<!-- 전화번호 중복 -->
+	<select id="checkOverTel" parameterType="String"
+		resultType="int">
+		SELECT count(*) FROM USER_TB WHERE tel=#{tel}
+	</select>
+
+	<!-- 이메일 인증 체크 -->
+	<select id="emailConfirm" parameterType="String" resultType="boolean">
+		UPDATE USER_TB SET email_confirm = 1
+	</select>
+	
+	<!-- 가입 조회 -->
+	<select id="findById" resultType="User">
+	   SELECT *
+	   FROM user_tb
+	   WHERE email = #{email}
+	</select>
+	
+	<!-- 이메일, 비밀번호로 조회 -->
+	<select id="readWithPw" resultType="User">
+	   SELECT *
+	   FROM user_tb
+	   WHERE email = #{email} AND password = #{password}
+	</select>
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD SQL Map Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="true" /> <!-- 설정에서 각 매퍼에 설정된 캐시를 전역적으로 사용할지 말지에 대한 여부 -->
+		<setting name="lazyLoadingEnabled" value="true" /> <!-- 지연로딩을 사용할지에 대한 여부 -->
+		<setting name="multipleResultSetsEnabled" value="false" /> <!-- 한개의 구문에서 여러개의 ResultSet을 허용할지의 여부 -->
+		<setting name="defaultExecutorType" value="SIMPLE" /> <!-- 디폴트 실행자(executor) 설정. SIMPLE 실행자는 특별히 하는 것이 없다. -->
+		<setting name="jdbcTypeForNull" value="VARCHAR" /> <!-- JDBC타입을 파라미터에 제공하지 않을때 null값을 처리한 JDBC타입을 명시 -->
+		<!-- 가져온 값이 null일때 setter나 맵의 put 메소드를 호출할지를 명시, Map.keySet() 이나 null값을 초기화할때 유용 -->
+		<setting name="callSettersOnNulls" value="true" /> 
+<!-- 		<setting name="mapUnderscoreToCamelCase" value="true" /> 카멜 케이스로 자동으로 매핑 -->
+	</settings>
+	
+	<typeAliases>
+		<typeAlias alias="HMap" type="java.util.HashMap" />
+		<typeAlias alias="user" type="com.ggomul.user.User" />
+	</typeAliases>
+	
+<!-- 	<plugins> -->
+<!-- 		<plugin interceptor="test.common.interceptor.LogInterceptor" /> -->
+<!-- 	</plugins> -->
+	
+</configuration>
