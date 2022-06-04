@@ -1,8 +1,11 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import "./asset/style.scss";
-import Home from "./component/Home";
-import Test from "./test";
+import Home from "./components/Home";
+import Login from './pages/Login/Login';
+import Select from './pages/Register/Select';
+import Register from './pages/Register/Register';
+import Mypage from './pages/Mypage/Mypage';
 // import modalTest from "./components/modalTest"
 
 
@@ -20,7 +23,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/test" element={<Test />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Select />} />
+      <Route path="/register/:type" element={<Register />} />
+      <Route path="/mypage" element={<Mypage />} />
     </Routes>
   )
 }

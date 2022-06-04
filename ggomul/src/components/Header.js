@@ -11,7 +11,7 @@ const Header = () => {
         <div className="logo">GGOMUL</div>
     
         <div className="header_option">
-        <span className="login" onClick={() => navigate("/test")}>로그인</span>
+        <span className="login" onClick={() => navigate("/login")}>로그인</span>
         <span className="join" onClick={() => navigate("/")}>회원가입</span>
         <span className="icon"><GoThreeBars/></span>
         </div>
