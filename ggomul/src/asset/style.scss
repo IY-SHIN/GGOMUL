@@ -1,8 +1,29 @@
+@mixin horizontal($display, $justify) {
+  display: $display;
+  justify-content: $justify;
+}
+
+@mixin button-style ($color, $backcolor) {
+  border: none;
+  color: $color;
+  background-color: $backcolor;
+}
+
+@mixin botton-hover {
+  &:hover {
+      background-color: white;
+      color: black;
+      border-width: 1px;
+      border-style: solid;
+      cursor: pointer;
+  }
+}
+
 
 .header {
 height: 50px;
 display: flex;
-position: fixed;
+position: sticky;
 align-items: center;
 background-color:#f7e600;
 z-index: 100;
@@ -13,33 +34,63 @@ justify-content: space-between;
 }
 
 .logo {
-  width: 100px;
-  object-fit: contain;
-  margin: 0 20px;
+  color: rgb(58, 95, 58);
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  flex-grow: 1;
 }
 
 
 .header_option {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-left: 20px;
-  margin-right: 20px;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
 }
 
-.login {
-  padding: 15px;
+.header-links {
+  color:rgb(58, 95, 58);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
 }
 
-.join {
-  padding: 15px;
+.header-links:hover{
+  border: 1px solid #1a8a24;
 }
 
-.icon {
-    background-color: #1a8a24;
-    padding: 15px;
-    height: 15px;
-  }
+
+.fa-code {
+  margin-left: 1rem;
+}
+
+
+// @media screen and (max-widht: 960px) {
+//   .header_option {
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     border-top: 1px solid #fff;
+//     position: absolute;
+//     top: 80px;
+//     opacity: 0;
+//   }
+// }
+
+.nav-icon {
+  display: black;
+  position: absolute;
+  top: -20px;
+  right: 0;
+  transform: translate(-100%, 60%);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
 
 
 .footer {
