@@ -18,20 +18,4 @@ public class JoinService {
 		this.userMapper = userMapper;
 	}
 	
-	@Transactional
-	public User save(User user) {
-		User user1=User.builder()
-				.typeNo(user.getTypeNo())
-				.name(user.getName())
-				.email(user.getEmail())
-				.password(user.getPassword())
-				.tel(user.getTel())
-				.dateBirth(user.getDateBirth())
-				.gender(user.getGender())
-				.address(user.getAddress())
-				.detailAddress(user.getDetailAddress())
-				.signDt(user.getSignDt()).build();
-		
-		return joinuserRepository.save(user);
-	}
 }

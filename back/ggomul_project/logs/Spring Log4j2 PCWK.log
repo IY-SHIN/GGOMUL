@@ -1,515 +1,924 @@
-[2022-06-04 23:08:03.240] DEBUG
-			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.256] DEBUG
-			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.256] DEBUG
-			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
-    - Returns
-       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
-          - EntityAttributeFetchImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:1>, path=com.ggomul.user.Customer.teacher)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
-          - SQL table alias mapping - customer0_
-          - alias suffix - 0_
-          - suffixed key columns - {no2_2_0_}
-          - JOIN (JoinDefinedByMetadata(teacher)) : <gen:0> -> <gen:1>
-             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.ggomul.user.Teacher)
-                - SQL table alias mapping - teacher1_
-                - alias suffix - 1_
-                - suffixed key columns - {no1_1_1_}
-
-[2022-06-04 23:08:03.256] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [READ]: select customer0_.no as no2_2_0_, customer0_1_.activate_key as activate_key3_2_0_, customer0_1_.address as address4_2_0_, customer0_1_.date_birth as date_birth5_2_0_, customer0_1_.detail_address as detail_address6_2_0_, customer0_1_.email as email7_2_0_, customer0_1_.email_confirm as email_confirm8_2_0_, customer0_1_.gender as gender9_2_0_, customer0_1_.name as name10_2_0_, customer0_1_.password as password11_2_0_, customer0_1_.resign as resign12_2_0_, customer0_1_.sign_dt as sign_dt13_2_0_, customer0_1_.tel as tel14_2_0_, customer0_1_.type_no as type_no15_2_0_, customer0_.nickname as nickname1_0_0_, teacher1_.no as no1_1_1_, teacher1_.account_number as account_number2_1_1_, teacher1_.branch_no as branch_no3_1_1_, teacher1_.name_bank as name_bank4_1_1_, teacher1_.profile_photo as profile_photo5_1_1_ from Customer customer0_ inner join USER_TB customer0_1_ on customer0_.no=customer0_1_.no left outer join TEACHER_TB teacher1_ on customer0_1_.no=teacher1_.no where customer0_.no=?
-[2022-06-04 23:08:03.256] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@e95595b]
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.464] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.470] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.470] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.470] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.470] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.471] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.471] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.471] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.471] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.471] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.471] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
-[2022-06-04 23:08:03.256] DEBUG
-			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : teacher
-[2022-06-04 23:08:03.256] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7e4579c7]
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.471] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.471] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.471] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.472] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.472] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.256] DEBUG
-			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+[2022-06-06 20:04:49.472] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.User)
     - Returns
-       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
-          - EntityAttributeFetchImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:1>, path=com.ggomul.user.Customer.teacher)
+       - EntityReturnImpl(entity=com.ggomul.user.User, querySpaceUid=<gen:0>, path=com.ggomul.user.User)
     - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
-          - SQL table alias mapping - customer0_
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.User)
+          - SQL table alias mapping - user0_
           - alias suffix - 0_
-          - suffixed key columns - {no2_2_0_}
+          - suffixed key columns - {no2_1_0_}
 
-[2022-06-04 23:08:03.256] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [UPGRADE]: select customer0_.no as no2_2_0_, customer0_1_.activate_key as activate_key3_2_0_, customer0_1_.address as address4_2_0_, customer0_1_.date_birth as date_birth5_2_0_, customer0_1_.detail_address as detail_address6_2_0_, customer0_1_.email as email7_2_0_, customer0_1_.email_confirm as email_confirm8_2_0_, customer0_1_.gender as gender9_2_0_, customer0_1_.name as name10_2_0_, customer0_1_.password as password11_2_0_, customer0_1_.resign as resign12_2_0_, customer0_1_.sign_dt as sign_dt13_2_0_, customer0_1_.tel as tel14_2_0_, customer0_1_.type_no as type_no15_2_0_, customer0_.nickname as nickname1_0_0_ from Customer customer0_ inner join USER_TB customer0_1_ on customer0_.no=customer0_1_.no where customer0_.no=? for update
-[2022-06-04 23:08:03.256] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@796f632b]
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.472] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.User [UPGRADE_NOWAIT]: select user0_.no as no2_1_0_, user0_.activate_key as activate_key3_1_0_, user0_.address as address4_1_0_, user0_.date_birth as date_birth5_1_0_, user0_.detail_address as detail_address6_1_0_, user0_.email as email7_1_0_, user0_.email_confirm as email_confirm8_1_0_, user0_.gender as gender9_1_0_, user0_.name as name10_1_0_, user0_.password as password11_1_0_, user0_.resign as resign12_1_0_, user0_.sign_dt as sign_dt13_1_0_, user0_.tel as tel14_1_0_, user0_.type_no as type_no15_1_0_, user0_.nickname as nickname16_1_0_, user0_.DTYPE as DTYPE1_1_0_ from USER_TB user0_ where user0_.no=? for update nowait
+[2022-06-06 20:04:49.472] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@23c767e6]
+[2022-06-06 20:04:49.472] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.473] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.473] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.473] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.473] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.473] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.474] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.474] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.474] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.474] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.474] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
-[2022-06-04 23:08:03.256] DEBUG
-			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : teacher
-[2022-06-04 23:08:03.256] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@cedee22]
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.474] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.474] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.474] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
-[2022-06-04 23:08:03.256] DEBUG
+[2022-06-06 20:04:49.475] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.475] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.271] DEBUG
-			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+[2022-06-06 20:04:49.475] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.User)
     - Returns
-       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
-          - EntityAttributeFetchImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:1>, path=com.ggomul.user.Customer.teacher)
+       - EntityReturnImpl(entity=com.ggomul.user.User, querySpaceUid=<gen:0>, path=com.ggomul.user.User)
     - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
-          - SQL table alias mapping - customer0_
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.User)
+          - SQL table alias mapping - user0_
           - alias suffix - 0_
-          - suffixed key columns - {no2_2_0_}
+          - suffixed key columns - {no2_1_0_}
 
-[2022-06-04 23:08:03.271] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [UPGRADE_NOWAIT]: select customer0_.no as no2_2_0_, customer0_1_.activate_key as activate_key3_2_0_, customer0_1_.address as address4_2_0_, customer0_1_.date_birth as date_birth5_2_0_, customer0_1_.detail_address as detail_address6_2_0_, customer0_1_.email as email7_2_0_, customer0_1_.email_confirm as email_confirm8_2_0_, customer0_1_.gender as gender9_2_0_, customer0_1_.name as name10_2_0_, customer0_1_.password as password11_2_0_, customer0_1_.resign as resign12_2_0_, customer0_1_.sign_dt as sign_dt13_2_0_, customer0_1_.tel as tel14_2_0_, customer0_1_.type_no as type_no15_2_0_, customer0_.nickname as nickname1_0_0_ from Customer customer0_ inner join USER_TB customer0_1_ on customer0_.no=customer0_1_.no where customer0_.no=? for update nowait
-[2022-06-04 23:08:03.271] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@59b32539]
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.475] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.User [UPGRADE_SKIPLOCKED]: select user0_.no as no2_1_0_, user0_.activate_key as activate_key3_1_0_, user0_.address as address4_1_0_, user0_.date_birth as date_birth5_1_0_, user0_.detail_address as detail_address6_1_0_, user0_.email as email7_1_0_, user0_.email_confirm as email_confirm8_1_0_, user0_.gender as gender9_1_0_, user0_.name as name10_1_0_, user0_.password as password11_1_0_, user0_.resign as resign12_1_0_, user0_.sign_dt as sign_dt13_1_0_, user0_.tel as tel14_1_0_, user0_.type_no as type_no15_1_0_, user0_.nickname as nickname16_1_0_, user0_.DTYPE as DTYPE1_1_0_ from USER_TB user0_ where user0_.no=? for update skip locked
+[2022-06-06 20:04:49.475] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@19e21f89]
+[2022-06-06 20:04:49.475] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.475] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.476] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.476] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.476] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.476] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.476] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.477] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.477] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.477] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.477] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
-[2022-06-04 23:08:03.271] DEBUG
-			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : teacher
-[2022-06-04 23:08:03.271] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@233db8e9]
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.477] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.477] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.477] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.477] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.477] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.271] DEBUG
-			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+[2022-06-06 20:04:49.478] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.User)
     - Returns
-       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
-          - EntityAttributeFetchImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:1>, path=com.ggomul.user.Customer.teacher)
+       - EntityReturnImpl(entity=com.ggomul.user.User, querySpaceUid=<gen:0>, path=com.ggomul.user.User)
     - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
-          - SQL table alias mapping - customer0_
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.User)
+          - SQL table alias mapping - user0_
           - alias suffix - 0_
-          - suffixed key columns - {no2_2_0_}
+          - suffixed key columns - {no2_1_0_}
 
-[2022-06-04 23:08:03.271] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [UPGRADE_SKIPLOCKED]: select customer0_.no as no2_2_0_, customer0_1_.activate_key as activate_key3_2_0_, customer0_1_.address as address4_2_0_, customer0_1_.date_birth as date_birth5_2_0_, customer0_1_.detail_address as detail_address6_2_0_, customer0_1_.email as email7_2_0_, customer0_1_.email_confirm as email_confirm8_2_0_, customer0_1_.gender as gender9_2_0_, customer0_1_.name as name10_2_0_, customer0_1_.password as password11_2_0_, customer0_1_.resign as resign12_2_0_, customer0_1_.sign_dt as sign_dt13_2_0_, customer0_1_.tel as tel14_2_0_, customer0_1_.type_no as type_no15_2_0_, customer0_.nickname as nickname1_0_0_ from Customer customer0_ inner join USER_TB customer0_1_ on customer0_.no=customer0_1_.no where customer0_.no=? for update skip locked
-[2022-06-04 23:08:03.271] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@40c2ce52]
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.478] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.User [FORCE]: select user0_.no as no2_1_0_, user0_.activate_key as activate_key3_1_0_, user0_.address as address4_1_0_, user0_.date_birth as date_birth5_1_0_, user0_.detail_address as detail_address6_1_0_, user0_.email as email7_1_0_, user0_.email_confirm as email_confirm8_1_0_, user0_.gender as gender9_1_0_, user0_.name as name10_1_0_, user0_.password as password11_1_0_, user0_.resign as resign12_1_0_, user0_.sign_dt as sign_dt13_1_0_, user0_.tel as tel14_1_0_, user0_.type_no as type_no15_1_0_, user0_.nickname as nickname16_1_0_, user0_.DTYPE as DTYPE1_1_0_ from USER_TB user0_ where user0_.no=? for update nowait
+[2022-06-06 20:04:49.478] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@29079032]
+[2022-06-06 20:04:49.478] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.478] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.478] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.478] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.478] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.478] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.478] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.479] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.479] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.479] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.479] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
-[2022-06-04 23:08:03.271] DEBUG
-			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : teacher
-[2022-06-04 23:08:03.271] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@60a7e509]
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.479] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.479] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.479] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.479] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.479] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.271] DEBUG
-			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+[2022-06-06 20:04:49.480] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.User)
     - Returns
-       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
-          - EntityAttributeFetchImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:1>, path=com.ggomul.user.Customer.teacher)
+       - EntityReturnImpl(entity=com.ggomul.user.User, querySpaceUid=<gen:0>, path=com.ggomul.user.User)
     - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
-          - SQL table alias mapping - customer0_
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.User)
+          - SQL table alias mapping - user0_
           - alias suffix - 0_
-          - suffixed key columns - {no2_2_0_}
+          - suffixed key columns - {no2_1_0_}
 
-[2022-06-04 23:08:03.271] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [FORCE]: select customer0_.no as no2_2_0_, customer0_1_.activate_key as activate_key3_2_0_, customer0_1_.address as address4_2_0_, customer0_1_.date_birth as date_birth5_2_0_, customer0_1_.detail_address as detail_address6_2_0_, customer0_1_.email as email7_2_0_, customer0_1_.email_confirm as email_confirm8_2_0_, customer0_1_.gender as gender9_2_0_, customer0_1_.name as name10_2_0_, customer0_1_.password as password11_2_0_, customer0_1_.resign as resign12_2_0_, customer0_1_.sign_dt as sign_dt13_2_0_, customer0_1_.tel as tel14_2_0_, customer0_1_.type_no as type_no15_2_0_, customer0_.nickname as nickname1_0_0_ from Customer customer0_ inner join USER_TB customer0_1_ on customer0_.no=customer0_1_.no where customer0_.no=? for update nowait
-[2022-06-04 23:08:03.271] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2e13f304]
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.480] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.User [PESSIMISTIC_READ]: select user0_.no as no2_1_0_, user0_.activate_key as activate_key3_1_0_, user0_.address as address4_1_0_, user0_.date_birth as date_birth5_1_0_, user0_.detail_address as detail_address6_1_0_, user0_.email as email7_1_0_, user0_.email_confirm as email_confirm8_1_0_, user0_.gender as gender9_1_0_, user0_.name as name10_1_0_, user0_.password as password11_1_0_, user0_.resign as resign12_1_0_, user0_.sign_dt as sign_dt13_1_0_, user0_.tel as tel14_1_0_, user0_.type_no as type_no15_1_0_, user0_.nickname as nickname16_1_0_, user0_.DTYPE as DTYPE1_1_0_ from USER_TB user0_ where user0_.no=? for update
+[2022-06-06 20:04:49.480] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@776015fc]
+[2022-06-06 20:04:49.480] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.480] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.480] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.480] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.480] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.480] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.481] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.481] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.481] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.481] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.481] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
-[2022-06-04 23:08:03.271] DEBUG
-			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : teacher
-[2022-06-04 23:08:03.271] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3d24420b]
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.481] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.481] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.481] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.481] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.482] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.271] DEBUG
-			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+[2022-06-06 20:04:49.482] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.User)
     - Returns
-       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
-          - EntityAttributeFetchImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:1>, path=com.ggomul.user.Customer.teacher)
+       - EntityReturnImpl(entity=com.ggomul.user.User, querySpaceUid=<gen:0>, path=com.ggomul.user.User)
     - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
-          - SQL table alias mapping - customer0_
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.User)
+          - SQL table alias mapping - user0_
           - alias suffix - 0_
-          - suffixed key columns - {no2_2_0_}
+          - suffixed key columns - {no2_1_0_}
 
-[2022-06-04 23:08:03.271] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [PESSIMISTIC_READ]: select customer0_.no as no2_2_0_, customer0_1_.activate_key as activate_key3_2_0_, customer0_1_.address as address4_2_0_, customer0_1_.date_birth as date_birth5_2_0_, customer0_1_.detail_address as detail_address6_2_0_, customer0_1_.email as email7_2_0_, customer0_1_.email_confirm as email_confirm8_2_0_, customer0_1_.gender as gender9_2_0_, customer0_1_.name as name10_2_0_, customer0_1_.password as password11_2_0_, customer0_1_.resign as resign12_2_0_, customer0_1_.sign_dt as sign_dt13_2_0_, customer0_1_.tel as tel14_2_0_, customer0_1_.type_no as type_no15_2_0_, customer0_.nickname as nickname1_0_0_ from Customer customer0_ inner join USER_TB customer0_1_ on customer0_.no=customer0_1_.no where customer0_.no=? for update
-[2022-06-04 23:08:03.271] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6274670b]
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.482] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.User [PESSIMISTIC_WRITE]: select user0_.no as no2_1_0_, user0_.activate_key as activate_key3_1_0_, user0_.address as address4_1_0_, user0_.date_birth as date_birth5_1_0_, user0_.detail_address as detail_address6_1_0_, user0_.email as email7_1_0_, user0_.email_confirm as email_confirm8_1_0_, user0_.gender as gender9_1_0_, user0_.name as name10_1_0_, user0_.password as password11_1_0_, user0_.resign as resign12_1_0_, user0_.sign_dt as sign_dt13_1_0_, user0_.tel as tel14_1_0_, user0_.type_no as type_no15_1_0_, user0_.nickname as nickname16_1_0_, user0_.DTYPE as DTYPE1_1_0_ from USER_TB user0_ where user0_.no=? for update
+[2022-06-06 20:04:49.482] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6ad179b4]
+[2022-06-06 20:04:49.482] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.482] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.483] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.483] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.483] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.483] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.483] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.483] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.483] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.483] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.483] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
-[2022-06-04 23:08:03.271] DEBUG
-			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : teacher
-[2022-06-04 23:08:03.271] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@32d5279]
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.483] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.483] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.484] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.484] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.484] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.271] DEBUG
-			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+[2022-06-06 20:04:49.484] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.User)
     - Returns
-       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
-          - EntityAttributeFetchImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:1>, path=com.ggomul.user.Customer.teacher)
+       - EntityReturnImpl(entity=com.ggomul.user.User, querySpaceUid=<gen:0>, path=com.ggomul.user.User)
     - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
-          - SQL table alias mapping - customer0_
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.User)
+          - SQL table alias mapping - user0_
           - alias suffix - 0_
-          - suffixed key columns - {no2_2_0_}
+          - suffixed key columns - {no2_1_0_}
 
-[2022-06-04 23:08:03.271] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [PESSIMISTIC_WRITE]: select customer0_.no as no2_2_0_, customer0_1_.activate_key as activate_key3_2_0_, customer0_1_.address as address4_2_0_, customer0_1_.date_birth as date_birth5_2_0_, customer0_1_.detail_address as detail_address6_2_0_, customer0_1_.email as email7_2_0_, customer0_1_.email_confirm as email_confirm8_2_0_, customer0_1_.gender as gender9_2_0_, customer0_1_.name as name10_2_0_, customer0_1_.password as password11_2_0_, customer0_1_.resign as resign12_2_0_, customer0_1_.sign_dt as sign_dt13_2_0_, customer0_1_.tel as tel14_2_0_, customer0_1_.type_no as type_no15_2_0_, customer0_.nickname as nickname1_0_0_ from Customer customer0_ inner join USER_TB customer0_1_ on customer0_.no=customer0_1_.no where customer0_.no=? for update
-[2022-06-04 23:08:03.271] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1c067c0d]
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.484] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.User [PESSIMISTIC_FORCE_INCREMENT]: select user0_.no as no2_1_0_, user0_.activate_key as activate_key3_1_0_, user0_.address as address4_1_0_, user0_.date_birth as date_birth5_1_0_, user0_.detail_address as detail_address6_1_0_, user0_.email as email7_1_0_, user0_.email_confirm as email_confirm8_1_0_, user0_.gender as gender9_1_0_, user0_.name as name10_1_0_, user0_.password as password11_1_0_, user0_.resign as resign12_1_0_, user0_.sign_dt as sign_dt13_1_0_, user0_.tel as tel14_1_0_, user0_.type_no as type_no15_1_0_, user0_.nickname as nickname16_1_0_, user0_.DTYPE as DTYPE1_1_0_ from USER_TB user0_ where user0_.no=? for update nowait
+[2022-06-06 20:04:49.484] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@59c500f7]
+[2022-06-06 20:04:49.485] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.485] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.485] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.485] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.485] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
-[2022-06-04 23:08:03.271] DEBUG
+[2022-06-06 20:04:49.485] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.485] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.485] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.485] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.485] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.486] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
-[2022-06-04 23:08:03.287] DEBUG
-			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : teacher
-[2022-06-04 23:08:03.287] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7f7b6639]
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.486] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.486] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.486] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.486] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.486] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.287] DEBUG
-			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+[2022-06-06 20:04:49.486] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.User)
     - Returns
-       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
-          - EntityAttributeFetchImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:1>, path=com.ggomul.user.Customer.teacher)
+       - EntityReturnImpl(entity=com.ggomul.user.User, querySpaceUid=<gen:0>, path=com.ggomul.user.User)
     - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
-          - SQL table alias mapping - customer0_
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.User)
+          - SQL table alias mapping - user0_
           - alias suffix - 0_
-          - suffixed key columns - {no2_2_0_}
+          - suffixed key columns - {no2_1_0_}
 
-[2022-06-04 23:08:03.287] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [PESSIMISTIC_FORCE_INCREMENT]: select customer0_.no as no2_2_0_, customer0_1_.activate_key as activate_key3_2_0_, customer0_1_.address as address4_2_0_, customer0_1_.date_birth as date_birth5_2_0_, customer0_1_.detail_address as detail_address6_2_0_, customer0_1_.email as email7_2_0_, customer0_1_.email_confirm as email_confirm8_2_0_, customer0_1_.gender as gender9_2_0_, customer0_1_.name as name10_2_0_, customer0_1_.password as password11_2_0_, customer0_1_.resign as resign12_2_0_, customer0_1_.sign_dt as sign_dt13_2_0_, customer0_1_.tel as tel14_2_0_, customer0_1_.type_no as type_no15_2_0_, customer0_.nickname as nickname1_0_0_ from Customer customer0_ inner join USER_TB customer0_1_ on customer0_.no=customer0_1_.no where customer0_.no=? for update nowait
-[2022-06-04 23:08:03.287] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@16ac5d35]
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.486] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.User [OPTIMISTIC]: select user0_.no as no2_1_0_, user0_.activate_key as activate_key3_1_0_, user0_.address as address4_1_0_, user0_.date_birth as date_birth5_1_0_, user0_.detail_address as detail_address6_1_0_, user0_.email as email7_1_0_, user0_.email_confirm as email_confirm8_1_0_, user0_.gender as gender9_1_0_, user0_.name as name10_1_0_, user0_.password as password11_1_0_, user0_.resign as resign12_1_0_, user0_.sign_dt as sign_dt13_1_0_, user0_.tel as tel14_1_0_, user0_.type_no as type_no15_1_0_, user0_.nickname as nickname16_1_0_, user0_.DTYPE as DTYPE1_1_0_ from USER_TB user0_ where user0_.no=?
+[2022-06-06 20:04:49.487] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@50110971]
+[2022-06-06 20:04:49.487] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.487] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.487] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.487] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.487] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.487] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.487] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.487] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.488] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.488] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.488] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
-[2022-06-04 23:08:03.287] DEBUG
-			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : teacher
-[2022-06-04 23:08:03.287] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3c0e00a8]
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.488] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.488] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.488] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.488] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.488] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.287] DEBUG
-			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+[2022-06-06 20:04:49.489] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.User)
     - Returns
-       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
-          - EntityAttributeFetchImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:1>, path=com.ggomul.user.Customer.teacher)
+       - EntityReturnImpl(entity=com.ggomul.user.User, querySpaceUid=<gen:0>, path=com.ggomul.user.User)
     - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
-          - SQL table alias mapping - customer0_
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.User)
+          - SQL table alias mapping - user0_
           - alias suffix - 0_
-          - suffixed key columns - {no2_2_0_}
+          - suffixed key columns - {no2_1_0_}
 
-[2022-06-04 23:08:03.287] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [OPTIMISTIC]: select customer0_.no as no2_2_0_, customer0_1_.activate_key as activate_key3_2_0_, customer0_1_.address as address4_2_0_, customer0_1_.date_birth as date_birth5_2_0_, customer0_1_.detail_address as detail_address6_2_0_, customer0_1_.email as email7_2_0_, customer0_1_.email_confirm as email_confirm8_2_0_, customer0_1_.gender as gender9_2_0_, customer0_1_.name as name10_2_0_, customer0_1_.password as password11_2_0_, customer0_1_.resign as resign12_2_0_, customer0_1_.sign_dt as sign_dt13_2_0_, customer0_1_.tel as tel14_2_0_, customer0_1_.type_no as type_no15_2_0_, customer0_.nickname as nickname1_0_0_ from Customer customer0_ inner join USER_TB customer0_1_ on customer0_.no=customer0_1_.no where customer0_.no=?
-[2022-06-04 23:08:03.287] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1860f3be]
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.489] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.User [OPTIMISTIC_FORCE_INCREMENT]: select user0_.no as no2_1_0_, user0_.activate_key as activate_key3_1_0_, user0_.address as address4_1_0_, user0_.date_birth as date_birth5_1_0_, user0_.detail_address as detail_address6_1_0_, user0_.email as email7_1_0_, user0_.email_confirm as email_confirm8_1_0_, user0_.gender as gender9_1_0_, user0_.name as name10_1_0_, user0_.password as password11_1_0_, user0_.resign as resign12_1_0_, user0_.sign_dt as sign_dt13_1_0_, user0_.tel as tel14_1_0_, user0_.type_no as type_no15_1_0_, user0_.nickname as nickname16_1_0_, user0_.DTYPE as DTYPE1_1_0_ from USER_TB user0_ where user0_.no=?
+[2022-06-06 20:04:49.489] DEBUG
+			CascadeEntityLoader.<init>(CascadeEntityLoader.java:38) - Static select for action ACTION_MERGE on entity com.ggomul.user.User: /* load com.ggomul.user.User */ select user0_.no as no2_1_0_, user0_.activate_key as activate_key3_1_0_, user0_.address as address4_1_0_, user0_.date_birth as date_birth5_1_0_, user0_.detail_address as detail_address6_1_0_, user0_.email as email7_1_0_, user0_.email_confirm as email_confirm8_1_0_, user0_.gender as gender9_1_0_, user0_.name as name10_1_0_, user0_.password as password11_1_0_, user0_.resign as resign12_1_0_, user0_.sign_dt as sign_dt13_1_0_, user0_.tel as tel14_1_0_, user0_.type_no as type_no15_1_0_, user0_.nickname as nickname16_1_0_, user0_.DTYPE as DTYPE1_1_0_ from USER_TB user0_ where user0_.no=?
+[2022-06-06 20:04:49.489] DEBUG
+			CascadeEntityLoader.<init>(CascadeEntityLoader.java:38) - Static select for action ACTION_REFRESH on entity com.ggomul.user.User: /* load com.ggomul.user.User */ select user0_.no as no2_1_0_, user0_.activate_key as activate_key3_1_0_, user0_.address as address4_1_0_, user0_.date_birth as date_birth5_1_0_, user0_.detail_address as detail_address6_1_0_, user0_.email as email7_1_0_, user0_.email_confirm as email_confirm8_1_0_, user0_.gender as gender9_1_0_, user0_.name as name10_1_0_, user0_.password as password11_1_0_, user0_.resign as resign12_1_0_, user0_.sign_dt as sign_dt13_1_0_, user0_.tel as tel14_1_0_, user0_.type_no as type_no15_1_0_, user0_.nickname as nickname16_1_0_, user0_.DTYPE as DTYPE1_1_0_ from USER_TB user0_ where user0_.no=?
+[2022-06-06 20:04:49.489] DEBUG
+			AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3418) - Static SQL for entity: com.ggomul.user.Customer
+[2022-06-06 20:04:49.489] DEBUG
+			AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3423) -  Version select: /* get version com.ggomul.user.Customer */ select no from USER_TB where no =?
+[2022-06-06 20:04:49.489] DEBUG
+			AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3426) -  Snapshot select: /* get current state com.ggomul.user.Customer */ select customer_.no, customer_.activate_key as activate_key3_1_, customer_.address as address4_1_, customer_.date_birth as date_birth5_1_, customer_.detail_address as detail_address6_1_, customer_.email as email7_1_, customer_.email_confirm as email_confirm8_1_, customer_.gender as gender9_1_, customer_.name as name10_1_, customer_.password as password11_1_, customer_.resign as resign12_1_, customer_.sign_dt as sign_dt13_1_, customer_.tel as tel14_1_, customer_.type_no as type_no15_1_, customer_.nickname as nickname16_1_ from USER_TB customer_ where customer_.no=?
+[2022-06-06 20:04:49.490] DEBUG
+			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:394) -  Insert 0: /* insert com.ggomul.user.Customer */ insert into USER_TB (activate_key, address, date_birth, detail_address, email, email_confirm, gender, name, password, resign, sign_dt, tel, type_no, nickname, DTYPE, no) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'CUSTOMER', ?)
+[2022-06-06 20:04:49.490] DEBUG
+			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:394) -  Update 0: /* update com.ggomul.user.Customer */ update USER_TB set activate_key=?, address=?, date_birth=?, detail_address=?, email=?, email_confirm=?, gender=?, name=?, password=?, resign=?, sign_dt=?, tel=?, type_no=?, nickname=? where no=?
+[2022-06-06 20:04:49.490] DEBUG
+			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:394) -  Delete 0: /* delete com.ggomul.user.Customer */ delete from USER_TB where no=?
+[2022-06-06 20:04:49.490] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6661d8c0]
+[2022-06-06 20:04:49.490] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.490] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.490] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.490] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.490] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.491] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.491] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.491] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.491] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.491] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.491] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
-[2022-06-04 23:08:03.287] DEBUG
-			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : teacher
-[2022-06-04 23:08:03.287] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@78cfa264]
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.491] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.491] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.491] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.492] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.492] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.492] DEBUG
 			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
     - Returns
        - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
-          - EntityAttributeFetchImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:1>, path=com.ggomul.user.Customer.teacher)
     - QuerySpaces
        - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
           - SQL table alias mapping - customer0_
           - alias suffix - 0_
-          - suffixed key columns - {no2_2_0_}
+          - suffixed key columns - {no2_1_0_}
 
-[2022-06-04 23:08:03.287] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [OPTIMISTIC_FORCE_INCREMENT]: select customer0_.no as no2_2_0_, customer0_1_.activate_key as activate_key3_2_0_, customer0_1_.address as address4_2_0_, customer0_1_.date_birth as date_birth5_2_0_, customer0_1_.detail_address as detail_address6_2_0_, customer0_1_.email as email7_2_0_, customer0_1_.email_confirm as email_confirm8_2_0_, customer0_1_.gender as gender9_2_0_, customer0_1_.name as name10_2_0_, customer0_1_.password as password11_2_0_, customer0_1_.resign as resign12_2_0_, customer0_1_.sign_dt as sign_dt13_2_0_, customer0_1_.tel as tel14_2_0_, customer0_1_.type_no as type_no15_2_0_, customer0_.nickname as nickname1_0_0_ from Customer customer0_ inner join USER_TB customer0_1_ on customer0_.no=customer0_1_.no where customer0_.no=?
-[2022-06-04 23:08:03.287] DEBUG
-			CascadeEntityLoader.<init>(CascadeEntityLoader.java:38) - Static select for action ACTION_MERGE on entity com.ggomul.user.Customer: /* load com.ggomul.user.Customer */ select customer0_.no as no2_2_0_, customer0_1_.activate_key as activate_key3_2_0_, customer0_1_.address as address4_2_0_, customer0_1_.date_birth as date_birth5_2_0_, customer0_1_.detail_address as detail_address6_2_0_, customer0_1_.email as email7_2_0_, customer0_1_.email_confirm as email_confirm8_2_0_, customer0_1_.gender as gender9_2_0_, customer0_1_.name as name10_2_0_, customer0_1_.password as password11_2_0_, customer0_1_.resign as resign12_2_0_, customer0_1_.sign_dt as sign_dt13_2_0_, customer0_1_.tel as tel14_2_0_, customer0_1_.type_no as type_no15_2_0_, customer0_.nickname as nickname1_0_0_ from Customer customer0_ inner join USER_TB customer0_1_ on customer0_.no=customer0_1_.no where customer0_.no=?
-[2022-06-04 23:08:03.287] DEBUG
-			CascadeEntityLoader.<init>(CascadeEntityLoader.java:38) - Static select for action ACTION_REFRESH on entity com.ggomul.user.Customer: /* load com.ggomul.user.Customer */ select customer0_.no as no2_2_0_, customer0_1_.activate_key as activate_key3_2_0_, customer0_1_.address as address4_2_0_, customer0_1_.date_birth as date_birth5_2_0_, customer0_1_.detail_address as detail_address6_2_0_, customer0_1_.email as email7_2_0_, customer0_1_.email_confirm as email_confirm8_2_0_, customer0_1_.gender as gender9_2_0_, customer0_1_.name as name10_2_0_, customer0_1_.password as password11_2_0_, customer0_1_.resign as resign12_2_0_, customer0_1_.sign_dt as sign_dt13_2_0_, customer0_1_.tel as tel14_2_0_, customer0_1_.type_no as type_no15_2_0_, customer0_.nickname as nickname1_0_0_ from Customer customer0_ inner join USER_TB customer0_1_ on customer0_.no=customer0_1_.no where customer0_.no=?
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.492] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [NONE]: select customer0_.no as no2_1_0_, customer0_.activate_key as activate_key3_1_0_, customer0_.address as address4_1_0_, customer0_.date_birth as date_birth5_1_0_, customer0_.detail_address as detail_address6_1_0_, customer0_.email as email7_1_0_, customer0_.email_confirm as email_confirm8_1_0_, customer0_.gender as gender9_1_0_, customer0_.name as name10_1_0_, customer0_.password as password11_1_0_, customer0_.resign as resign12_1_0_, customer0_.sign_dt as sign_dt13_1_0_, customer0_.tel as tel14_1_0_, customer0_.type_no as type_no15_1_0_, customer0_.nickname as nickname16_1_0_ from USER_TB customer0_ where customer0_.no=? and customer0_.DTYPE='CUSTOMER'
+[2022-06-06 20:04:49.492] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6909f6be]
+[2022-06-06 20:04:49.492] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
+[2022-06-06 20:04:49.492] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
+[2022-06-06 20:04:49.493] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
+[2022-06-06 20:04:49.493] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
+[2022-06-06 20:04:49.493] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
+[2022-06-06 20:04:49.493] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
+[2022-06-06 20:04:49.493] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+[2022-06-06 20:04:49.493] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
+[2022-06-06 20:04:49.493] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
+[2022-06-06 20:04:49.493] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
+[2022-06-06 20:04:49.493] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
+[2022-06-06 20:04:49.493] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
+[2022-06-06 20:04:49.493] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
+[2022-06-06 20:04:49.494] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
+[2022-06-06 20:04:49.494] DEBUG
+			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
+[2022-06-06 20:04:49.494] DEBUG
+			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
+[2022-06-06 20:04:49.494] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+    - Returns
+       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
+          - SQL table alias mapping - customer0_
+          - alias suffix - 0_
+          - suffixed key columns - {no2_1_0_}
+
+[2022-06-06 20:04:49.494] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [READ]: select customer0_.no as no2_1_0_, customer0_.activate_key as activate_key3_1_0_, customer0_.address as address4_1_0_, customer0_.date_birth as date_birth5_1_0_, customer0_.detail_address as detail_address6_1_0_, customer0_.email as email7_1_0_, customer0_.email_confirm as email_confirm8_1_0_, customer0_.gender as gender9_1_0_, customer0_.name as name10_1_0_, customer0_.password as password11_1_0_, customer0_.resign as resign12_1_0_, customer0_.sign_dt as sign_dt13_1_0_, customer0_.tel as tel14_1_0_, customer0_.type_no as type_no15_1_0_, customer0_.nickname as nickname16_1_0_ from USER_TB customer0_ where customer0_.no=? and customer0_.DTYPE='CUSTOMER'
+[2022-06-06 20:04:49.495] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@315c081]
+[2022-06-06 20:04:49.495] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
+[2022-06-06 20:04:49.495] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
+[2022-06-06 20:04:49.495] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
+[2022-06-06 20:04:49.495] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
+[2022-06-06 20:04:49.495] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
+[2022-06-06 20:04:49.495] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
+[2022-06-06 20:04:49.495] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+[2022-06-06 20:04:49.495] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
+[2022-06-06 20:04:49.495] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
+[2022-06-06 20:04:49.496] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
+[2022-06-06 20:04:49.496] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
+[2022-06-06 20:04:49.496] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
+[2022-06-06 20:04:49.496] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
+[2022-06-06 20:04:49.496] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
+[2022-06-06 20:04:49.496] DEBUG
+			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
+[2022-06-06 20:04:49.496] DEBUG
+			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
+[2022-06-06 20:04:49.496] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+    - Returns
+       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
+          - SQL table alias mapping - customer0_
+          - alias suffix - 0_
+          - suffixed key columns - {no2_1_0_}
+
+[2022-06-06 20:04:49.497] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [UPGRADE]: select customer0_.no as no2_1_0_, customer0_.activate_key as activate_key3_1_0_, customer0_.address as address4_1_0_, customer0_.date_birth as date_birth5_1_0_, customer0_.detail_address as detail_address6_1_0_, customer0_.email as email7_1_0_, customer0_.email_confirm as email_confirm8_1_0_, customer0_.gender as gender9_1_0_, customer0_.name as name10_1_0_, customer0_.password as password11_1_0_, customer0_.resign as resign12_1_0_, customer0_.sign_dt as sign_dt13_1_0_, customer0_.tel as tel14_1_0_, customer0_.type_no as type_no15_1_0_, customer0_.nickname as nickname16_1_0_ from USER_TB customer0_ where customer0_.no=? and customer0_.DTYPE='CUSTOMER' for update
+[2022-06-06 20:04:49.497] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4db77402]
+[2022-06-06 20:04:49.497] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
+[2022-06-06 20:04:49.497] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
+[2022-06-06 20:04:49.497] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
+[2022-06-06 20:04:49.497] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
+[2022-06-06 20:04:49.497] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
+[2022-06-06 20:04:49.497] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
+[2022-06-06 20:04:49.497] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+[2022-06-06 20:04:49.497] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
+[2022-06-06 20:04:49.498] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
+[2022-06-06 20:04:49.498] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
+[2022-06-06 20:04:49.498] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
+[2022-06-06 20:04:49.498] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
+[2022-06-06 20:04:49.498] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
+[2022-06-06 20:04:49.498] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
+[2022-06-06 20:04:49.498] DEBUG
+			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
+[2022-06-06 20:04:49.498] DEBUG
+			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
+[2022-06-06 20:04:49.498] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+    - Returns
+       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
+          - SQL table alias mapping - customer0_
+          - alias suffix - 0_
+          - suffixed key columns - {no2_1_0_}
+
+[2022-06-06 20:04:49.499] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [UPGRADE_NOWAIT]: select customer0_.no as no2_1_0_, customer0_.activate_key as activate_key3_1_0_, customer0_.address as address4_1_0_, customer0_.date_birth as date_birth5_1_0_, customer0_.detail_address as detail_address6_1_0_, customer0_.email as email7_1_0_, customer0_.email_confirm as email_confirm8_1_0_, customer0_.gender as gender9_1_0_, customer0_.name as name10_1_0_, customer0_.password as password11_1_0_, customer0_.resign as resign12_1_0_, customer0_.sign_dt as sign_dt13_1_0_, customer0_.tel as tel14_1_0_, customer0_.type_no as type_no15_1_0_, customer0_.nickname as nickname16_1_0_ from USER_TB customer0_ where customer0_.no=? and customer0_.DTYPE='CUSTOMER' for update nowait
+[2022-06-06 20:04:49.499] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5ef85555]
+[2022-06-06 20:04:49.499] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
+[2022-06-06 20:04:49.499] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
+[2022-06-06 20:04:49.499] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
+[2022-06-06 20:04:49.499] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
+[2022-06-06 20:04:49.499] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
+[2022-06-06 20:04:49.499] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
+[2022-06-06 20:04:49.499] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+[2022-06-06 20:04:49.500] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
+[2022-06-06 20:04:49.500] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
+[2022-06-06 20:04:49.500] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
+[2022-06-06 20:04:49.500] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
+[2022-06-06 20:04:49.500] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
+[2022-06-06 20:04:49.500] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
+[2022-06-06 20:04:49.500] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
+[2022-06-06 20:04:49.500] DEBUG
+			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
+[2022-06-06 20:04:49.500] DEBUG
+			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
+[2022-06-06 20:04:49.501] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+    - Returns
+       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
+          - SQL table alias mapping - customer0_
+          - alias suffix - 0_
+          - suffixed key columns - {no2_1_0_}
+
+[2022-06-06 20:04:49.501] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [UPGRADE_SKIPLOCKED]: select customer0_.no as no2_1_0_, customer0_.activate_key as activate_key3_1_0_, customer0_.address as address4_1_0_, customer0_.date_birth as date_birth5_1_0_, customer0_.detail_address as detail_address6_1_0_, customer0_.email as email7_1_0_, customer0_.email_confirm as email_confirm8_1_0_, customer0_.gender as gender9_1_0_, customer0_.name as name10_1_0_, customer0_.password as password11_1_0_, customer0_.resign as resign12_1_0_, customer0_.sign_dt as sign_dt13_1_0_, customer0_.tel as tel14_1_0_, customer0_.type_no as type_no15_1_0_, customer0_.nickname as nickname16_1_0_ from USER_TB customer0_ where customer0_.no=? and customer0_.DTYPE='CUSTOMER' for update skip locked
+[2022-06-06 20:04:49.501] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2dafae61]
+[2022-06-06 20:04:49.501] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
+[2022-06-06 20:04:49.501] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
+[2022-06-06 20:04:49.501] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
+[2022-06-06 20:04:49.502] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
+[2022-06-06 20:04:49.502] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
+[2022-06-06 20:04:49.502] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
+[2022-06-06 20:04:49.502] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+[2022-06-06 20:04:49.502] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
+[2022-06-06 20:04:49.502] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
+[2022-06-06 20:04:49.502] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
+[2022-06-06 20:04:49.502] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
+[2022-06-06 20:04:49.502] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
+[2022-06-06 20:04:49.503] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
+[2022-06-06 20:04:49.503] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
+[2022-06-06 20:04:49.503] DEBUG
+			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
+[2022-06-06 20:04:49.503] DEBUG
+			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
+[2022-06-06 20:04:49.503] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+    - Returns
+       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
+          - SQL table alias mapping - customer0_
+          - alias suffix - 0_
+          - suffixed key columns - {no2_1_0_}
+
+[2022-06-06 20:04:49.504] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [FORCE]: select customer0_.no as no2_1_0_, customer0_.activate_key as activate_key3_1_0_, customer0_.address as address4_1_0_, customer0_.date_birth as date_birth5_1_0_, customer0_.detail_address as detail_address6_1_0_, customer0_.email as email7_1_0_, customer0_.email_confirm as email_confirm8_1_0_, customer0_.gender as gender9_1_0_, customer0_.name as name10_1_0_, customer0_.password as password11_1_0_, customer0_.resign as resign12_1_0_, customer0_.sign_dt as sign_dt13_1_0_, customer0_.tel as tel14_1_0_, customer0_.type_no as type_no15_1_0_, customer0_.nickname as nickname16_1_0_ from USER_TB customer0_ where customer0_.no=? and customer0_.DTYPE='CUSTOMER' for update nowait
+[2022-06-06 20:04:49.504] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@66e17eff]
+[2022-06-06 20:04:49.504] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
+[2022-06-06 20:04:49.504] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
+[2022-06-06 20:04:49.504] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
+[2022-06-06 20:04:49.504] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
+[2022-06-06 20:04:49.504] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
+[2022-06-06 20:04:49.504] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
+[2022-06-06 20:04:49.504] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+[2022-06-06 20:04:49.505] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
+[2022-06-06 20:04:49.505] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
+[2022-06-06 20:04:49.505] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
+[2022-06-06 20:04:49.505] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
+[2022-06-06 20:04:49.505] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
+[2022-06-06 20:04:49.505] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
+[2022-06-06 20:04:49.505] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
+[2022-06-06 20:04:49.505] DEBUG
+			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
+[2022-06-06 20:04:49.505] DEBUG
+			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
+[2022-06-06 20:04:49.506] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+    - Returns
+       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
+          - SQL table alias mapping - customer0_
+          - alias suffix - 0_
+          - suffixed key columns - {no2_1_0_}
+
+[2022-06-06 20:04:49.506] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [PESSIMISTIC_READ]: select customer0_.no as no2_1_0_, customer0_.activate_key as activate_key3_1_0_, customer0_.address as address4_1_0_, customer0_.date_birth as date_birth5_1_0_, customer0_.detail_address as detail_address6_1_0_, customer0_.email as email7_1_0_, customer0_.email_confirm as email_confirm8_1_0_, customer0_.gender as gender9_1_0_, customer0_.name as name10_1_0_, customer0_.password as password11_1_0_, customer0_.resign as resign12_1_0_, customer0_.sign_dt as sign_dt13_1_0_, customer0_.tel as tel14_1_0_, customer0_.type_no as type_no15_1_0_, customer0_.nickname as nickname16_1_0_ from USER_TB customer0_ where customer0_.no=? and customer0_.DTYPE='CUSTOMER' for update
+[2022-06-06 20:04:49.506] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1bbddada]
+[2022-06-06 20:04:49.507] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
+[2022-06-06 20:04:49.507] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
+[2022-06-06 20:04:49.507] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
+[2022-06-06 20:04:49.507] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
+[2022-06-06 20:04:49.507] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
+[2022-06-06 20:04:49.507] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
+[2022-06-06 20:04:49.507] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+[2022-06-06 20:04:49.507] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
+[2022-06-06 20:04:49.507] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
+[2022-06-06 20:04:49.507] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
+[2022-06-06 20:04:49.507] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
+[2022-06-06 20:04:49.508] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
+[2022-06-06 20:04:49.508] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
+[2022-06-06 20:04:49.508] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
+[2022-06-06 20:04:49.508] DEBUG
+			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
+[2022-06-06 20:04:49.508] DEBUG
+			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
+[2022-06-06 20:04:49.508] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+    - Returns
+       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
+          - SQL table alias mapping - customer0_
+          - alias suffix - 0_
+          - suffixed key columns - {no2_1_0_}
+
+[2022-06-06 20:04:49.509] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [PESSIMISTIC_WRITE]: select customer0_.no as no2_1_0_, customer0_.activate_key as activate_key3_1_0_, customer0_.address as address4_1_0_, customer0_.date_birth as date_birth5_1_0_, customer0_.detail_address as detail_address6_1_0_, customer0_.email as email7_1_0_, customer0_.email_confirm as email_confirm8_1_0_, customer0_.gender as gender9_1_0_, customer0_.name as name10_1_0_, customer0_.password as password11_1_0_, customer0_.resign as resign12_1_0_, customer0_.sign_dt as sign_dt13_1_0_, customer0_.tel as tel14_1_0_, customer0_.type_no as type_no15_1_0_, customer0_.nickname as nickname16_1_0_ from USER_TB customer0_ where customer0_.no=? and customer0_.DTYPE='CUSTOMER' for update
+[2022-06-06 20:04:49.509] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@721d5b74]
+[2022-06-06 20:04:49.509] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
+[2022-06-06 20:04:49.509] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
+[2022-06-06 20:04:49.509] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
+[2022-06-06 20:04:49.509] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
+[2022-06-06 20:04:49.509] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
+[2022-06-06 20:04:49.510] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
+[2022-06-06 20:04:49.510] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+[2022-06-06 20:04:49.510] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
+[2022-06-06 20:04:49.510] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
+[2022-06-06 20:04:49.510] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
+[2022-06-06 20:04:49.510] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
+[2022-06-06 20:04:49.510] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
+[2022-06-06 20:04:49.510] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
+[2022-06-06 20:04:49.510] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
+[2022-06-06 20:04:49.510] DEBUG
+			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
+[2022-06-06 20:04:49.511] DEBUG
+			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
+[2022-06-06 20:04:49.511] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+    - Returns
+       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
+          - SQL table alias mapping - customer0_
+          - alias suffix - 0_
+          - suffixed key columns - {no2_1_0_}
+
+[2022-06-06 20:04:49.511] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [PESSIMISTIC_FORCE_INCREMENT]: select customer0_.no as no2_1_0_, customer0_.activate_key as activate_key3_1_0_, customer0_.address as address4_1_0_, customer0_.date_birth as date_birth5_1_0_, customer0_.detail_address as detail_address6_1_0_, customer0_.email as email7_1_0_, customer0_.email_confirm as email_confirm8_1_0_, customer0_.gender as gender9_1_0_, customer0_.name as name10_1_0_, customer0_.password as password11_1_0_, customer0_.resign as resign12_1_0_, customer0_.sign_dt as sign_dt13_1_0_, customer0_.tel as tel14_1_0_, customer0_.type_no as type_no15_1_0_, customer0_.nickname as nickname16_1_0_ from USER_TB customer0_ where customer0_.no=? and customer0_.DTYPE='CUSTOMER' for update nowait
+[2022-06-06 20:04:49.511] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@41bfa9e9]
+[2022-06-06 20:04:49.511] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
+[2022-06-06 20:04:49.511] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
+[2022-06-06 20:04:49.511] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
+[2022-06-06 20:04:49.511] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
+[2022-06-06 20:04:49.512] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
+[2022-06-06 20:04:49.512] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
+[2022-06-06 20:04:49.512] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+[2022-06-06 20:04:49.512] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
+[2022-06-06 20:04:49.512] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
+[2022-06-06 20:04:49.512] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
+[2022-06-06 20:04:49.512] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
+[2022-06-06 20:04:49.512] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
+[2022-06-06 20:04:49.512] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
+[2022-06-06 20:04:49.512] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
+[2022-06-06 20:04:49.512] DEBUG
+			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
+[2022-06-06 20:04:49.513] DEBUG
+			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
+[2022-06-06 20:04:49.513] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+    - Returns
+       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
+          - SQL table alias mapping - customer0_
+          - alias suffix - 0_
+          - suffixed key columns - {no2_1_0_}
+
+[2022-06-06 20:04:49.513] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [OPTIMISTIC]: select customer0_.no as no2_1_0_, customer0_.activate_key as activate_key3_1_0_, customer0_.address as address4_1_0_, customer0_.date_birth as date_birth5_1_0_, customer0_.detail_address as detail_address6_1_0_, customer0_.email as email7_1_0_, customer0_.email_confirm as email_confirm8_1_0_, customer0_.gender as gender9_1_0_, customer0_.name as name10_1_0_, customer0_.password as password11_1_0_, customer0_.resign as resign12_1_0_, customer0_.sign_dt as sign_dt13_1_0_, customer0_.tel as tel14_1_0_, customer0_.type_no as type_no15_1_0_, customer0_.nickname as nickname16_1_0_ from USER_TB customer0_ where customer0_.no=? and customer0_.DTYPE='CUSTOMER'
+[2022-06-06 20:04:49.513] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7069f076]
+[2022-06-06 20:04:49.513] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : activateKey
+[2022-06-06 20:04:49.513] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : address
+[2022-06-06 20:04:49.513] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : dateBirth
+[2022-06-06 20:04:49.513] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : detailAddress
+[2022-06-06 20:04:49.513] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : email
+[2022-06-06 20:04:49.514] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : emailConfirm
+[2022-06-06 20:04:49.514] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+[2022-06-06 20:04:49.514] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : name
+[2022-06-06 20:04:49.514] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : password
+[2022-06-06 20:04:49.514] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : resign
+[2022-06-06 20:04:49.514] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : signDt
+[2022-06-06 20:04:49.514] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : tel
+[2022-06-06 20:04:49.514] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : typeNo
+[2022-06-06 20:04:49.514] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nickname
+[2022-06-06 20:04:49.514] DEBUG
+			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
+[2022-06-06 20:04:49.514] DEBUG
+			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
+[2022-06-06 20:04:49.515] DEBUG
+			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Customer)
+    - Returns
+       - EntityReturnImpl(entity=com.ggomul.user.Customer, querySpaceUid=<gen:0>, path=com.ggomul.user.Customer)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Customer)
+          - SQL table alias mapping - customer0_
+          - alias suffix - 0_
+          - suffixed key columns - {no2_1_0_}
+
+[2022-06-06 20:04:49.515] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Customer [OPTIMISTIC_FORCE_INCREMENT]: select customer0_.no as no2_1_0_, customer0_.activate_key as activate_key3_1_0_, customer0_.address as address4_1_0_, customer0_.date_birth as date_birth5_1_0_, customer0_.detail_address as detail_address6_1_0_, customer0_.email as email7_1_0_, customer0_.email_confirm as email_confirm8_1_0_, customer0_.gender as gender9_1_0_, customer0_.name as name10_1_0_, customer0_.password as password11_1_0_, customer0_.resign as resign12_1_0_, customer0_.sign_dt as sign_dt13_1_0_, customer0_.tel as tel14_1_0_, customer0_.type_no as type_no15_1_0_, customer0_.nickname as nickname16_1_0_ from USER_TB customer0_ where customer0_.no=? and customer0_.DTYPE='CUSTOMER'
+[2022-06-06 20:04:49.515] DEBUG
+			CascadeEntityLoader.<init>(CascadeEntityLoader.java:38) - Static select for action ACTION_MERGE on entity com.ggomul.user.Customer: /* load com.ggomul.user.Customer */ select customer0_.no as no2_1_0_, customer0_.activate_key as activate_key3_1_0_, customer0_.address as address4_1_0_, customer0_.date_birth as date_birth5_1_0_, customer0_.detail_address as detail_address6_1_0_, customer0_.email as email7_1_0_, customer0_.email_confirm as email_confirm8_1_0_, customer0_.gender as gender9_1_0_, customer0_.name as name10_1_0_, customer0_.password as password11_1_0_, customer0_.resign as resign12_1_0_, customer0_.sign_dt as sign_dt13_1_0_, customer0_.tel as tel14_1_0_, customer0_.type_no as type_no15_1_0_, customer0_.nickname as nickname16_1_0_ from USER_TB customer0_ where customer0_.no=? and customer0_.DTYPE='CUSTOMER'
+[2022-06-06 20:04:49.515] DEBUG
+			CascadeEntityLoader.<init>(CascadeEntityLoader.java:38) - Static select for action ACTION_REFRESH on entity com.ggomul.user.Customer: /* load com.ggomul.user.Customer */ select customer0_.no as no2_1_0_, customer0_.activate_key as activate_key3_1_0_, customer0_.address as address4_1_0_, customer0_.date_birth as date_birth5_1_0_, customer0_.detail_address as detail_address6_1_0_, customer0_.email as email7_1_0_, customer0_.email_confirm as email_confirm8_1_0_, customer0_.gender as gender9_1_0_, customer0_.name as name10_1_0_, customer0_.password as password11_1_0_, customer0_.resign as resign12_1_0_, customer0_.sign_dt as sign_dt13_1_0_, customer0_.tel as tel14_1_0_, customer0_.type_no as type_no15_1_0_, customer0_.nickname as nickname16_1_0_ from USER_TB customer0_ where customer0_.no=? and customer0_.DTYPE='CUSTOMER'
+[2022-06-06 20:04:49.515] DEBUG
 			AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3418) - Static SQL for entity: com.ggomul.user.Teacher
-[2022-06-04 23:08:03.287] DEBUG
-			AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3423) -  Version select: /* get version com.ggomul.user.Teacher */ select no from TEACHER_TB where no =?
-[2022-06-04 23:08:03.287] DEBUG
-			AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3426) -  Snapshot select: /* get current state com.ggomul.user.Teacher */ select teacher_.no, teacher_.account_number as account_number2_1_, teacher_.branch_no as branch_no3_1_, teacher_.name_bank as name_bank4_1_, teacher_.profile_photo as profile_photo5_1_ from TEACHER_TB teacher_ where teacher_.no=?
-[2022-06-04 23:08:03.287] DEBUG
-			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:394) -  Insert 0: /* insert com.ggomul.user.Teacher */ insert into TEACHER_TB (account_number, branch_no, name_bank, profile_photo, no) values (?, ?, ?, ?, ?)
-[2022-06-04 23:08:03.287] DEBUG
-			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:394) -  Update 0: /* update com.ggomul.user.Teacher */ update TEACHER_TB set account_number=?, branch_no=?, name_bank=?, profile_photo=? where no=?
-[2022-06-04 23:08:03.287] DEBUG
-			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:394) -  Delete 0: /* delete com.ggomul.user.Teacher */ delete from TEACHER_TB where no=?
-[2022-06-04 23:08:03.287] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3408f695]
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.515] DEBUG
+			AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3423) -  Version select: /* get version com.ggomul.user.Teacher */ select teacher_no from TEACHER_TB where teacher_no =?
+[2022-06-06 20:04:49.515] DEBUG
+			AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3426) -  Snapshot select: /* get current state com.ggomul.user.Teacher */ select teacher_.teacher_no, teacher_.account_number as account_number2_0_, teacher_.branch_no as branch_no3_0_, teacher_.name_bank as name_bank4_0_, teacher_.profile_photo as profile_photo5_0_, teacher_.user_no as user_no6_0_ from TEACHER_TB teacher_ where teacher_.teacher_no=?
+[2022-06-06 20:04:49.516] DEBUG
+			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:394) -  Insert 0: /* insert com.ggomul.user.Teacher */ insert into TEACHER_TB (account_number, branch_no, name_bank, profile_photo, user_no, teacher_no) values (?, ?, ?, ?, ?, ?)
+[2022-06-06 20:04:49.516] DEBUG
+			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:394) -  Update 0: /* update com.ggomul.user.Teacher */ update TEACHER_TB set account_number=?, branch_no=?, name_bank=?, profile_photo=?, user_no=? where teacher_no=?
+[2022-06-06 20:04:49.516] DEBUG
+			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:394) -  Delete 0: /* delete com.ggomul.user.Teacher */ delete from TEACHER_TB where teacher_no=?
+[2022-06-06 20:04:49.516] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@764b14b8]
+[2022-06-06 20:04:49.516] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : accountNumber
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.516] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : branchNo
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.516] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nameBank
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.516] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : profilePhoto
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.516] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : userNo
+[2022-06-06 20:04:49.516] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.517] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.517] DEBUG
 			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Teacher)
     - Returns
        - EntityReturnImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:0>, path=com.ggomul.user.Teacher)
@@ -517,25 +926,27 @@
        - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Teacher)
           - SQL table alias mapping - teacher0_
           - alias suffix - 0_
-          - suffixed key columns - {no1_1_0_}
+          - suffixed key columns - {teacher_no1_0_0_}
 
-[2022-06-04 23:08:03.287] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [NONE]: select teacher0_.no as no1_1_0_, teacher0_.account_number as account_number2_1_0_, teacher0_.branch_no as branch_no3_1_0_, teacher0_.name_bank as name_bank4_1_0_, teacher0_.profile_photo as profile_photo5_1_0_ from TEACHER_TB teacher0_ where teacher0_.no=?
-[2022-06-04 23:08:03.287] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4dde8976]
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.517] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [NONE]: select teacher0_.teacher_no as teacher_no1_0_0_, teacher0_.account_number as account_number2_0_0_, teacher0_.branch_no as branch_no3_0_0_, teacher0_.name_bank as name_bank4_0_0_, teacher0_.profile_photo as profile_photo5_0_0_, teacher0_.user_no as user_no6_0_0_ from TEACHER_TB teacher0_ where teacher0_.teacher_no=?
+[2022-06-06 20:04:49.517] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1f782c05]
+[2022-06-06 20:04:49.517] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : accountNumber
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.517] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : branchNo
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.517] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nameBank
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.517] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : profilePhoto
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.517] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : userNo
+[2022-06-06 20:04:49.517] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.518] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.518] DEBUG
 			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Teacher)
     - Returns
        - EntityReturnImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:0>, path=com.ggomul.user.Teacher)
@@ -543,25 +954,27 @@
        - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Teacher)
           - SQL table alias mapping - teacher0_
           - alias suffix - 0_
-          - suffixed key columns - {no1_1_0_}
+          - suffixed key columns - {teacher_no1_0_0_}
 
-[2022-06-04 23:08:03.287] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [READ]: select teacher0_.no as no1_1_0_, teacher0_.account_number as account_number2_1_0_, teacher0_.branch_no as branch_no3_1_0_, teacher0_.name_bank as name_bank4_1_0_, teacher0_.profile_photo as profile_photo5_1_0_ from TEACHER_TB teacher0_ where teacher0_.no=?
-[2022-06-04 23:08:03.287] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3b4825f0]
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.518] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [READ]: select teacher0_.teacher_no as teacher_no1_0_0_, teacher0_.account_number as account_number2_0_0_, teacher0_.branch_no as branch_no3_0_0_, teacher0_.name_bank as name_bank4_0_0_, teacher0_.profile_photo as profile_photo5_0_0_, teacher0_.user_no as user_no6_0_0_ from TEACHER_TB teacher0_ where teacher0_.teacher_no=?
+[2022-06-06 20:04:49.518] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@432af457]
+[2022-06-06 20:04:49.518] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : accountNumber
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.518] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : branchNo
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.518] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nameBank
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.518] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : profilePhoto
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.518] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : userNo
+[2022-06-06 20:04:49.519] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.519] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.519] DEBUG
 			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Teacher)
     - Returns
        - EntityReturnImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:0>, path=com.ggomul.user.Teacher)
@@ -569,25 +982,27 @@
        - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Teacher)
           - SQL table alias mapping - teacher0_
           - alias suffix - 0_
-          - suffixed key columns - {no1_1_0_}
+          - suffixed key columns - {teacher_no1_0_0_}
 
-[2022-06-04 23:08:03.287] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [UPGRADE]: select teacher0_.no as no1_1_0_, teacher0_.account_number as account_number2_1_0_, teacher0_.branch_no as branch_no3_1_0_, teacher0_.name_bank as name_bank4_1_0_, teacher0_.profile_photo as profile_photo5_1_0_ from TEACHER_TB teacher0_ where teacher0_.no=? for update
-[2022-06-04 23:08:03.287] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7980cf2c]
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.519] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [UPGRADE]: select teacher0_.teacher_no as teacher_no1_0_0_, teacher0_.account_number as account_number2_0_0_, teacher0_.branch_no as branch_no3_0_0_, teacher0_.name_bank as name_bank4_0_0_, teacher0_.profile_photo as profile_photo5_0_0_, teacher0_.user_no as user_no6_0_0_ from TEACHER_TB teacher0_ where teacher0_.teacher_no=? for update
+[2022-06-06 20:04:49.519] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@519c6fcc]
+[2022-06-06 20:04:49.519] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : accountNumber
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.519] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : branchNo
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.519] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nameBank
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.519] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : profilePhoto
-[2022-06-04 23:08:03.287] DEBUG
+[2022-06-06 20:04:49.520] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : userNo
+[2022-06-06 20:04:49.520] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.520] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.520] DEBUG
 			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Teacher)
     - Returns
        - EntityReturnImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:0>, path=com.ggomul.user.Teacher)
@@ -595,25 +1010,27 @@
        - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Teacher)
           - SQL table alias mapping - teacher0_
           - alias suffix - 0_
-          - suffixed key columns - {no1_1_0_}
+          - suffixed key columns - {teacher_no1_0_0_}
 
-[2022-06-04 23:08:03.302] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [UPGRADE_NOWAIT]: select teacher0_.no as no1_1_0_, teacher0_.account_number as account_number2_1_0_, teacher0_.branch_no as branch_no3_1_0_, teacher0_.name_bank as name_bank4_1_0_, teacher0_.profile_photo as profile_photo5_1_0_ from TEACHER_TB teacher0_ where teacher0_.no=? for update nowait
-[2022-06-04 23:08:03.302] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@759de304]
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.520] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [UPGRADE_NOWAIT]: select teacher0_.teacher_no as teacher_no1_0_0_, teacher0_.account_number as account_number2_0_0_, teacher0_.branch_no as branch_no3_0_0_, teacher0_.name_bank as name_bank4_0_0_, teacher0_.profile_photo as profile_photo5_0_0_, teacher0_.user_no as user_no6_0_0_ from TEACHER_TB teacher0_ where teacher0_.teacher_no=? for update nowait
+[2022-06-06 20:04:49.520] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7ecda95b]
+[2022-06-06 20:04:49.520] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : accountNumber
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.521] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : branchNo
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.521] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nameBank
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.521] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : profilePhoto
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.521] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : userNo
+[2022-06-06 20:04:49.521] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.521] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.521] DEBUG
 			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Teacher)
     - Returns
        - EntityReturnImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:0>, path=com.ggomul.user.Teacher)
@@ -621,25 +1038,27 @@
        - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Teacher)
           - SQL table alias mapping - teacher0_
           - alias suffix - 0_
-          - suffixed key columns - {no1_1_0_}
+          - suffixed key columns - {teacher_no1_0_0_}
 
-[2022-06-04 23:08:03.302] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [UPGRADE_SKIPLOCKED]: select teacher0_.no as no1_1_0_, teacher0_.account_number as account_number2_1_0_, teacher0_.branch_no as branch_no3_1_0_, teacher0_.name_bank as name_bank4_1_0_, teacher0_.profile_photo as profile_photo5_1_0_ from TEACHER_TB teacher0_ where teacher0_.no=? for update skip locked
-[2022-06-04 23:08:03.302] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@294f9d50]
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.521] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [UPGRADE_SKIPLOCKED]: select teacher0_.teacher_no as teacher_no1_0_0_, teacher0_.account_number as account_number2_0_0_, teacher0_.branch_no as branch_no3_0_0_, teacher0_.name_bank as name_bank4_0_0_, teacher0_.profile_photo as profile_photo5_0_0_, teacher0_.user_no as user_no6_0_0_ from TEACHER_TB teacher0_ where teacher0_.teacher_no=? for update skip locked
+[2022-06-06 20:04:49.522] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@100ad67e]
+[2022-06-06 20:04:49.522] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : accountNumber
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.522] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : branchNo
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.522] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nameBank
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.522] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : profilePhoto
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.522] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : userNo
+[2022-06-06 20:04:49.522] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.522] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.593] DEBUG
 			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Teacher)
     - Returns
        - EntityReturnImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:0>, path=com.ggomul.user.Teacher)
@@ -647,25 +1066,27 @@
        - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Teacher)
           - SQL table alias mapping - teacher0_
           - alias suffix - 0_
-          - suffixed key columns - {no1_1_0_}
+          - suffixed key columns - {teacher_no1_0_0_}
 
-[2022-06-04 23:08:03.302] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [FORCE]: select teacher0_.no as no1_1_0_, teacher0_.account_number as account_number2_1_0_, teacher0_.branch_no as branch_no3_1_0_, teacher0_.name_bank as name_bank4_1_0_, teacher0_.profile_photo as profile_photo5_1_0_ from TEACHER_TB teacher0_ where teacher0_.no=? for update nowait
-[2022-06-04 23:08:03.302] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3ddb774f]
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.593] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [FORCE]: select teacher0_.teacher_no as teacher_no1_0_0_, teacher0_.account_number as account_number2_0_0_, teacher0_.branch_no as branch_no3_0_0_, teacher0_.name_bank as name_bank4_0_0_, teacher0_.profile_photo as profile_photo5_0_0_, teacher0_.user_no as user_no6_0_0_ from TEACHER_TB teacher0_ where teacher0_.teacher_no=? for update nowait
+[2022-06-06 20:04:49.593] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@62aeddc8]
+[2022-06-06 20:04:49.593] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : accountNumber
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.593] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : branchNo
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.593] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nameBank
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.594] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : profilePhoto
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.594] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : userNo
+[2022-06-06 20:04:49.594] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.594] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.594] DEBUG
 			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Teacher)
     - Returns
        - EntityReturnImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:0>, path=com.ggomul.user.Teacher)
@@ -673,25 +1094,27 @@
        - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Teacher)
           - SQL table alias mapping - teacher0_
           - alias suffix - 0_
-          - suffixed key columns - {no1_1_0_}
+          - suffixed key columns - {teacher_no1_0_0_}
 
-[2022-06-04 23:08:03.302] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [PESSIMISTIC_READ]: select teacher0_.no as no1_1_0_, teacher0_.account_number as account_number2_1_0_, teacher0_.branch_no as branch_no3_1_0_, teacher0_.name_bank as name_bank4_1_0_, teacher0_.profile_photo as profile_photo5_1_0_ from TEACHER_TB teacher0_ where teacher0_.no=? for update
-[2022-06-04 23:08:03.302] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@70721c12]
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.594] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [PESSIMISTIC_READ]: select teacher0_.teacher_no as teacher_no1_0_0_, teacher0_.account_number as account_number2_0_0_, teacher0_.branch_no as branch_no3_0_0_, teacher0_.name_bank as name_bank4_0_0_, teacher0_.profile_photo as profile_photo5_0_0_, teacher0_.user_no as user_no6_0_0_ from TEACHER_TB teacher0_ where teacher0_.teacher_no=? for update
+[2022-06-06 20:04:49.594] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5707f613]
+[2022-06-06 20:04:49.595] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : accountNumber
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.595] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : branchNo
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.595] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nameBank
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.595] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : profilePhoto
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.595] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : userNo
+[2022-06-06 20:04:49.595] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.595] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.595] DEBUG
 			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Teacher)
     - Returns
        - EntityReturnImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:0>, path=com.ggomul.user.Teacher)
@@ -699,25 +1122,27 @@
        - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Teacher)
           - SQL table alias mapping - teacher0_
           - alias suffix - 0_
-          - suffixed key columns - {no1_1_0_}
+          - suffixed key columns - {teacher_no1_0_0_}
 
-[2022-06-04 23:08:03.302] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [PESSIMISTIC_WRITE]: select teacher0_.no as no1_1_0_, teacher0_.account_number as account_number2_1_0_, teacher0_.branch_no as branch_no3_1_0_, teacher0_.name_bank as name_bank4_1_0_, teacher0_.profile_photo as profile_photo5_1_0_ from TEACHER_TB teacher0_ where teacher0_.no=? for update
-[2022-06-04 23:08:03.302] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@101ca8da]
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.595] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [PESSIMISTIC_WRITE]: select teacher0_.teacher_no as teacher_no1_0_0_, teacher0_.account_number as account_number2_0_0_, teacher0_.branch_no as branch_no3_0_0_, teacher0_.name_bank as name_bank4_0_0_, teacher0_.profile_photo as profile_photo5_0_0_, teacher0_.user_no as user_no6_0_0_ from TEACHER_TB teacher0_ where teacher0_.teacher_no=? for update
+[2022-06-06 20:04:49.596] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6367a688]
+[2022-06-06 20:04:49.596] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : accountNumber
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.596] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : branchNo
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.596] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nameBank
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.596] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : profilePhoto
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.596] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : userNo
+[2022-06-06 20:04:49.596] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.596] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.597] DEBUG
 			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Teacher)
     - Returns
        - EntityReturnImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:0>, path=com.ggomul.user.Teacher)
@@ -725,25 +1150,27 @@
        - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Teacher)
           - SQL table alias mapping - teacher0_
           - alias suffix - 0_
-          - suffixed key columns - {no1_1_0_}
+          - suffixed key columns - {teacher_no1_0_0_}
 
-[2022-06-04 23:08:03.302] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [PESSIMISTIC_FORCE_INCREMENT]: select teacher0_.no as no1_1_0_, teacher0_.account_number as account_number2_1_0_, teacher0_.branch_no as branch_no3_1_0_, teacher0_.name_bank as name_bank4_1_0_, teacher0_.profile_photo as profile_photo5_1_0_ from TEACHER_TB teacher0_ where teacher0_.no=? for update nowait
-[2022-06-04 23:08:03.302] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@405b6d75]
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.597] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [PESSIMISTIC_FORCE_INCREMENT]: select teacher0_.teacher_no as teacher_no1_0_0_, teacher0_.account_number as account_number2_0_0_, teacher0_.branch_no as branch_no3_0_0_, teacher0_.name_bank as name_bank4_0_0_, teacher0_.profile_photo as profile_photo5_0_0_, teacher0_.user_no as user_no6_0_0_ from TEACHER_TB teacher0_ where teacher0_.teacher_no=? for update nowait
+[2022-06-06 20:04:49.597] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@59498d94]
+[2022-06-06 20:04:49.597] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : accountNumber
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.597] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : branchNo
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.597] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nameBank
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.597] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : profilePhoto
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.597] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : userNo
+[2022-06-06 20:04:49.597] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.598] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.598] DEBUG
 			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Teacher)
     - Returns
        - EntityReturnImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:0>, path=com.ggomul.user.Teacher)
@@ -751,25 +1178,27 @@
        - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Teacher)
           - SQL table alias mapping - teacher0_
           - alias suffix - 0_
-          - suffixed key columns - {no1_1_0_}
+          - suffixed key columns - {teacher_no1_0_0_}
 
-[2022-06-04 23:08:03.302] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [OPTIMISTIC]: select teacher0_.no as no1_1_0_, teacher0_.account_number as account_number2_1_0_, teacher0_.branch_no as branch_no3_1_0_, teacher0_.name_bank as name_bank4_1_0_, teacher0_.profile_photo as profile_photo5_1_0_ from TEACHER_TB teacher0_ where teacher0_.no=?
-[2022-06-04 23:08:03.302] DEBUG
-			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1d858300]
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.598] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [OPTIMISTIC]: select teacher0_.teacher_no as teacher_no1_0_0_, teacher0_.account_number as account_number2_0_0_, teacher0_.branch_no as branch_no3_0_0_, teacher0_.name_bank as name_bank4_0_0_, teacher0_.profile_photo as profile_photo5_0_0_, teacher0_.user_no as user_no6_0_0_ from TEACHER_TB teacher0_ where teacher0_.teacher_no=?
+[2022-06-06 20:04:49.598] DEBUG
+			QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6b321262]
+[2022-06-06 20:04:49.598] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : accountNumber
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.598] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : branchNo
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.598] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : nameBank
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.598] DEBUG
 			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : profilePhoto
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.598] DEBUG
+			MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:137) - Visiting attribute path : userNo
+[2022-06-06 20:04:49.599] DEBUG
 			FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:76) - Building LoadPlan...
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.599] DEBUG
 			LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:95) - processing queryspace <gen:0>
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.599] DEBUG
 			LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:55) - LoadPlan(entity=com.ggomul.user.Teacher)
     - Returns
        - EntityReturnImpl(entity=com.ggomul.user.Teacher, querySpaceUid=<gen:0>, path=com.ggomul.user.Teacher)
@@ -777,149 +1206,291 @@
        - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ggomul.user.Teacher)
           - SQL table alias mapping - teacher0_
           - alias suffix - 0_
-          - suffixed key columns - {no1_1_0_}
+          - suffixed key columns - {teacher_no1_0_0_}
 
-[2022-06-04 23:08:03.302] DEBUG
-			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [OPTIMISTIC_FORCE_INCREMENT]: select teacher0_.no as no1_1_0_, teacher0_.account_number as account_number2_1_0_, teacher0_.branch_no as branch_no3_1_0_, teacher0_.name_bank as name_bank4_1_0_, teacher0_.profile_photo as profile_photo5_1_0_ from TEACHER_TB teacher0_ where teacher0_.no=?
-[2022-06-04 23:08:03.302] DEBUG
-			CascadeEntityLoader.<init>(CascadeEntityLoader.java:38) - Static select for action ACTION_MERGE on entity com.ggomul.user.Teacher: /* load com.ggomul.user.Teacher */ select teacher0_.no as no1_1_0_, teacher0_.account_number as account_number2_1_0_, teacher0_.branch_no as branch_no3_1_0_, teacher0_.name_bank as name_bank4_1_0_, teacher0_.profile_photo as profile_photo5_1_0_ from TEACHER_TB teacher0_ where teacher0_.no=?
-[2022-06-04 23:08:03.302] DEBUG
-			CascadeEntityLoader.<init>(CascadeEntityLoader.java:38) - Static select for action ACTION_REFRESH on entity com.ggomul.user.Teacher: /* load com.ggomul.user.Teacher */ select teacher0_.no as no1_1_0_, teacher0_.account_number as account_number2_1_0_, teacher0_.branch_no as branch_no3_1_0_, teacher0_.name_bank as name_bank4_1_0_, teacher0_.profile_photo as profile_photo5_1_0_ from TEACHER_TB teacher0_ where teacher0_.no=?
-[2022-06-04 23:08:03.302] DEBUG
+[2022-06-06 20:04:49.599] DEBUG
+			EntityLoader.<init>(EntityLoader.java:128) - Static select for entity com.ggomul.user.Teacher [OPTIMISTIC_FORCE_INCREMENT]: select teacher0_.teacher_no as teacher_no1_0_0_, teacher0_.account_number as account_number2_0_0_, teacher0_.branch_no as branch_no3_0_0_, teacher0_.name_bank as name_bank4_0_0_, teacher0_.profile_photo as profile_photo5_0_0_, teacher0_.user_no as user_no6_0_0_ from TEACHER_TB teacher0_ where teacher0_.teacher_no=?
+[2022-06-06 20:04:49.599] DEBUG
+			CascadeEntityLoader.<init>(CascadeEntityLoader.java:38) - Static select for action ACTION_MERGE on entity com.ggomul.user.Teacher: /* load com.ggomul.user.Teacher */ select teacher0_.teacher_no as teacher_no1_0_0_, teacher0_.account_number as account_number2_0_0_, teacher0_.branch_no as branch_no3_0_0_, teacher0_.name_bank as name_bank4_0_0_, teacher0_.profile_photo as profile_photo5_0_0_, teacher0_.user_no as user_no6_0_0_ from TEACHER_TB teacher0_ where teacher0_.teacher_no=?
+[2022-06-06 20:04:49.599] DEBUG
+			CascadeEntityLoader.<init>(CascadeEntityLoader.java:38) - Static select for action ACTION_REFRESH on entity com.ggomul.user.Teacher: /* load com.ggomul.user.Teacher */ select teacher0_.teacher_no as teacher_no1_0_0_, teacher0_.account_number as account_number2_0_0_, teacher0_.branch_no as branch_no3_0_0_, teacher0_.name_bank as name_bank4_0_0_, teacher0_.profile_photo as profile_photo5_0_0_, teacher0_.user_no as user_no6_0_0_ from TEACHER_TB teacher0_ where teacher0_.teacher_no=?
+[2022-06-06 20:04:49.599] DEBUG
 			SessionFactoryImpl.<init>(SessionFactoryImpl.java:462) - Instantiated session factory
-[2022-06-04 23:08:03.318] DEBUG
-			SqlStatementLogger.logStatement(SqlStatementLogger.java:92) - 
-    create global temporary table HT_USER_TB (no number(19,0) not null) 
-        on commit delete rows
-[2022-06-04 23:08:03.334] DEBUG
-			IdTableHelper.executeIdTableCreationStatements(IdTableHelper.java:85) - Error attempting to export id-table [create global temporary table HT_USER_TB (no number(19,0) not null) on commit delete rows] : ORA-00955: 기존의 객체가 이름을 사용하고 있습니다.
-
-[2022-06-04 23:08:03.334] DEBUG
-			SqlStatementLogger.logStatement(SqlStatementLogger.java:92) - 
-    create global temporary table HT_Customer (no number(19,0) not null) 
-        on commit delete rows
-[2022-06-04 23:08:03.334] DEBUG
-			IdTableHelper.executeIdTableCreationStatements(IdTableHelper.java:85) - Error attempting to export id-table [create global temporary table HT_Customer (no number(19,0) not null) on commit delete rows] : ORA-00955: 기존의 객체가 이름을 사용하고 있습니다.
-
-[2022-06-04 23:08:03.334] DEBUG
+[2022-06-06 20:04:49.600] DEBUG
 			JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:42) - No JtaPlatform was specified, checking resolver
-[2022-06-04 23:08:03.334] DEBUG
+[2022-06-06 20:04:49.600] DEBUG
 			JtaPlatformResolverInitiator.initiateService(JtaPlatformResolverInitiator.java:33) - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
-[2022-06-04 23:08:03.334] DEBUG
+[2022-06-06 20:04:49.601] DEBUG
 			StandardJtaPlatformResolver.resolveJtaPlatform(StandardJtaPlatformResolver.java:101) - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[2022-06-04 23:08:03.334] DEBUG
+[2022-06-06 20:04:49.602] DEBUG
 			NamedQueryRepository.checkNamedQueries(NamedQueryRepository.java:149) - Checking 0 named HQL queries
-[2022-06-04 23:08:03.349] DEBUG
+[2022-06-06 20:04:49.602] DEBUG
 			NamedQueryRepository.checkNamedQueries(NamedQueryRepository.java:165) - Checking 0 named SQL queries
-[2022-06-04 23:08:03.349] DEBUG
-			SessionFactoryRegistry.<init>(SessionFactoryRegistry.java:52) - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@25a7fedf
-[2022-06-04 23:08:03.349] DEBUG
-			SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:74) - Registering SessionFactory: 838bdac0-6192-43de-81e9-a67e0e67d3bd (<unnamed>)
-[2022-06-04 23:08:03.349] DEBUG
+[2022-06-06 20:04:49.602] DEBUG
+			SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:74) - Registering SessionFactory: 7e8991d9-ee1b-4fda-83cf-94304d96a672 (<unnamed>)
+[2022-06-06 20:04:49.602] DEBUG
 			SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:81) - Not binding SessionFactory to JNDI, no JNDI name configured
-[2022-06-04 23:08:03.349] DEBUG
+[2022-06-06 20:04:49.602] DEBUG
 			JpaSchemaGenerator$GenerationProcess.execute(JpaSchemaGenerator.java:106) - No actions specified; doing nothing
-[2022-06-04 23:08:03.380] DEBUG
-			EntityManagerFactoryRegistry.<init>(EntityManagerFactoryRegistry.java:39) - Initializing EntityManagerFactoryRegistry : org.hibernate.jpa.internal.EntityManagerFactoryRegistry@7b5b5bfe
-[2022-06-04 23:08:03.380] DEBUG
+[2022-06-06 20:04:49.603] DEBUG
 			EntityManagerFactoryRegistry.addEntityManagerFactory(EntityManagerFactoryRegistry.java:49) - Registering EntityManagerFactory: jpa-sql 
-[2022-06-04 23:08:03.380] INFO 
-			AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) - Initialized JPA EntityManagerFactory for persistence unit 'jpa-sql'
-[2022-06-04 23:08:03.380] DEBUG
-			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean 'transactionManager'
-[2022-06-04 23:08:03.412] DEBUG
-			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean 'org.springframework.data.jpa.util.JpaMetamodelCacheCleanup'
-[2022-06-04 23:08:03.412] DEBUG
-			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean 'org.springframework.data.jpa.repository.support.JpaEvaluationContextExtension'
-[2022-06-04 23:08:03.412] DEBUG
-			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean 'joinUserRepository'
-[2022-06-04 23:08:03.459] DEBUG
-			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean 'jpaMappingContext'
-[2022-06-04 23:08:03.505] DEBUG
-			SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:305) - Creating new EntityManager for shared EntityManager invocation
-[2022-06-04 23:08:03.552] DEBUG
+[2022-06-06 20:04:49.603] WARN 
+			EntityManagerFactoryRegistry.addEntityManagerFactory(EntityManagerFactoryRegistry.java:63) - HHH000436: Entity manager factory name (jpa-sql) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+[2022-06-06 20:04:49.604] DEBUG
 			StatisticsInitiator.initiateServiceInternal(StatisticsInitiator.java:82) - Statistics initialized [enabled=false]
-[2022-06-04 23:08:03.555] DEBUG
-			SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:305) - Creating new EntityManager for shared EntityManager invocation
-[2022-06-04 23:08:03.617] DEBUG
-			SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:305) - Creating new EntityManager for shared EntityManager invocation
-[2022-06-04 23:08:03.695] DEBUG
-			SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:305) - Creating new EntityManager for shared EntityManager invocation
-[2022-06-04 23:08:03.695] DEBUG
-			SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:305) - Creating new EntityManager for shared EntityManager invocation
-[2022-06-04 23:08:03.695] DEBUG
-			DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:213) - Creating shared instance of singleton bean 'joinTeacherRepository'
-[2022-06-04 23:08:03.695] DEBUG
-			SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:305) - Creating new EntityManager for shared EntityManager invocation
-[2022-06-04 23:08:03.711] DEBUG
-			SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:305) - Creating new EntityManager for shared EntityManager invocation
-[2022-06-04 23:08:03.727] DEBUG
-			DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:126) - Storing ApplicationContext [884603232] in cache under key [[WebMergedContextConfiguration@2ad48653 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@59505b48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
-[2022-06-04 23:08:03.727] DEBUG
-			DefaultContextCache.logStatistics(DefaultContextCache.java:290) - Spring test ApplicationContext cache statistics: [DefaultContextCache@1f71194d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 0, missCount = 1]
-[2022-06-04 23:08:03.727] DEBUG
-			ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200) - Setting up MockHttpServletRequest, MockHttpServletResponse, ServletWebRequest, and RequestContextHolder for test context [DefaultTestContext@32115b28 testClass = JoinUserTest, testInstance = com.ggomul.persistence.JoinUserTest@6da4feeb, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2ad48653 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@59505b48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]].
-[2022-06-04 23:08:03.742] DEBUG
-			DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:81) - Performing dependency injection for test context [[DefaultTestContext@32115b28 testClass = JoinUserTest, testInstance = com.ggomul.persistence.JoinUserTest@6da4feeb, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2ad48653 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@59505b48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]].
-[2022-06-04 23:08:03.742] DEBUG
-			DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:137) - Retrieved ApplicationContext [884603232] from cache with key [[WebMergedContextConfiguration@2ad48653 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@59505b48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
-[2022-06-04 23:08:03.742] DEBUG
-			DefaultContextCache.logStatistics(DefaultContextCache.java:290) - Spring test ApplicationContext cache statistics: [DefaultContextCache@1f71194d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 1, missCount = 1]
-[2022-06-04 23:08:03.742] DEBUG
-			DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:137) - Retrieved ApplicationContext [884603232] from cache with key [[WebMergedContextConfiguration@2ad48653 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@59505b48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
-[2022-06-04 23:08:03.742] DEBUG
-			DefaultContextCache.logStatistics(DefaultContextCache.java:290) - Spring test ApplicationContext cache statistics: [DefaultContextCache@1f71194d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 2, missCount = 1]
-[2022-06-04 23:08:03.758] DEBUG
-			AbstractDirtiesContextTestExecutionListener.beforeOrAfterTestMethod(AbstractDirtiesContextTestExecutionListener.java:107) - Before test method: context [DefaultTestContext@32115b28 testClass = JoinUserTest, testInstance = com.ggomul.persistence.JoinUserTest@6da4feeb, testMethod = insert@JoinUserTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2ad48653 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@59505b48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
-[2022-06-04 23:08:03.774] DEBUG
-			DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:137) - Retrieved ApplicationContext [884603232] from cache with key [[WebMergedContextConfiguration@2ad48653 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@59505b48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
-[2022-06-04 23:08:03.774] DEBUG
-			DefaultContextCache.logStatistics(DefaultContextCache.java:290) - Spring test ApplicationContext cache statistics: [DefaultContextCache@1f71194d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 3, missCount = 1]
-[2022-06-04 23:08:03.774] DEBUG
-			DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:137) - Retrieved ApplicationContext [884603232] from cache with key [[WebMergedContextConfiguration@2ad48653 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@59505b48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
-[2022-06-04 23:08:03.774] DEBUG
-			DefaultContextCache.logStatistics(DefaultContextCache.java:290) - Spring test ApplicationContext cache statistics: [DefaultContextCache@1f71194d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 4, missCount = 1]
-[2022-06-04 23:08:03.789] DEBUG
-			SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:305) - Creating new EntityManager for shared EntityManager invocation
-[2022-06-04 23:08:03.852] DEBUG
+[2022-06-06 20:04:49.604] DEBUG
+			TransactionImpl.begin(TransactionImpl.java:51) - begin
+[2022-06-06 20:04:49.611] DEBUG
+			AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:370) - Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.insertUser]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+[2022-06-06 20:04:49.611] DEBUG
+			JpaTransactionManager.doBegin(JpaTransactionManager.java:393) - Opened new EntityManager [org.hibernate.jpa.internal.EntityManagerImpl@35650279] for JPA transaction
+[2022-06-06 20:04:49.613] DEBUG
+			TransactionImpl.begin(TransactionImpl.java:51) - begin
+[2022-06-06 20:04:49.615] DEBUG
+			JpaTransactionManager.doBegin(JpaTransactionManager.java:421) - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@322204dc]
+[2022-06-06 20:04:49.639] DEBUG
 			SqlStatementLogger.logStatement(SqlStatementLogger.java:92) - 
-    /* dynamic native SQL query */ select
-        * 
-    from
+    insert 
+    into
         USER_TB
-[2022-06-04 23:08:03.898] DEBUG
-			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:384) - Result set row: 0
-[2022-06-04 23:08:03.898] DEBUG
-			Loader.getRow(Loader.java:1514) - Result row: EntityKey[com.ggomul.user.User#4]
-[2022-06-04 23:08:03.898] DEBUG
+        (type_no, name, email, password, tel, date_birth, gender, address, detail_address, sign_dt)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-06-06 20:04:49.669] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() 1 -> type_no [1]
+[2022-06-06 20:04:49.672] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() 911121 -> date_birth [6]
+[2022-06-06 20:04:49.673] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() a12314 -> password [4]
+[2022-06-06 20:04:49.673] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() 서구 -> address [8]
+[2022-06-06 20:04:49.673] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() F -> gender [7]
+[2022-06-06 20:04:49.673] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() 인천 -> detail_address [9]
+[2022-06-06 20:04:49.673] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() 인 -> name [2]
+[2022-06-06 20:04:49.673] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() 0121232883 -> tel [5]
+[2022-06-06 20:04:49.673] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() 2022-06-06 -> sign_dt [10]
+[2022-06-06 20:04:49.676] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() 21ass2 -> email [3]
+[2022-06-06 20:04:49.687] DEBUG
+			AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:740) - Initiating transaction commit
+[2022-06-06 20:04:49.687] DEBUG
+			JpaTransactionManager.doCommit(JpaTransactionManager.java:529) - Committing JPA transaction on EntityManager [org.hibernate.jpa.internal.EntityManagerImpl@35650279]
+[2022-06-06 20:04:49.687] DEBUG
+			TransactionImpl.commit(TransactionImpl.java:62) - committing
+[2022-06-06 20:04:49.691] DEBUG
+			JpaTransactionManager.doCleanupAfterCompletion(JpaTransactionManager.java:620) - Closing JPA EntityManager [org.hibernate.jpa.internal.EntityManagerImpl@35650279] after transaction
+[2022-06-06 20:04:49.693] DEBUG
 			AbstractEntityManagerImpl.markForRollbackOnly(AbstractEntityManagerImpl.java:1494) - Mark transaction for rollback
-[2022-06-04 23:08:03.914] DEBUG
-			DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:137) - Retrieved ApplicationContext [884603232] from cache with key [[WebMergedContextConfiguration@2ad48653 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@59505b48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
-[2022-06-04 23:08:03.914] DEBUG
-			DefaultContextCache.logStatistics(DefaultContextCache.java:290) - Spring test ApplicationContext cache statistics: [DefaultContextCache@1f71194d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 5, missCount = 1]
-[2022-06-04 23:08:03.914] DEBUG
-			DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:137) - Retrieved ApplicationContext [884603232] from cache with key [[WebMergedContextConfiguration@2ad48653 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@59505b48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
-[2022-06-04 23:08:03.914] DEBUG
-			DefaultContextCache.logStatistics(DefaultContextCache.java:290) - Spring test ApplicationContext cache statistics: [DefaultContextCache@1f71194d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 6, missCount = 1]
-[2022-06-04 23:08:03.914] DEBUG
-			AbstractDirtiesContextTestExecutionListener.beforeOrAfterTestMethod(AbstractDirtiesContextTestExecutionListener.java:107) - After test method: context [DefaultTestContext@32115b28 testClass = JoinUserTest, testInstance = com.ggomul.persistence.JoinUserTest@6da4feeb, testMethod = insert@JoinUserTest, testException = org.springframework.orm.ObjectRetrievalFailureException: Object [id=4] was not of the specified subclass [com.ggomul.user.User] : Discriminator: null; nested exception is org.hibernate.WrongClassException: Object [id=4] was not of the specified subclass [com.ggomul.user.User] : Discriminator: null, mergedContextConfiguration = [WebMergedContextConfiguration@2ad48653 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@59505b48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
-[2022-06-04 23:08:03.914] DEBUG
-			ServletTestExecutionListener.afterTestMethod(ServletTestExecutionListener.java:166) - Resetting RequestContextHolder for test context [DefaultTestContext@32115b28 testClass = JoinUserTest, testInstance = com.ggomul.persistence.JoinUserTest@6da4feeb, testMethod = insert@JoinUserTest, testException = org.springframework.orm.ObjectRetrievalFailureException: Object [id=4] was not of the specified subclass [com.ggomul.user.User] : Discriminator: null; nested exception is org.hibernate.WrongClassException: Object [id=4] was not of the specified subclass [com.ggomul.user.User] : Discriminator: null, mergedContextConfiguration = [WebMergedContextConfiguration@2ad48653 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@59505b48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]].
-[2022-06-04 23:08:03.914] DEBUG
-			DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:137) - Retrieved ApplicationContext [884603232] from cache with key [[WebMergedContextConfiguration@2ad48653 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@59505b48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
-[2022-06-04 23:08:03.914] DEBUG
-			DefaultContextCache.logStatistics(DefaultContextCache.java:290) - Spring test ApplicationContext cache statistics: [DefaultContextCache@1f71194d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 7, missCount = 1]
-[2022-06-04 23:08:03.914] DEBUG
-			AbstractDirtiesContextTestExecutionListener.beforeOrAfterTestClass(AbstractDirtiesContextTestExecutionListener.java:142) - After test class: context [DefaultTestContext@32115b28 testClass = JoinUserTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2ad48653 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@59505b48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.support.DependencyInjectionTestExecutionListener.reinjectDependencies' -> true]], class annotated with @DirtiesContext [false] with mode [null].
-[2022-06-04 23:08:03.930] DEBUG
-			AbstractApplicationContext.doClose(AbstractApplicationContext.java:1006) - Closing org.springframework.web.context.support.GenericWebApplicationContext@34b9f960, started on Sat Jun 04 23:07:59 KST 2022
-[2022-06-04 23:08:03.945] INFO 
-			AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:601) - Closing JPA EntityManagerFactory for persistence unit 'jpa-sql'
-[2022-06-04 23:08:03.945] DEBUG
+[2022-06-06 20:04:49.693] DEBUG
+			TransactionImpl.rollback(TransactionImpl.java:86) - rolling back
+[2022-06-06 20:04:49.694] DEBUG
+			AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:370) - Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findId]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+[2022-06-06 20:04:49.694] DEBUG
+			JpaTransactionManager.doBegin(JpaTransactionManager.java:393) - Opened new EntityManager [org.hibernate.jpa.internal.EntityManagerImpl@798deee8] for JPA transaction
+[2022-06-06 20:04:49.694] DEBUG
+			TransactionImpl.begin(TransactionImpl.java:51) - begin
+[2022-06-06 20:04:49.695] DEBUG
+			JpaTransactionManager.doBegin(JpaTransactionManager.java:421) - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@96897c8]
+[2022-06-06 20:04:49.697] DEBUG
+			SqlStatementLogger.logStatement(SqlStatementLogger.java:92) - 
+    /* select
+        user_no 
+    from
+        User */ select
+            user0_.no as col_0_0_ 
+        from
+            USER_TB user0_
+[2022-06-06 20:04:49.700] DEBUG
+			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:384) - Result set row: 0
+[2022-06-06 20:04:49.700] DEBUG
+			Loader.getRow(Loader.java:1514) - Result row: 
+[2022-06-06 20:04:49.701] DEBUG
+			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:384) - Result set row: 1
+[2022-06-06 20:04:49.701] DEBUG
+			Loader.getRow(Loader.java:1514) - Result row: 
+[2022-06-06 20:04:49.701] DEBUG
+			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:384) - Result set row: 2
+[2022-06-06 20:04:49.701] DEBUG
+			Loader.getRow(Loader.java:1514) - Result row: 
+[2022-06-06 20:04:49.701] DEBUG
+			DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:384) - Result set row: 3
+[2022-06-06 20:04:49.702] DEBUG
+			Loader.getRow(Loader.java:1514) - Result row: 
+[2022-06-06 20:04:49.703] DEBUG
+			AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:740) - Initiating transaction commit
+[2022-06-06 20:04:49.704] DEBUG
+			JpaTransactionManager.doCommit(JpaTransactionManager.java:529) - Committing JPA transaction on EntityManager [org.hibernate.jpa.internal.EntityManagerImpl@798deee8]
+[2022-06-06 20:04:49.704] DEBUG
+			TransactionImpl.commit(TransactionImpl.java:62) - committing
+[2022-06-06 20:04:49.704] DEBUG
+			JpaTransactionManager.doCleanupAfterCompletion(JpaTransactionManager.java:620) - Closing JPA EntityManager [org.hibernate.jpa.internal.EntityManagerImpl@798deee8] after transaction
+[2022-06-06 20:04:49.705] DEBUG
+			AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:370) - Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.insertTeacher]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+[2022-06-06 20:04:49.705] DEBUG
+			JpaTransactionManager.doBegin(JpaTransactionManager.java:393) - Opened new EntityManager [org.hibernate.jpa.internal.EntityManagerImpl@bc09d57] for JPA transaction
+[2022-06-06 20:04:49.705] DEBUG
+			TransactionImpl.begin(TransactionImpl.java:51) - begin
+[2022-06-06 20:04:49.706] DEBUG
+			JpaTransactionManager.doBegin(JpaTransactionManager.java:421) - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@6d963d70]
+[2022-06-06 20:04:49.706] DEBUG
+			SqlStatementLogger.logStatement(SqlStatementLogger.java:92) - 
+    insert 
+    into
+        TEACHER_TB
+        (user_no, branch_no, profile_photo, name_bank, account_number)
+    values
+        (?, ?, ?, ?, ?)
+[2022-06-06 20:04:49.707] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() 12345 -> account_number [5]
+[2022-06-06 20:04:49.707] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() 10 -> branch_no [2]
+[2022-06-06 20:04:49.707] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() 우리 -> name_bank [4]
+[2022-06-06 20:04:49.707] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() qwer -> profile_photo [3]
+[2022-06-06 20:04:49.707] DEBUG
+			NativeSQLQueryPlan.bindNamedParameters(NativeSQLQueryPlan.java:135) - bindNamedParameters() 4 -> user_no [1]
+[2022-06-06 20:04:49.712] DEBUG
+			SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:122) - could not execute statement [n/a]
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: 무결성 제약 조건(GGOMUL.SYS_C0025307)에 위배됩니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:630) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:564) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1151) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:771) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:299) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:498) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:152) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1052) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1531) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1311) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3746) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:3918) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:992) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:136) ~[commons-dbcp2-2.8.0.jar:2.8.0]
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:136) ~[commons-dbcp2-2.8.0.jar:2.8.0]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:204) ~[hibernate-core-5.0.0.Final.jar:5.0.0.Final]
+	at org.hibernate.engine.query.spi.NativeSQLQueryPlan.performExecuteUpdate(NativeSQLQueryPlan.java:194) ~[hibernate-core-5.0.0.Final.jar:5.0.0.Final]
+	at org.hibernate.internal.SessionImpl.executeNativeUpdate(SessionImpl.java:1315) ~[hibernate-core-5.0.0.Final.jar:5.0.0.Final]
+	at org.hibernate.internal.SQLQueryImpl.executeUpdate(SQLQueryImpl.java:373) ~[hibernate-core-5.0.0.Final.jar:5.0.0.Final]
+	at org.hibernate.jpa.internal.QueryImpl.internalExecuteUpdate(QueryImpl.java:358) ~[hibernate-entitymanager-5.0.0.Final.jar:5.0.0.Final]
+	at org.hibernate.jpa.spi.AbstractQueryImpl.executeUpdate(AbstractQueryImpl.java:61) ~[hibernate-entitymanager-5.0.0.Final.jar:5.0.0.Final]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$ModifyingExecution.doExecute(JpaQueryExecution.java:239) ~[spring-data-jpa-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:88) ~[spring-data-jpa-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:154) ~[spring-data-jpa-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:142) ~[spring-data-jpa-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor$QueryMethodInvoker.invoke(QueryExecutorMethodInterceptor.java:195) ~[spring-data-commons-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:152) ~[spring-data-commons-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:130) ~[spring-data-commons-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:367) ~[spring-tx-5.2.14.RELEASE.jar:5.2.14.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-5.2.14.RELEASE.jar:5.2.14.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.2.14.RELEASE.jar:5.2.14.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:149) ~[spring-data-jpa-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95) ~[spring-aop-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at com.sun.proxy.$Proxy73.insertTeacher(Unknown Source) ~[?:?]
+	at com.ggomul.persistence.JoinUserTest.insert(JoinUserTest.java:95) ~[test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210) ~[.cp/:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-00001: 무결성 제약 조건(GGOMUL.SYS_C0025307)에 위배됩니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:637) ~[ojdbc8-21.5.0.0.jar:21.5.0.0.0]
+	... 75 more
+[2022-06-06 20:04:49.720] WARN 
+			SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:127) - SQL Error: 1, SQLState: 23000
+[2022-06-06 20:04:49.720] ERROR
+			SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:129) - ORA-00001: 무결성 제약 조건(GGOMUL.SYS_C0025307)에 위배됩니다
+
+[2022-06-06 20:04:49.721] DEBUG
+			AbstractEntityManagerImpl.markForRollbackOnly(AbstractEntityManagerImpl.java:1494) - Mark transaction for rollback
+[2022-06-06 20:04:49.721] DEBUG
+			AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:833) - Initiating transaction rollback
+[2022-06-06 20:04:49.721] DEBUG
+			JpaTransactionManager.doRollback(JpaTransactionManager.java:555) - Rolling back JPA transaction on EntityManager [org.hibernate.jpa.internal.EntityManagerImpl@bc09d57]
+[2022-06-06 20:04:49.721] DEBUG
+			TransactionImpl.rollback(TransactionImpl.java:86) - rolling back
+[2022-06-06 20:04:49.722] DEBUG
+			JpaTransactionManager.doCleanupAfterCompletion(JpaTransactionManager.java:620) - Closing JPA EntityManager [org.hibernate.jpa.internal.EntityManagerImpl@bc09d57] after transaction
+[2022-06-06 20:04:49.723] DEBUG
 			SessionFactoryImpl.close(SessionFactoryImpl.java:1047) - HHH000031: Closing
-[2022-06-04 23:08:03.945] DEBUG
+[2022-06-06 20:04:49.724] DEBUG
 			AbstractServiceRegistryImpl.deRegisterChild(AbstractServiceRegistryImpl.java:389) - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
-[2022-06-04 23:08:03.945] DEBUG
+[2022-06-06 20:04:49.724] INFO 
+			DriverManagerConnectionProviderImpl.stop(DriverManagerConnectionProviderImpl.java:259) - HHH000030: Cleaning up connection pool [jdbc:oracle:thin:@localhost:1521:xe]
+[2022-06-06 20:04:49.725] DEBUG
 			BootstrapServiceRegistryImpl.deRegisterChild(BootstrapServiceRegistryImpl.java:286) - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
-[2022-06-04 23:08:03.945] DEBUG
+[2022-06-06 20:04:49.725] DEBUG
+			EntityManagerFactoryRegistry.removeEntityManagerFactory(EntityManagerFactoryRegistry.java:91) - Remove: name=jpa-sql
+[2022-06-06 20:04:49.726] DEBUG
+			DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:137) - Retrieved ApplicationContext [1048855692] from cache with key [[WebMergedContextConfiguration@7671cb68 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@ed7f8b4], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
+[2022-06-06 20:04:49.727] DEBUG
+			DefaultContextCache.logStatistics(DefaultContextCache.java:290) - Spring test ApplicationContext cache statistics: [DefaultContextCache@47829d6d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 5, missCount = 1]
+[2022-06-06 20:04:49.729] DEBUG
+			DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:137) - Retrieved ApplicationContext [1048855692] from cache with key [[WebMergedContextConfiguration@7671cb68 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@ed7f8b4], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
+[2022-06-06 20:04:49.729] DEBUG
+			DefaultContextCache.logStatistics(DefaultContextCache.java:290) - Spring test ApplicationContext cache statistics: [DefaultContextCache@47829d6d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 6, missCount = 1]
+[2022-06-06 20:04:49.729] DEBUG
+			AbstractDirtiesContextTestExecutionListener.beforeOrAfterTestMethod(AbstractDirtiesContextTestExecutionListener.java:107) - After test method: context [DefaultTestContext@73ee04c8 testClass = JoinUserTest, testInstance = com.ggomul.persistence.JoinUserTest@2921199d, testMethod = insert@JoinUserTest, testException = java.lang.IllegalStateException: Transaction not active, mergedContextConfiguration = [WebMergedContextConfiguration@7671cb68 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@ed7f8b4], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+[2022-06-06 20:04:49.730] DEBUG
+			ServletTestExecutionListener.afterTestMethod(ServletTestExecutionListener.java:166) - Resetting RequestContextHolder for test context [DefaultTestContext@73ee04c8 testClass = JoinUserTest, testInstance = com.ggomul.persistence.JoinUserTest@2921199d, testMethod = insert@JoinUserTest, testException = java.lang.IllegalStateException: Transaction not active, mergedContextConfiguration = [WebMergedContextConfiguration@7671cb68 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@ed7f8b4], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]].
+[2022-06-06 20:04:49.735] DEBUG
+			DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:137) - Retrieved ApplicationContext [1048855692] from cache with key [[WebMergedContextConfiguration@7671cb68 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@ed7f8b4], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
+[2022-06-06 20:04:49.735] DEBUG
+			DefaultContextCache.logStatistics(DefaultContextCache.java:290) - Spring test ApplicationContext cache statistics: [DefaultContextCache@47829d6d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 7, missCount = 1]
+[2022-06-06 20:04:49.735] DEBUG
+			AbstractDirtiesContextTestExecutionListener.beforeOrAfterTestClass(AbstractDirtiesContextTestExecutionListener.java:142) - After test class: context [DefaultTestContext@73ee04c8 testClass = JoinUserTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@7671cb68 testClass = JoinUserTest, locations = '{}', classes = '{class com.ggomul.config.RootContext}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@ed7f8b4], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.support.DependencyInjectionTestExecutionListener.reinjectDependencies' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+[2022-06-06 20:04:49.741] DEBUG
+			AbstractApplicationContext.doClose(AbstractApplicationContext.java:1006) - Closing org.springframework.web.context.support.GenericWebApplicationContext@3e84448c, started on Mon Jun 06 20:04:45 KST 2022
+[2022-06-06 20:04:49.743] INFO 
+			AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:601) - Closing JPA EntityManagerFactory for persistence unit 'jpa-sql'
+[2022-06-06 20:04:49.744] DEBUG
+			SessionFactoryImpl.close(SessionFactoryImpl.java:1047) - HHH000031: Closing
+[2022-06-06 20:04:49.744] DEBUG
+			AbstractServiceRegistryImpl.deRegisterChild(AbstractServiceRegistryImpl.java:389) - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+[2022-06-06 20:04:49.744] DEBUG
+			BootstrapServiceRegistryImpl.deRegisterChild(BootstrapServiceRegistryImpl.java:286) - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+[2022-06-06 20:04:49.744] DEBUG
 			EntityManagerFactoryRegistry.removeEntityManagerFactory(EntityManagerFactoryRegistry.java:91) - Remove: name=jpa-sql

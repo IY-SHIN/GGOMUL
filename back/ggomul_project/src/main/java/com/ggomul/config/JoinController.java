@@ -26,7 +26,6 @@ private final JoinService joinService;
 	public Map<String, Object> save(@RequestBody User user) {
 		Map<String, Object> response = new HashMap<>();
 		
-		User user1 = joinService.save(user);
 		if(user != null) {
 			response.put("result", "SUCCESS");
 			response.put("user", user);

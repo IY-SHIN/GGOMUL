@@ -18,12 +18,14 @@ public class RootContext {
 	public BasicDataSource dataSource() { // DB 정보
 		BasicDataSource datasource = new BasicDataSource();
 		datasource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
-//		datasource.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
-//		datasource.setUsername("GGOMUL");
-//		datasource.setPassword("RhanfRhanf00");
-		datasource.setUrl("jdbc:oracle:thin:@ggomuldb_high?TNS_ADMIN=C:\\\\Users\\\\Shinwoo\\\\Documents\\\\ggomuldb\\\\DB\\\\Wallet");
-		datasource.setUsername("admin");
-		datasource.setPassword("ggomulDB1234");
+		datasource.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
+		datasource.setUsername("GGOMUL");
+		datasource.setPassword("RhanfRhanf00");
+		/*
+		 * datasource.setUrl(
+		 * "jdbc:oracle:thin:@ggomuldb_high?TNS_ADMIN=C:\\\\Users\\\\Shinwoo\\\\Documents\\\\ggomuldb\\\\DB\\\\Wallet"
+		 * ); datasource.setUsername("admin"); datasource.setPassword("ggomulDB1234");
+		 */
 
 		return datasource;
 	}

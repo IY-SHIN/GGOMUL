@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence version="2.1"
-    xmlns="http://xmlns.jcp.org/xml/ns/persistence"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-    <persistence-unit name="jpa-sql"> <!-- 이름 -->
-        <properties>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle12cDialect" /> <!-- DB고유 기능 사용 -->
-            <property name="hibernate.show_sql" value="true" /> <!-- 콘솔창에 실행되는 SQL문 출력 -->
-            <property name="hibernate.format_sql" value="true" /> <!-- SQL출력시 보기 쉽게 정렬 -->
-            <property name="hibernate.use_sql_comments" value="true" /> <!-- SQL출력 시 주석도 같이 출력 -->
-            <property name="hibernate.hbm2ddl_auto" value="update"/>
-            <property name="hibernate.id.new_generator_mappings" value="true" /> <!-- JPA표준에 맞춘 새로운 키 생성 전략 설정 -->
-        </properties>
-    </persistence-unit>
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
+	<persistence-unit name="jpa-sql"> <!-- 이름 -->
+		<!-- entity가 되는 클래스들 -->
+		<class>com.ggomul.user.User</class>
+		<class>com.ggomul.user.Teacher</class>
+
+		<properties>
+			<!-- 데이터베이스 연결 -->
+			<property name="javax.persistence.jdbc.driver"
+				value="oracle.jdbc.driver.OracleDriver"></property>
+			<!-- <property name="url" value="jdbc:oracle:thin:@ggomuldb_high?TNS_ADMIN=C:\\Users\\Shinwoo\\Documents\\ggomuldb\\DB\\Wallet"></property> -->
+			<!-- <property name="username" value="admin"></property> -->
+			<!-- <property name="password" value="ggomulDB1234"></property> -->
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+			<property name="javax.persistence.jdbc.user" value="GGOMUL"></property>
+			<property name="javax.persistence.jdbc.password"
+				value="RhanfRhanf00"></property>
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.OracleDialect"></property>
+
+			<!-- 옵션 -->
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.Oracle12cDialect" /> <!-- DB고유 기능 사용 -->
+			<property name="hibernate.show_sql" value="true" /> <!-- 콘솔창에 실행되는 SQL문 출력 -->
+			<property name="hibernate.format_sql" value="true" /> <!-- SQL출력시 보기 쉽게 정렬 -->
+			<property name="hibernate.use_sql_comments" value="true" /> <!-- SQL출력 시 주석도 같이 출력 -->
+			<property name="hibernate.hbm2ddl_auto" value="create " /> <!-- none : 이미 존재하는 table 활용 -->
+			<property name="hibernate.id.new_generator_mappings"
+				value="true" /> <!-- JPA표준에 맞춘 새로운 키 생성 전략 설정 -->
+		</properties>
+	</persistence-unit>
 </persistence>

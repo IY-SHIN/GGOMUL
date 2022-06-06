@@ -2,7 +2,12 @@ package com.ggomul.join;
 
 import java.sql.Date;
 import java.util.List;
-import java.util.Optional;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -15,6 +20,10 @@ import com.ggomul.user.User;
 
 @Repository
 public interface JoinUserRepository extends JpaRepository<User, Long> {
+	EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa-sql");
+	EntityManager em = emf.createEntityManager();
+	EntityTransaction tx = em.getTransaction();
+	
 	@Transactional
 	@Modifying
 	@Query(value="insert into USER_TB "
@@ -36,7 +45,10 @@ public interface JoinUserRepository extends JpaRepository<User, Long> {
 //			@Param("resign") String resign, @Param("emailConfirm") Boolean emailConfirm,
 //			@Param("activateKey") Boolean activateKey);
 	
-	@Query(value="select * from USER_TB", nativeQuery = true)
-//	List<Object[]> selectUser();
-	Optional<User> selectUser();
+	TypedQuery<User> query = em.createQuery("SELECT m FROM User m", User.class);
+	
+	@Transactional
+	@Modifying
+    @Query(value = "select user_no from User")
+	public List<Long> findId(@Param("user_no") Long user_no);
 }
