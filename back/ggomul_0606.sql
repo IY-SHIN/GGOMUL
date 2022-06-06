@@ -1,0 +1,680 @@
+
+/* Drop Triggers */
+
+DROP TRIGGER TRI_CALCULATE_TB_no;
+DROP TRIGGER TRI_CLASS_TB_no;
+DROP TRIGGER TRI_COMMENT_TB_no;
+DROP TRIGGER TRI_COMMON_BOARD_TB_seq;
+DROP TRIGGER TRI_PAYMENT_TB_no;
+DROP TRIGGER TRI_REFUND_TB_no;
+DROP TRIGGER TRI_RESERVATION_TB_no;
+DROP TRIGGER TRI_UPLOAD_TB_no;
+DROP TRIGGER TRI_USER_TB_no;
+DROP TRIGGER TRI_TEACHER_TB_teacher_no;
+DROP TRIGGER TRI_WISH_TB_no;
+
+
+
+/* Drop Tables */
+
+DROP TABLE ALTER_TB CASCADE CONSTRAINTS;
+DROP TABLE APPROVE_TB CASCADE CONSTRAINTS;
+DROP TABLE COMMENT_TB CASCADE CONSTRAINTS;
+DROP TABLE UPLOAD_TB CASCADE CONSTRAINTS;
+DROP TABLE COMMON_BOARD_TB CASCADE CONSTRAINTS;
+DROP TABLE REFUND_TB CASCADE CONSTRAINTS;
+DROP TABLE PAYMENT_TB CASCADE CONSTRAINTS;
+DROP TABLE RESERVATION_TB CASCADE CONSTRAINTS;
+DROP TABLE WISH_TB CASCADE CONSTRAINTS;
+DROP TABLE CLASS_TB CASCADE CONSTRAINTS;
+DROP TABLE CALCULATE_TB CASCADE CONSTRAINTS;
+DROP TABLE TEACHER_TB CASCADE CONSTRAINTS;
+DROP TABLE BRANCH_TB CASCADE CONSTRAINTS;
+DROP TABLE CUSTOMER_TB CASCADE CONSTRAINTS;
+DROP TABLE TERMS_TB CASCADE CONSTRAINTS;
+DROP TABLE USER_TB CASCADE CONSTRAINTS;
+
+
+
+/* Drop Sequences */
+
+DROP SEQUENCE SEQ_CALCULATE_TB_no;
+DROP SEQUENCE SEQ_CLASS_TB_no;
+DROP SEQUENCE SEQ_COMMENT_TB_no;
+DROP SEQUENCE SEQ_COMMON_BOARD_TB_seq;
+DROP SEQUENCE SEQ_PAYMENT_TB_no;
+DROP SEQUENCE SEQ_REFUND_TB_no;
+DROP SEQUENCE SEQ_RESERVATION_TB_no;
+DROP SEQUENCE SEQ_UPLOAD_TB_no;
+DROP SEQUENCE SEQ_USER_TB_no;
+DROP SEQUENCE SEQ_TEACHER_TB_teacher_no;
+DROP SEQUENCE SEQ_WISH_TB_no;
+
+/* Create Sequences */
+
+CREATE SEQUENCE SEQ_CALCULATE_TB_no MINVALUE 1 MAXVALUE 99999999 INCREMENT BY 1 START WITH 1 NOCYCLE NOCACHE;
+CREATE SEQUENCE SEQ_CLASS_TB_no MINVALUE 1 MAXVALUE 99999999 INCREMENT BY 1 START WITH 1 NOCYCLE NOCACHE;
+CREATE SEQUENCE SEQ_COMMENT_TB_no MINVALUE 1 MAXVALUE 99999999 INCREMENT BY 1 START WITH 1 NOCYCLE NOCACHE;
+CREATE SEQUENCE SEQ_COMMON_BOARD_TB_seq MINVALUE 1 MAXVALUE 99999999 INCREMENT BY 1 START WITH 1 NOCYCLE NOCACHE;
+CREATE SEQUENCE SEQ_PAYMENT_TB_no MINVALUE 1 MAXVALUE 99999999 INCREMENT BY 1 START WITH 1 NOCYCLE NOCACHE;
+CREATE SEQUENCE SEQ_REFUND_TB_no MINVALUE 1 MAXVALUE 99999999 INCREMENT BY 1 START WITH 1 NOCYCLE NOCACHE;
+CREATE SEQUENCE SEQ_RESERVATION_TB_no MINVALUE 1 MAXVALUE 99999999 INCREMENT BY 1 START WITH 1 NOCYCLE NOCACHE;
+CREATE SEQUENCE SEQ_UPLOAD_TB_no MINVALUE 1 MAXVALUE 99999999 INCREMENT BY 1 START WITH 1 NOCYCLE NOCACHE;
+CREATE SEQUENCE SEQ_USER_TB_no MINVALUE 1 MAXVALUE 99999999 INCREMENT BY 1 START WITH 1 NOCYCLE NOCACHE;
+CREATE SEQUENCE SEQ_TEACHER_TB_teacher_no MINVALUE 1 MAXVALUE 99999999 INCREMENT BY 1 START WITH 1 NOCYCLE NOCACHE;
+CREATE SEQUENCE SEQ_WISH_TB_no MINVALUE 1 MAXVALUE 99999999 INCREMENT BY 1 START WITH 1 NOCYCLE NOCACHE;
+
+
+
+/* Create Tables */
+
+-- 변경이력 테이블
+CREATE TABLE ALTER_TB
+(
+	no number NOT NULL,
+	branch_no number NOT NULL,
+	reg_dt date DEFAULT sysdate NOT NULL
+);
+
+
+-- 약관 동의이력 테이블
+CREATE TABLE APPROVE_TB
+(
+	terms_code varchar2(2) NOT NULL,
+	no number NOT NULL,
+	approve varchar2(1) NOT NULL
+);
+
+
+-- 지점 테이블
+CREATE TABLE BRANCH_TB
+(
+	no number NOT NULL,
+	name varchar2(20 char) NOT NULL UNIQUE,
+	address varchar2(50 char) NOT NULL,
+	tel varchar2(20) NOT NULL,
+	delete_code varchar2(1) DEFAULT 'N' NOT NULL,
+	PRIMARY KEY (no)
+);
+
+
+-- 정산 테이블
+CREATE TABLE CALCULATE_TB
+(
+	no number NOT NULL,
+	teacher_no number NOT NULL UNIQUE,
+	total_price number NOT NULL,
+	settlement_fee number(2,3) NOT NULL,
+	settlement_amount number NOT NULL,
+	PRIMARY KEY (no)
+);
+
+
+-- 클래스 테이블
+CREATE TABLE CLASS_TB
+(
+	no number NOT NULL,
+	branch_no number NOT NULL,
+	teacher_no number NOT NULL UNIQUE,
+	name varchar2(20 char) NOT NULL,
+	type varchar2(2) NOT NULL,
+	price varchar2(20) NOT NULL,
+	start_dt date NOT NULL,
+	end_dt date NOT NULL,
+	start_time date NOT NULL,
+	end_time date NOT NULL,
+	content varchar2(300 char) NOT NULL,
+	day_week varchar2(3 char) NOT NULL,
+	status_code varchar2(1) DEFAULT 'P' NOT NULL,
+	PRIMARY KEY (no)
+);
+
+
+-- 댓글 테이블
+CREATE TABLE COMMENT_TB
+(
+	no number NOT NULL,
+	seq number NOT NULL UNIQUE,
+	user_no number NOT NULL UNIQUE,
+	content varchar2(300 char) NOT NULL,
+	reg_dt date DEFAULT sysdate NOT NULL,
+	mod_dt date DEFAULT sysdate NOT NULL,
+	delete_code varchar2(1) DEFAULT 'N' NOT NULL,
+	PRIMARY KEY (no)
+);
+
+
+-- 게시판 공통 테이블
+CREATE TABLE COMMON_BOARD_TB
+(
+	seq number NOT NULL,
+	reservation_no number NOT NULL,
+	types number(1) NOT NULL,
+	title varchar2(30 char) NOT NULL,
+	content clob NOT NULL,
+	view_cnt number DEFAULT 0 NOT NULL,
+	user_no number NOT NULL UNIQUE,
+	mod_id varchar2(10 char) NOT NULL,
+	reg_dt date DEFAULT sysdate NOT NULL,
+	mod_dt date DEFAULT sysdate NOT NULL,
+	delete_code varchar2(1) DEFAULT 'N' NOT NULL,
+	PRIMARY KEY (seq)
+);
+
+
+-- 고객 테이블
+CREATE TABLE CUSTOMER_TB
+(
+	no number NOT NULL,
+	nickname varchar2(10) NOT NULL UNIQUE,
+	PRIMARY KEY (no)
+);
+
+
+-- 결제 테이블
+CREATE TABLE PAYMENT_TB
+(
+	no number NOT NULL,
+	reservation_no number NOT NULL,
+	name varchar2(10 char) NOT NULL,
+	tel varchar2(11) NOT NULL,
+	email varchar2(40) NOT NULL,
+	payment_type number(1) NOT NULL,
+	payment_dt date DEFAULT sysdate NOT NULL,
+	PRIMARY KEY (no)
+);
+
+
+-- 환불 테이블
+CREATE TABLE REFUND_TB
+(
+	no number NOT NULL,
+	reservation_no number NOT NULL UNIQUE,
+	payment_no number NOT NULL UNIQUE,
+	reasons varchar2(300 char) NOT NULL,
+	name_bank varchar2(10 char),
+	account_number varchar2(20),
+	account_name varchar2(10 char),
+	confirm_type number(2) NOT NULL,
+	PRIMARY KEY (no)
+);
+
+
+-- 예약 테이블
+CREATE TABLE RESERVATION_TB
+(
+	no number NOT NULL,
+	class_no number NOT NULL UNIQUE,
+	customer_no number NOT NULL UNIQUE,
+	num_persons number(2) NOT NULL,
+	reservation_dt date NOT NULL,
+	sum_amount varchar2(20) NOT NULL,
+	status number(1),
+	PRIMARY KEY (no)
+);
+
+
+-- 강사 테이블
+CREATE TABLE TEACHER_TB
+(
+	teacher_no number NOT NULL,
+	user_no number,
+	branch_no number NOT NULL UNIQUE,
+	profile_photo varchar2(255),
+	name_bank varchar2(10 char) NOT NULL,
+	account_number varchar2(20) NOT NULL,
+	PRIMARY KEY (teacher_no)
+);
+
+
+-- 약관 테이블
+CREATE TABLE TERMS_TB
+(
+	terms_code varchar2(2) NOT NULL,
+	terms_name varchar2(20 char) NOT NULL,
+	terms_contents varchar2(1000) NOT NULL,
+	essential varchar2(1) NOT NULL,
+	PRIMARY KEY (terms_code)
+);
+
+
+-- 파일첨부 테이블
+CREATE TABLE UPLOAD_TB
+(
+	no number NOT NULL,
+	seq number,
+	teacher_no number,
+	upload_path varchar2(200) NOT NULL,
+	file_name_origin varchar2(200) NOT NULL,
+	file_name_change varchar2(200) NOT NULL,
+	file_size number(11,2) NOT NULL,
+	image_width number NOT NULL,
+	image_height number NOT NULL,
+	file_insert_dt date DEFAULT sysdate NOT NULL,
+	file_delete_dt date DEFAULT sysdate,
+	delete_code varchar2(1) DEFAULT 'N' NOT NULL,
+	PRIMARY KEY (no)
+);
+
+
+-- 회원 테이블
+CREATE TABLE USER_TB
+(
+	no number NOT NULL,
+	type_no number NOT NULL,
+	name varchar2(10 char) NOT NULL,
+	email varchar2(50) NOT NULL UNIQUE,
+	password varchar2(20) NOT NULL,
+	tel varchar2(11) NOT NULL UNIQUE,
+	date_birth varchar2(8) NOT NULL,
+	gender varchar2(1) NOT NULL,
+	address varchar2(50 char),
+	detail_address varchar2(20 char),
+	sign_dt date DEFAULT sysdate NOT NULL,
+	resign varchar2(1) DEFAULT 'N' NOT NULL,
+	email_confirm varchar2(1) DEFAULT '0' NOT NULL,
+	activate_key VARCHAR2(1) DEFAULT '0' NOT NULL,
+	dtype VARCHAR2(20),
+	PRIMARY KEY (no)
+);
+
+
+-- 찜 테이블
+CREATE TABLE WISH_TB
+(
+	no number NOT NULL,
+	class_no number NOT NULL UNIQUE,
+	customer_no number NOT NULL UNIQUE,
+	wish_dt date DEFAULT sysdate NOT NULL,
+	delete_code varchar2(1) DEFAULT 'N' NOT NULL,
+	PRIMARY KEY (no)
+);
+
+
+
+/* Create Foreign Keys */
+
+ALTER TABLE ALTER_TB
+	ADD FOREIGN KEY (branch_no)
+	REFERENCES BRANCH_TB (no)
+;
+
+
+ALTER TABLE CLASS_TB
+	ADD FOREIGN KEY (branch_no)
+	REFERENCES BRANCH_TB (no)
+;
+
+
+ALTER TABLE TEACHER_TB
+	ADD FOREIGN KEY (branch_no)
+	REFERENCES BRANCH_TB (no)
+;
+
+
+ALTER TABLE RESERVATION_TB
+	ADD FOREIGN KEY (class_no)
+	REFERENCES CLASS_TB (no)
+;
+
+
+ALTER TABLE WISH_TB
+	ADD FOREIGN KEY (class_no)
+	REFERENCES CLASS_TB (no)
+;
+
+
+ALTER TABLE COMMENT_TB
+	ADD FOREIGN KEY (seq)
+	REFERENCES COMMON_BOARD_TB (seq)
+;
+
+
+ALTER TABLE UPLOAD_TB
+	ADD FOREIGN KEY (seq)
+	REFERENCES COMMON_BOARD_TB (seq)
+;
+
+
+ALTER TABLE RESERVATION_TB
+	ADD FOREIGN KEY (customer_no)
+	REFERENCES CUSTOMER_TB (no)
+;
+
+
+ALTER TABLE WISH_TB
+	ADD FOREIGN KEY (customer_no)
+	REFERENCES CUSTOMER_TB (no)
+;
+
+
+ALTER TABLE REFUND_TB
+	ADD FOREIGN KEY (payment_no)
+	REFERENCES PAYMENT_TB (no)
+;
+
+
+ALTER TABLE COMMON_BOARD_TB
+	ADD FOREIGN KEY (reservation_no)
+	REFERENCES RESERVATION_TB (no)
+;
+
+
+ALTER TABLE PAYMENT_TB
+	ADD FOREIGN KEY (reservation_no)
+	REFERENCES RESERVATION_TB (no)
+;
+
+
+ALTER TABLE REFUND_TB
+	ADD FOREIGN KEY (reservation_no)
+	REFERENCES RESERVATION_TB (no)
+;
+
+
+ALTER TABLE ALTER_TB
+	ADD FOREIGN KEY (no)
+	REFERENCES TEACHER_TB (teacher_no)
+;
+
+
+ALTER TABLE CALCULATE_TB
+	ADD FOREIGN KEY (teacher_no)
+	REFERENCES TEACHER_TB (teacher_no)
+;
+
+
+ALTER TABLE CLASS_TB
+	ADD FOREIGN KEY (teacher_no)
+	REFERENCES TEACHER_TB (teacher_no)
+;
+
+
+ALTER TABLE UPLOAD_TB
+	ADD FOREIGN KEY (teacher_no)
+	REFERENCES TEACHER_TB (teacher_no)
+;
+
+
+ALTER TABLE APPROVE_TB
+	ADD FOREIGN KEY (terms_code)
+	REFERENCES TERMS_TB (terms_code)
+;
+
+
+ALTER TABLE APPROVE_TB
+	ADD FOREIGN KEY (no)
+	REFERENCES USER_TB (no)
+;
+
+
+ALTER TABLE COMMENT_TB
+	ADD FOREIGN KEY (user_no)
+	REFERENCES USER_TB (no)
+;
+
+
+ALTER TABLE CUSTOMER_TB
+	ADD FOREIGN KEY (no)
+	REFERENCES USER_TB (no)
+;
+
+
+--ALTER TABLE TEACHER_TB
+--	ADD FOREIGN KEY (user_no)
+--	REFERENCES USER_TB (no)
+--;
+
+	   
+/* Create Triggers */
+
+CREATE OR REPLACE TRIGGER TRI_CALCULATE_TB_no BEFORE INSERT ON CALCULATE_TB
+FOR EACH ROW
+BEGIN
+	SELECT SEQ_CALCULATE_TB_no.nextval
+	INTO :new.no
+	FROM dual;
+END;
+
+/
+
+CREATE OR REPLACE TRIGGER TRI_CLASS_TB_no BEFORE INSERT ON CLASS_TB
+FOR EACH ROW
+BEGIN
+	SELECT SEQ_CLASS_TB_no.nextval
+	INTO :new.no
+	FROM dual;
+END;
+
+/
+
+CREATE OR REPLACE TRIGGER TRI_COMMENT_TB_no BEFORE INSERT ON COMMENT_TB
+FOR EACH ROW
+BEGIN
+	SELECT SEQ_COMMENT_TB_no.nextval
+	INTO :new.no
+	FROM dual;
+END;
+
+/
+
+CREATE OR REPLACE TRIGGER TRI_COMMON_BOARD_TB_seq BEFORE INSERT ON COMMON_BOARD_TB
+FOR EACH ROW
+BEGIN
+	SELECT SEQ_COMMON_BOARD_TB_seq.nextval
+	INTO :new.seq
+	FROM dual;
+END;
+
+/
+
+CREATE OR REPLACE TRIGGER TRI_PAYMENT_TB_no BEFORE INSERT ON PAYMENT_TB
+FOR EACH ROW
+BEGIN
+	SELECT SEQ_PAYMENT_TB_no.nextval
+	INTO :new.no
+	FROM dual;
+END;
+
+/
+
+CREATE OR REPLACE TRIGGER TRI_REFUND_TB_no BEFORE INSERT ON REFUND_TB
+FOR EACH ROW
+BEGIN
+	SELECT SEQ_REFUND_TB_no.nextval
+	INTO :new.no
+	FROM dual;
+END;
+
+/
+
+CREATE OR REPLACE TRIGGER TRI_RESERVATION_TB_no BEFORE INSERT ON RESERVATION_TB
+FOR EACH ROW
+BEGIN
+	SELECT SEQ_RESERVATION_TB_no.nextval
+	INTO :new.no
+	FROM dual;
+END;
+
+/
+
+CREATE OR REPLACE TRIGGER TRI_UPLOAD_TB_no BEFORE INSERT ON UPLOAD_TB
+FOR EACH ROW
+BEGIN
+	SELECT SEQ_UPLOAD_TB_no.nextval
+	INTO :new.no
+	FROM dual;
+END;
+
+/
+
+CREATE OR REPLACE TRIGGER TRI_USER_TB_no BEFORE INSERT ON USER_TB
+FOR EACH ROW
+BEGIN
+	SELECT SEQ_USER_TB_no.nextval
+	INTO :new.no
+	FROM dual;
+END;
+
+/
+
+CREATE OR REPLACE TRIGGER TRI_TEACHER_TB_teacher_no BEFORE INSERT ON TEACHER_TB
+FOR EACH ROW
+BEGIN
+	SELECT SEQ_TEACHER_TB_teacher_no.nextval
+	INTO :new.teacher_no
+	FROM dual;
+END;
+
+/
+
+CREATE OR REPLACE TRIGGER TRI_WISH_TB_no BEFORE INSERT ON WISH_TB
+FOR EACH ROW
+BEGIN
+	SELECT SEQ_WISH_TB_no.nextval
+	INTO :new.no
+	FROM dual;
+END;
+
+/
+
+
+
+
+/* Comments */
+
+COMMENT ON TABLE ALTER_TB IS '변경이력 테이블';
+COMMENT ON COLUMN ALTER_TB.no IS '강사 번호';
+COMMENT ON COLUMN ALTER_TB.branch_no IS '지점별 부여코드';
+COMMENT ON COLUMN ALTER_TB.reg_dt IS '지점 변경일자';
+COMMENT ON TABLE APPROVE_TB IS '약관 동의이력 테이블';
+COMMENT ON COLUMN APPROVE_TB.terms_code IS '약관코드 : (필수 : 01 / 선택: 02)';
+COMMENT ON COLUMN APPROVE_TB.no IS '회원 번호';
+COMMENT ON COLUMN APPROVE_TB.approve IS '동의여부 : Y / N';
+COMMENT ON TABLE BRANCH_TB IS '지점 테이블';
+COMMENT ON COLUMN BRANCH_TB.no IS '지점별 부여코드';
+COMMENT ON COLUMN BRANCH_TB.name IS '지점명';
+COMMENT ON COLUMN BRANCH_TB.address IS '지점 주소';
+COMMENT ON COLUMN BRANCH_TB.tel IS '지점 전화번호';
+COMMENT ON COLUMN BRANCH_TB.delete_code IS '삭제(폐점)여부 : (Y/N)';
+COMMENT ON TABLE CALCULATE_TB IS '정산 테이블';
+COMMENT ON COLUMN CALCULATE_TB.no IS '정산 번호';
+COMMENT ON COLUMN CALCULATE_TB.teacher_no IS '강사 번호';
+COMMENT ON COLUMN CALCULATE_TB.total_price IS '총 클래스 수강비용';
+COMMENT ON COLUMN CALCULATE_TB.settlement_fee IS '정산 수수료';
+COMMENT ON COLUMN CALCULATE_TB.settlement_amount IS '정산 금액 : 총 클래스 수강비용 * 정산 수수료';
+COMMENT ON TABLE CLASS_TB IS '클래스 테이블';
+COMMENT ON COLUMN CLASS_TB.no IS '클래스 번호';
+COMMENT ON COLUMN CLASS_TB.branch_no IS '지점별 부여코드';
+COMMENT ON COLUMN CLASS_TB.teacher_no IS '강사 번호';
+COMMENT ON COLUMN CLASS_TB.name IS '클래스 이름';
+COMMENT ON COLUMN CLASS_TB.type IS '클래스 종류';
+COMMENT ON COLUMN CLASS_TB.price IS '클래스 가격';
+COMMENT ON COLUMN CLASS_TB.start_dt IS '클래스 시작일';
+COMMENT ON COLUMN CLASS_TB.end_dt IS '클래스 종료일';
+COMMENT ON COLUMN CLASS_TB.start_time IS '클래스 시작시간';
+COMMENT ON COLUMN CLASS_TB.end_time IS '클래스 종료시간';
+COMMENT ON COLUMN CLASS_TB.content IS '클래스 수업내용';
+COMMENT ON COLUMN CLASS_TB.day_week IS '클래스 해당 요일';
+COMMENT ON COLUMN CLASS_TB.status_code IS '클래스 상태 : (E-종료/P-진행중)';
+COMMENT ON TABLE COMMENT_TB IS '댓글 테이블';
+COMMENT ON COLUMN COMMENT_TB.no IS '댓글 번호';
+COMMENT ON COLUMN COMMENT_TB.seq IS '공통 게시판 번호';
+COMMENT ON COLUMN COMMENT_TB.user_no IS '회원 번호';
+COMMENT ON COLUMN COMMENT_TB.content IS '댓글 내용';
+COMMENT ON COLUMN COMMENT_TB.reg_dt IS '댓글 작성날짜';
+COMMENT ON COLUMN COMMENT_TB.mod_dt IS '댓글 수정날짜';
+COMMENT ON COLUMN COMMENT_TB.delete_code IS '삭제여부 : (Y/N)';
+COMMENT ON TABLE COMMON_BOARD_TB IS '게시판 공통 테이블';
+COMMENT ON COLUMN COMMON_BOARD_TB.seq IS '공통 게시판 번호';
+COMMENT ON COLUMN COMMON_BOARD_TB.reservation_no IS '예약 번호';
+COMMENT ON COLUMN COMMON_BOARD_TB.types IS '게시판 분류 : ( 0-이벤트 1-FAQ 2-수강후기 3-예약안내)';
+COMMENT ON COLUMN COMMON_BOARD_TB.title IS '게시글 제목';
+COMMENT ON COLUMN COMMON_BOARD_TB.content IS '게시글 내용';
+COMMENT ON COLUMN COMMON_BOARD_TB.view_cnt IS '조회수';
+COMMENT ON COLUMN COMMON_BOARD_TB.user_no IS '회원 번호';
+COMMENT ON COLUMN COMMON_BOARD_TB.mod_id IS '수정자';
+COMMENT ON COLUMN COMMON_BOARD_TB.reg_dt IS '게시글 작성날짜';
+COMMENT ON COLUMN COMMON_BOARD_TB.mod_dt IS '게시글 수정날짜';
+COMMENT ON COLUMN COMMON_BOARD_TB.delete_code IS '삭제여부 : (Y/N)';
+COMMENT ON TABLE CUSTOMER_TB IS '고객 테이블';
+COMMENT ON COLUMN CUSTOMER_TB.no IS '고객 번호';
+COMMENT ON COLUMN CUSTOMER_TB.nickname IS '고객 닉네임';
+COMMENT ON TABLE PAYMENT_TB IS '결제 테이블';
+COMMENT ON COLUMN PAYMENT_TB.no IS '결제 번호';
+COMMENT ON COLUMN PAYMENT_TB.reservation_no IS '예약 번호';
+COMMENT ON COLUMN PAYMENT_TB.name IS '결제 고객 이름';
+COMMENT ON COLUMN PAYMENT_TB.tel IS '결제 고객 전화번호';
+COMMENT ON COLUMN PAYMENT_TB.email IS '결제 고객 이메일';
+COMMENT ON COLUMN PAYMENT_TB.payment_type IS '결제 방법 : (1-카드 결제, 2-카카오페이, 3-계좌이체, 4-무통장입금)';
+COMMENT ON COLUMN PAYMENT_TB.payment_dt IS '결제 날짜';
+COMMENT ON TABLE REFUND_TB IS '환불 테이블';
+COMMENT ON COLUMN REFUND_TB.no IS '환불 번호';
+COMMENT ON COLUMN REFUND_TB.reservation_no IS '예약 번호';
+COMMENT ON COLUMN REFUND_TB.payment_no IS '결제 번호';
+COMMENT ON COLUMN REFUND_TB.reasons IS '환불 사유';
+COMMENT ON COLUMN REFUND_TB.name_bank IS '환불 은행명';
+COMMENT ON COLUMN REFUND_TB.account_number IS '환불 계좌번호';
+COMMENT ON COLUMN REFUND_TB.account_name IS '환불 계좌 예금주';
+COMMENT ON COLUMN REFUND_TB.confirm_type IS '환불 상태 타입 : (10 - 환불 요청, 20 - 환불 대기, 30 - 환불요청취소, 40 - 환불 승인)';
+COMMENT ON TABLE RESERVATION_TB IS '예약 테이블';
+COMMENT ON COLUMN RESERVATION_TB.no IS '예약 번호';
+COMMENT ON COLUMN RESERVATION_TB.class_no IS '클래스 번호';
+COMMENT ON COLUMN RESERVATION_TB.customer_no IS '고객 번호';
+COMMENT ON COLUMN RESERVATION_TB.num_persons IS '수강 인원';
+COMMENT ON COLUMN RESERVATION_TB.reservation_dt IS '예약 날짜';
+COMMENT ON COLUMN RESERVATION_TB.sum_amount IS '결제 금액 : CLASS_TB 클래스 가격(price) * 수강 인원';
+COMMENT ON COLUMN RESERVATION_TB.status IS '승인 여부 : (승인 : 1, 비승인 : 0)';
+COMMENT ON TABLE TEACHER_TB IS '강사 테이블';
+COMMENT ON COLUMN TEACHER_TB.teacher_no IS '강사 번호';
+COMMENT ON COLUMN TEACHER_TB.user_no IS '회원 번호';
+COMMENT ON COLUMN TEACHER_TB.branch_no IS '지점별 부여코드';
+COMMENT ON COLUMN TEACHER_TB.profile_photo IS '강사 프로필 사진';
+COMMENT ON COLUMN TEACHER_TB.name_bank IS '은행명';
+COMMENT ON COLUMN TEACHER_TB.account_number IS '강사 계좌번호';
+COMMENT ON TABLE TERMS_TB IS '약관 테이블';
+COMMENT ON COLUMN TERMS_TB.terms_code IS '약관코드 : (필수 : 01 / 선택: 02)';
+COMMENT ON COLUMN TERMS_TB.terms_name IS '약관명 : 이용약관 동의 / 개인정보 수집 및 이용동의 / SNS 수신동의 / 이메일 수신동의';
+COMMENT ON COLUMN TERMS_TB.terms_contents IS '약관내용';
+COMMENT ON COLUMN TERMS_TB.essential IS '필수여부 : Y / N';
+COMMENT ON TABLE UPLOAD_TB IS '파일첨부 테이블';
+COMMENT ON COLUMN UPLOAD_TB.no IS '파일첨부 번호';
+COMMENT ON COLUMN UPLOAD_TB.seq IS '공통 게시판 번호';
+COMMENT ON COLUMN UPLOAD_TB.teacher_no IS '강사 번호';
+COMMENT ON COLUMN UPLOAD_TB.upload_path IS '파일 경로';
+COMMENT ON COLUMN UPLOAD_TB.file_name_origin IS '첨부파일 원래 명칭';
+COMMENT ON COLUMN UPLOAD_TB.file_name_change IS '첨부파일 변경 명칭 : yyyymmddhhmmss-게시판번호 혹은 강사 번호-000001 부터 시작';
+COMMENT ON COLUMN UPLOAD_TB.file_size IS '파일 크기';
+COMMENT ON COLUMN UPLOAD_TB.image_width IS '이미지 가로값';
+COMMENT ON COLUMN UPLOAD_TB.image_height IS '이미지 세로값';
+COMMENT ON COLUMN UPLOAD_TB.file_insert_dt IS '첨부파일 등록일자';
+COMMENT ON COLUMN UPLOAD_TB.file_delete_dt IS '첨부파일 삭제일자';
+COMMENT ON COLUMN UPLOAD_TB.delete_code IS '삭제여부 : (Y/N)';
+COMMENT ON TABLE USER_TB IS '회원 테이블';
+COMMENT ON COLUMN USER_TB.no IS '회원 번호';
+COMMENT ON COLUMN USER_TB.type_no IS '회원 분류 : ( 0-관리자 1-강사 2-고객)';
+COMMENT ON COLUMN USER_TB.name IS '회원 이름';
+COMMENT ON COLUMN USER_TB.email IS '회원 이메일 주소 : 로그인 ID';
+COMMENT ON COLUMN USER_TB.password IS '회원 비밀번호';
+COMMENT ON COLUMN USER_TB.tel IS '회원 휴대폰번호';
+COMMENT ON COLUMN USER_TB.date_birth IS '회원 생년월일';
+COMMENT ON COLUMN USER_TB.gender IS '성별 : ( M-남자 F-여자 )';
+COMMENT ON COLUMN USER_TB.address IS '회원 주소';
+COMMENT ON COLUMN USER_TB.detail_address IS '회원 상세 주소';
+COMMENT ON COLUMN USER_TB.sign_dt IS '가입 날짜';
+COMMENT ON COLUMN USER_TB.resign IS '탈퇴(퇴사)여부 : (Y/N)';
+COMMENT ON COLUMN USER_TB.email_confirm IS '이메일인증 여부 : (1/0)';
+COMMENT ON COLUMN USER_TB.activate_key IS '활성화 상태 여부 : (1/0)';
+COMMENT ON TABLE WISH_TB IS '찜 테이블';
+COMMENT ON COLUMN WISH_TB.no IS '찜 번호';
+COMMENT ON COLUMN WISH_TB.class_no IS '클래스 번호';
+COMMENT ON COLUMN WISH_TB.customer_no IS '고객 번호';
+COMMENT ON COLUMN WISH_TB.wish_dt IS '찜 등록날짜';
+COMMENT ON COLUMN WISH_TB.delete_code IS '찜 삭제여부 : (Y/N)';
+
+
+select constraint_name, status
+from all_constraints
+order by  constraint_name desc
+
+alter table teacher_tb drop constraint SYS_C0025348

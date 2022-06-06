@@ -1,19 +1,17 @@
 package com.ggomul.user;
 
-import java.time.LocalDateTime;
+import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
-import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.DynamicInsert;
 
@@ -23,14 +21,12 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import lombok.experimental.SuperBuilder;
 
 @Data
 @Getter
 @Entity
 @Table(name="USER_TB")
-@Inheritance(strategy = InheritanceType.JOINED) //상속으로 조인
-@DiscriminatorColumn(name = "DTYPE") //구분 컬럼
+//@Inheritance(strategy = InheritanceType.JOINED) //상속으로 조인
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
@@ -41,21 +37,12 @@ import lombok.experimental.SuperBuilder;
 	    sequenceName = "SEQ_USER_TB_NO",          // generator가될 DB 테이블명입니다.
 	    initialValue = 1, allocationSize = 1 // 초기값과 할당 사이즈입니다.
 	)
-@SuperBuilder
-public class User{
-	//private Teacher teacher;
-	//private Customer customer;
-	//private UserType memberType;
-
+public class User implements Serializable{
 	// 공통
 	@Id //PK값을 의미
-	@GeneratedValue(strategy=GenerationType.AUTO, generator = "USER_TB_NO")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "USER_TB_NO")
 	@Column(name="no", insertable=false, updatable=false)
-	private Long userNo; // 회원 번호(PK)
-	
-	@ManyToOne
-	@JoinColumn(name="no", insertable=false, updatable=false)
-	private Teacher teacher;
+	private Long user_no; // 회원 번호(PK)
 	
 	@Column(name = "type_no")
 	private int typeNo; // 회원 분류
@@ -75,14 +62,15 @@ public class User{
 	private String dateBirth; // 생년월일
 	
 	private String gender; // 성별
+	
 	private String address; // 주소
 	
 	@Column(name = "detail_address")
 	private String detailAddress; // 상세주소
 	
-	
+	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "sign_dt")
-	private LocalDateTime signDt; // 가입날짜
+	private Date signDt; // 가입날짜
 	
 	
 	@Column(columnDefinition = "varchar2(1) DEFAULT 'N'")
@@ -93,24 +81,6 @@ public class User{
 	
 	@Column(name = "activate_key", columnDefinition = "varchar2(1) DEFAULT '0'")
 	private boolean activateKey; // 활성화 상태 여부
-
-	
-	public User(Long userNo, int typeNo, String name, String email, String password, String tel, String dateBirth,
-			String gender, String address, String detailAddress, LocalDateTime signDt) {
-		this.userNo = userNo;
-		this.typeNo = typeNo;
-		this.name = name;
-		this.email = email;
-		this.password = password;
-		this.tel = tel;
-		this.dateBirth = dateBirth;
-		this.gender = gender;
-		this.address = address;
-		this.detailAddress = detailAddress;
-		this.signDt = signDt;
-	}
-
-	
 
 	
 }
