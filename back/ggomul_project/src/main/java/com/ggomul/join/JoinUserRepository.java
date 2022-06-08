@@ -45,7 +45,7 @@ public interface JoinUserRepository extends JpaRepository<User, Long> {
 //			@Param("resign") String resign, @Param("emailConfirm") Boolean emailConfirm,
 //			@Param("activateKey") Boolean activateKey);
 	
-	TypedQuery<User> query = em.createQuery("SELECT m FROM User m", User.class);
+	//TypedQuery<User> query = em.createQuery("SELECT m FROM User m", User.class);
 	
 	@Transactional
 	@Modifying

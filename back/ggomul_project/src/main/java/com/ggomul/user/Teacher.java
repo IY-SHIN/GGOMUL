@@ -29,6 +29,7 @@ import lombok.ToString;
 	    sequenceName = "SEQ_TEACHER_TB_TEACHER_NO",          // generator가될 DB 테이블명입니다.
 	    initialValue = 1, allocationSize = 1 // 초기값과 할당 사이즈입니다.
 	)
+
 public class Teacher implements Serializable{
 	
 	// 강사

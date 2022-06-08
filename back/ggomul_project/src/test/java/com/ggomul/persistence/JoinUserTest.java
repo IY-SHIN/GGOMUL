@@ -36,7 +36,9 @@ public class JoinUserTest {
 	JoinTeacherRepository joinTeacherRepository;
 	@Autowired
 	JoinUserRepository joinUserRepository;
-
+	
+	User user;
+	Teacher teacher;
 
 	// 회원가입 테스트
 	@Test
@@ -46,9 +48,8 @@ public class JoinUserTest {
 
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa-sql");
 		EntityManager em = emf.createEntityManager();
-		EntityTransaction tx = em.getTransaction();
 
-		tx.begin();
+		em.getTransaction().begin();
 
 		try {
 			/*
@@ -57,10 +58,8 @@ public class JoinUserTest {
 			 * .dateBirth("911121") .gender("F") .address("인천") .detailAddress("서구")
 			 * .signDt(date).build();
 			 */
-			joinUserRepository.insertUser(1, "인", "21ass2", "a12314", "0121232883", "F", "911121", "서구", "인천", date);
+			joinUserRepository.insertUser(1, "인", "aaaaaa", "qwer", "1010110", "F", "911121", "서구", "인천", date);
 			em.persist(joinUserRepository); // persist == save
-			tx.commit();
-
 			
 
 //			Teacher a = new Teacher();
@@ -70,7 +69,8 @@ public class JoinUserTest {
 //			em.persist(joinTeacherRepository); // persist == save
 
 		} catch (Exception e) {
-			tx.rollback();
+			em.getTransaction().rollback();
+			e.printStackTrace();
 		} finally {
 
 		}
@@ -94,13 +94,17 @@ public class JoinUserTest {
 
 			joinTeacherRepository.insertTeacher(lastNo, 10, "qwer", "우리", "12345");
 			em.persist(joinTeacherRepository); // persist == save
+			
 
 		} catch (Exception e) {
-			tx.rollback();
+			em.getTransaction().rollback();
+			e.printStackTrace();
 		} finally {
-			em.close();
-			emf.close();
+//			em.close();
+//			emf.close();
 		}
+		
+		em.getTransaction().commit();
 		// when
 //		user1 = joinUserRepository.save(user1);
 

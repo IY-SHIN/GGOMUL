@@ -1,5 +1,7 @@
 package com.ggomul.join;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -30,5 +32,7 @@ public interface JoinTeacherRepository extends JpaRepository<Teacher, Long> {
 			@Param("user_no") Long users, @Param("branch_no") Integer branchNo, @Param("profile_photo") String profilePhoto, 
 			@Param("name_bank") String nameBank, @Param("account_number") String accountNumber);
 	
-	TypedQuery<Teacher> query = em.createQuery("SELECT t FROM Teacher t", Teacher.class);
+	//TypedQuery<Teacher> query = em.createQuery("SELECT t FROM Teacher t", Teacher.class);
+	
+	
 }
