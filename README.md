@@ -32,4 +32,11 @@ ggomul(꼬물꼬물): 프렌차이즈 베이킹 원데이클래스 홈
 <summary>접기/펼치기</summary>
 <img src=>
 </details>
+
 ## ERD     
+<details markdown="1">
+<summary>접기/펼치기</summary>
+<img src=>
+</details>
+
+## 기능시연    
