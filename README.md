@@ -1,5 +1,6 @@
-# GGOMUL
 
+![header](https://capsule-render.vercel.app/api?type=cylinder&color=F9D923&text=GGOMOL&fontAlignY=55&fontSize=55&height=150&animation=twinkling)
+  
 ## 프로젝트명    
 ```
 ggomul(꼬물꼬물): 프렌차이즈 베이킹 원데이클래스 홈  
